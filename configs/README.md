@@ -39,7 +39,7 @@
    latency = 1 <br>
 
    ```
-   ~/gem5/build/X86_MESI_Two_Level/gem5.opt ~/gem5/configs/example/ruby_direct_test.py --num-cpus=4 --num-dirs=4 --network=garnet --topology=Mesh_XY --mesh-rows=2 --link-latency=1 --router-latency=1
+   ~/gem5/build/X86/gem5.opt ~/gem5/configs/example/ruby_direct_test.py --num-cpus=4 --num-dirs=4 --network=garnet --topology=Mesh_XY --mesh-rows=2 --link-latency=1 --router-latency=1
    ```
 4) Output
    ![image](https://github.com/user-attachments/assets/4af03ef4-4ec9-4866-88f5-ac24018f99da)
