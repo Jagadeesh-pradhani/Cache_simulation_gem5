@@ -62,8 +62,30 @@
    system.ruby.network.flits_received::total
    system.ruby.network.flits_received 
    ```
-   Flits ststs used for Calculations.
+   Flits ststs used for Calculations. <br>
+
+   ### Interconnected Parameters of Flits
+1. *Flit Latency*: Look for the average, minimum, and maximum latencies of flits.
+2. *Flit Throughput*: Metrics indicating the number of flits sent/received over time.
+3. *Network Traffic*: Statistics related to the volume and distribution of flit traffic across the network.
 
 
+### Performance Calculation
+1. *Execution Time*: simSeconds and simTicks can provide the simulated execution time.
+2. *Instructions Per Cycle (IPC)*: This can be derived if you have the total number of instructions executed and the number of cycles.
+3. *Bandwidth Utilization*: Metrics like avgRdBWSys and avgWrBWSys give insights into read and write bandwidth utilization.
 
+
+### Sample Data from the Stats File
+Here are some of the relevant entries extracted from your stats-2.txt:
+
+- system.mem_ctrls0.readReqs: Number of read requests accepted (Count)
+- system.mem_ctrls0.writeReqs: Number of write requests accepted (Count)
+- system.mem_ctrls0.avgRdBWSys: Average system read bandwidth in Byte/s
+- system.mem_ctrls0.avgWrBWSys: Average system write bandwidth in Byte/s
+- simSeconds: Number of seconds simulated (Second)
+- simTicks: Number of ticks simulated (Tick)
+- finalTick: Number of ticks from the beginning of the simulation (Tick)
+- system.clk_domain.clock: Clock period in ticks (Tick)
+- system.cpu.power_state.pwrStateResidencyTicks::UNDEFINED: Cumulative time in ticks in various power states (Tick)
    
