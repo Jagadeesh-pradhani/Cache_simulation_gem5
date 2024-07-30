@@ -1,6 +1,6 @@
 # RUBY
 
-## 1) ruby_test.py
+## 1) ruby_test.py : normal run
 
 1) Navigate to the Build Directory:
    ```
@@ -25,7 +25,7 @@
    Open file named 'm5out' for results.
 
 
-## 2) ruby_direct_test.py
+## 2) ruby_direct_test.py :Mesh_XY topology
 
 1) Replace the Mesh_XY.py file from this repo to the file in the location "gem5/configs/topologies/Mesh_XY.py".
 2) Navigate to the Build Directory:
