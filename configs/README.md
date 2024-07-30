@@ -46,10 +46,10 @@
 
 5) Result
    Results can be viewd in m5out directory <br>
-   config.pdf
+   config.pdf <br>
    ![image](https://github.com/user-attachments/assets/e6f9c5f6-8c93-4870-8bb8-e4d6d1a7e899)
    <br>
-   ruby.pdf
+   ruby.pdf<br>
    ![image](https://github.com/user-attachments/assets/5aa3ae8b-8880-4ad7-b355-65be9b9e5bcc)
    <br>
 
