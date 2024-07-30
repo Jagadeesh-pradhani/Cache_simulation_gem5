@@ -52,6 +52,15 @@
    ruby.pdf<br>
    ![image](https://github.com/user-attachments/assets/5aa3ae8b-8880-4ad7-b355-65be9b9e5bcc)
    <br>
+   <br>
+   Stats.txt
+   ```
+   system.ruby.network.average_flit_latency
+   system.ruby.network.average_flit_network_latency
+   system.ruby.network.flits_received::total
+   system.ruby.network.flits_received 
+   ```
+   Flits ststs used for Calculations.
 
 
 
