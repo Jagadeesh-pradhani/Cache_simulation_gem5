@@ -37,6 +37,8 @@
    dir's = 4 <br>
    rows = 2 <br>
    latency = 1 <br>
+   <br>
+   Prefetcher = Rubyprefetcher (default-strideprefetcher)
 
    ```
    ~/gem5/build/X86/gem5.opt ~/gem5/configs/example/ruby_direct_test.py --num-cpus=4 --num-dirs=4 --network=garnet --topology=Mesh_XY --mesh-rows=2 --link-latency=1 --router-latency=1
