@@ -64,7 +64,7 @@
    ```
    Flits ststs used for Calculations. <br>
 
-   ### Interconnected Parameters of Flits
+### Interconnected Parameters of Flits
 1. *Flit Latency*: Look for the average, minimum, and maximum latencies of flits.
 2. *Flit Throughput*: Metrics indicating the number of flits sent/received over time.
 3. *Network Traffic*: Statistics related to the volume and distribution of flit traffic across the network.
