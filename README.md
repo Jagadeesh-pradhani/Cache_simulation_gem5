@@ -23,3 +23,9 @@
 5) Analyze the Results
    GEM5 will generate various output files and statistics that you can analyze to understand the performance of your system.
    Open file named 'm5out' for results.
+
+
+
+## Extra
+
+https://pages.cs.wisc.edu/~swilson/gem5-docs/Prefetcher_8cc_source.html
