@@ -19,4 +19,7 @@
 ### SimTime 
 ![simtime](https://github.com/user-attachments/assets/79424bcd-ebd2-48d9-9136-1b06491467da)
 
+### PowerPerCore
+![PowerPerCore](https://github.com/user-attachments/assets/06fe7a3a-135b-419c-9696-e7760c6a0089)
+
 
