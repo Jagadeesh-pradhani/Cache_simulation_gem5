@@ -5,7 +5,8 @@
   ```
 
 ### average_flit_latency
-![avg_latency](https://github.com/user-attachments/assets/38ac8d05-314c-457e-83d3-54d385e56992)
+![flit_latency](https://github.com/user-attachments/assets/05c3ae60-06b0-43ca-862c-4c5cd0311a87)
 
 ### average_flit_network_latency
-  ![flit_latency](https://github.com/user-attachments/assets/05c3ae60-06b0-43ca-862c-4c5cd0311a87)
+  
+  ![avg_latency](https://github.com/user-attachments/assets/38ac8d05-314c-457e-83d3-54d385e56992)
