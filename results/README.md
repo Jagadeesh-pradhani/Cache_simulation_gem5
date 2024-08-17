@@ -12,3 +12,7 @@
 
 ### flits_received::total 
 ![no_flits](https://github.com/user-attachments/assets/7296f3b2-1180-405d-a50a-2a623793d909)
+
+### Average system read bandwidth in Byte/s 
+![bandwidth_reads](https://github.com/user-attachments/assets/f709d157-ac0a-443a-b3c8-88c1210fc70f)
+
