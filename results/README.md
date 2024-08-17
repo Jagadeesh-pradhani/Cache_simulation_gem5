@@ -7,6 +7,8 @@
 ### average_flit_latency
 ![flit_latency](https://github.com/user-attachments/assets/05c3ae60-06b0-43ca-862c-4c5cd0311a87)
 
-### average_flit_network_latency
-  
-  ![avg_latency](https://github.com/user-attachments/assets/38ac8d05-314c-457e-83d3-54d385e56992)
+### average_flit_network_latency  
+![avg_latency](https://github.com/user-attachments/assets/38ac8d05-314c-457e-83d3-54d385e56992)
+
+### flits_received::total 
+![no_flits](https://github.com/user-attachments/assets/7296f3b2-1180-405d-a50a-2a623793d909)
