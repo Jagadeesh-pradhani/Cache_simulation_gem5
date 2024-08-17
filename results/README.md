@@ -16,3 +16,7 @@
 ### Average system read bandwidth in Byte/s 
 ![bandwidth_reads](https://github.com/user-attachments/assets/f709d157-ac0a-443a-b3c8-88c1210fc70f)
 
+### SimTime 
+![simtime](https://github.com/user-attachments/assets/79424bcd-ebd2-48d9-9136-1b06491467da)
+
+
