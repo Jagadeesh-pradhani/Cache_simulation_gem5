@@ -23,6 +23,7 @@
 - **L1D Cache**: `64kB`
 - **L2 Cache**: `512kB`
 - **Memory**: `512MB`
+- **Block size** : `64 bytes`
 - **L1 Associativity**: `2-way`
 - **L2 Associativity**: `8-way`
 - **Network**: `garnet`
