@@ -10,7 +10,7 @@
    gem5/build/X86/gem5.opt --debug-flags=RubyCache --debug-file=output.out.gz gem5/configs/deprecated/example/se.py
    ```
    `--debug-flags=RubyCache` : This will trace the address allocated to all the ruby components
-   `--debug-file=output.out.gz` : Store the trace file in a zip. this file may be sometimes very large.
+   `--debug-file=output.out.gz` : Store the trace file in `m5out` folder. this file may be sometimes very large.
 
 
 
