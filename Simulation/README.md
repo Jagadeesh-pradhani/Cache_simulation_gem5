@@ -37,10 +37,7 @@
 
 | CPU Core | Workload |
 |----------|----------|
-| CPU0     | dct      |
-| CPU1     | fft      |
-| CPU2     | heat     |
-| CPU3     | dct      |
+| CPU0     | dct      | CPU1     | fft      | CPU2     | heat     | CPU3     | dct      |
 | CPU4     | dct      |
 | CPU5     | fft      |
 | CPU6     | heat     |
