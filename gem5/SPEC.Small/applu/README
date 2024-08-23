@@ -1,0 +1,20 @@
+This is largely the PBN OpenMP version of the NAS parallel benchmark LU
+(APPLU), with major changes to JACLD, BLTS, JACU and BUTS to increase
+the parallelism.  The compiled sizes of arrays have also been changed
+to match SPEC's 173.applu benchmark.
+
+A very simple makefile is provided.  Please adapt flags to suit your
+compiler.  The sources are still split as from PBN, with an included
+file.  There is also a wtime.c file to return wall clock time.  Expect
+to rewrite this (Fortran or C) for your platform.
+
+I have included the SPEC ref, train and test inputs in the form of
+input.* files.  Their contents must be somehow put into a file named
+inputlu.data to affect the run.  Reference files are in output.*, and I
+have not matched the format up yet.  The verification tests are still
+done in the NAS style, which does not recognize the train and ref data
+sets, and claims they are UNSUCCESSFUL.  Inspection of the final
+results is required to verify success.
+
+Paul Kinney
+paul.kinney@sun.com

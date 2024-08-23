@@ -1,0 +1,89 @@
+build/X86/gem5.opt configs/depricated/example/se.py --mem-type DDR3_1600_8x8 --l2cache --l1d_size --l1i_size --cpu-type X86TimingSimpleCPU
+
+             [-h] [-n NUM_CPUS] 
+             
+             [--sys-voltage SYS_VOLTAGE] 
+             
+             [--sys-clock SYS_CLOCK] 
+            
+             [--list-mem-types]
+
+             [--mem-type {CfiMemory,DDR3_1600_8x8,DDR3_2133_8x8,DDR4_2400_16x4,DDR4_2400_4x16,DDR4_2400_8x8,DDR5_4400_4x8,DDR5_6400_4x8,DDR5_8400_4x8,DRAMInterface,GDDR5_4000_2x32,HBM_1000_4H_1x128,HBM_1000_4H_1x64,HBM_2000_4H_1x64,HMC_2500_1x32,LPDDR2_S4_1066_1x32,LPDDR3_1600_1x32,LPDDR5_5500_1x16_8B_BL32,LPDDR5_5500_1x16_BG_BL16,LPDDR5_5500_1x16_BG_BL32,LPDDR5_6400_1x16_8B_BL32,LPDDR5_6400_1x16_BG_BL16,LPDDR5_6400_1x16_BG_BL32,NVMInterface,NVM_2400_1x64,QoSMemSinkInterface,SimpleMemory,WideIO_200_1x128}]
+             
+             [--mem-channels MEM_CHANNELS] [--mem-ranks MEM_RANKS] [--mem-size MEM_SIZE]
+             
+             [--enable-dram-powerdown] [--mem-channels-intlv MEM_CHANNELS_INTLV] [--memchecker]
+             
+             [--external-memory-system EXTERNAL_MEMORY_SYSTEM] [--tlm-memory TLM_MEMORY] [--caches]
+             
+             [--l2cache] [--num-dirs NUM_DIRS] [--num-l2caches NUM_L2CACHES] [--num-l3caches NUM_L3CACHES]
+             
+             [--l1d_size L1D_SIZE] [--l1i_size L1I_SIZE] [--l2_size L2_SIZE] [--l3_size L3_SIZE]
+             
+             [--l1d_assoc L1D_ASSOC] [--l1i_assoc L1I_ASSOC] [--l2_assoc L2_ASSOC] [--l3_assoc L3_ASSOC]
+             
+             [--cacheline_size CACHELINE_SIZE] [--ruby] [-m TICKS] [--rel-max-tick TICKS]
+             
+             [--maxtime MAXTIME] [-P PARAM] [--list-cpu-types]
+             
+             [--cpu-type {AtomicSimpleCPU,BaseAtomicSimpleCPU,BaseMinorCPU,BaseNonCachingSimpleCPU,BaseO3CPU,BaseTimingSimpleCPU,DerivO3CPU,NonCachingSimpleCPU,O3CPU,TimingSimpleCPU,X86AtomicSimpleCPU,X86KvmCPU,X86MinorCPU,X86NonCachingSimpleCPU,X86O3CPU,X86TimingSimpleCPU}]
+             
+             [--list-bp-types] [--list-indirect-bp-types]
+             
+             [--bp-type {BiModeBP,LTAGE,LocalBP,MultiperspectivePerceptron64KB,MultiperspectivePerceptron8KB,MultiperspectivePerceptronTAGE64KB,MultiperspectivePerceptronTAGE8KB,TAGE,TAGE_SC_L_64KB,TAGE_SC_L_8KB,TournamentBP}]
+             
+             [--indirect-bp-type {SimpleIndirectPredictor}] [--list-rp-types] [--list-hwp-types]
+             
+             [--l1i-hwp-type {AMPMPrefetcher,BOPPrefetcher,DCPTPrefetcher,IndirectMemoryPrefetcher,IrregularStreamBufferPrefetcher,MultiPrefetcher,PIFPrefetcher,SBOOEPrefetcher,STeMSPrefetcher,SignaturePathPrefetcher,SignaturePathPrefetcherV2,SlimAMPMPrefetcher,StridePrefetcher,TaggedPrefetcher}]
+             
+             [--l1d-hwp-type {AMPMPrefetcher,BOPPrefetcher,DCPTPrefetcher,IndirectMemoryPrefetcher,IrregularStreamBufferPrefetcher,MultiPrefetcher,PIFPrefetcher,SBOOEPrefetcher,STeMSPrefetcher,SignaturePathPrefetcher,SignaturePathPrefetcherV2,SlimAMPMPrefetcher,StridePrefetcher,TaggedPrefetcher}]
+             
+             [--l2-hwp-type {AMPMPrefetcher,BOPPrefetcher,DCPTPrefetcher,IndirectMemoryPrefetcher,IrregularStreamBufferPrefetcher,MultiPrefetcher,PIFPrefetcher,SBOOEPrefetcher,STeMSPrefetcher,SignaturePathPrefetcher,SignaturePathPrefetcherV2,SlimAMPMPrefetcher,StridePrefetcher,TaggedPrefetcher}]
+             
+             [--checker] [--cpu-clock CPU_CLOCK] [--smt] [--elastic-trace-en]
+             
+             [--inst-trace-file INST_TRACE_FILE] [--data-trace-file DATA_TRACE_FILE] [--dist]
+             
+             [--dist-sync-on-pseudo-op] [--is-switch] [--dist-rank DIST_RANK] [--dist-size DIST_SIZE]
+             
+             [--dist-server-name DIST_SERVER_NAME] [--dist-server-port DIST_SERVER_PORT]
+             
+             [--dist-sync-repeat DIST_SYNC_REPEAT] [--dist-sync-start DIST_SYNC_START]
+             
+             [--ethernet-linkspeed ETHERNET_LINKSPEED] [--ethernet-linkdelay ETHERNET_LINKDELAY]
+             
+             [-I MAXINSTS] [--work-item-id WORK_ITEM_ID] [--num-work-ids NUM_WORK_IDS]
+             
+             
+             [--work-begin-cpu-id-exit WORK_BEGIN_CPU_ID_EXIT] [--work-end-exit-count WORK_END_EXIT_COUNT]
+             
+             [--work-begin-exit-count WORK_BEGIN_EXIT_COUNT] [--init-param INIT_PARAM] [--initialize-only]
+             
+             [--simpoint-profile] [--simpoint-interval SIMPOINT_INTERVAL]
+             
+             [--take-simpoint-checkpoints TAKE_SIMPOINT_CHECKPOINTS] [--restore-simpoint-checkpoint]
+             
+             [--take-checkpoints TAKE_CHECKPOINTS] [--max-checkpoints MAX_CHECKPOINTS]
+             
+             [--checkpoint-dir CHECKPOINT_DIR] [-r CHECKPOINT_RESTORE] [--checkpoint-at-end]
+             
+             [--work-begin-checkpoint-count WORK_BEGIN_CHECKPOINT_COUNT]
+             
+             [--work-end-checkpoint-count WORK_END_CHECKPOINT_COUNT]
+             
+             [--work-cpus-checkpoint-count WORK_CPUS_CHECKPOINT_COUNT]
+             
+             [--restore-with-cpu {AtomicSimpleCPU,BaseAtomicSimpleCPU,BaseMinorCPU,BaseNonCachingSimpleCPU,BaseO3CPU,BaseTimingSimpleCPU,DerivO3CPU,NonCachingSimpleCPU,O3CPU,TimingSimpleCPU,X86AtomicSimpleCPU,X86KvmCPU,X86MinorCPU,X86NonCachingSimpleCPU,X86O3CPU,X86TimingSimpleCPU}]
+             
+             [--repeat-switch REPEAT_SWITCH] [-s STANDARD_SWITCH] [-p PROG_INTERVAL] [-W WARMUP_INSTS]
+             
+             [--bench BENCH] [-F FAST_FORWARD] [-S] [--at-instruction]
+             
+             [--spec-input {ref,test,train,smred,mdred,lgred}] [--arm-iset {arm,thumb,aarch64}]
+             
+             
+             [--stats-root STATS_ROOT] [--override-vendor-string OVERRIDE_VENDOR_STRING] [-c CMD]
+             
+             [-o OPTIONS] [-e ENV] [-i INPUT] [--output OUTPUT] [--errout ERROUT] [--chroot CHROOT]
+             
+             [--interp-dir INTERP_DIR] [--redirects REDIRECTS] [--wait-gdb]

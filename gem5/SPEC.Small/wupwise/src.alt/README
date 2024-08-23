@@ -1,0 +1,45 @@
+The following is a README file describing the modifications
+and including the diff output.
+
+This is a possible README file that could be included 
+in the 311.wupwise source modified to run with 310.wupwise 
+data files.
+
+This file contains descriptions of modifications to 
+SPEC OMPL2001 311.fma3d source such that it will validate
+when run with SPEC OMPM2001 310.wupwise data files
+
+To help with making modifications manifest and 
+make converion back to OMPL2001 source code possible, 
+sections from the SPEC OMPL2001 suite are commented out
+and marked.  Sections required for SPEC OMPM2001 are 
+not commented out.
+
+Modification descriptions:
+
+SPEC OMPM2001 310.wupwise has the size of the problem
+hardcoded into the benchmark.
+
+SPEC OMPL2001 311.wupwise is modified so that the size 
+of the problem is hardcoded into the benchmark instead 
+of being read at runtime.
+
+
+Difference of SPEC OMPL2001 311.wupwise source against 
+SPEC OMPL2001 311.wupwise source modified to validate with
+SPEC OMPM2001 310.wupwise data files.
+<         READ(10,*)     N1,N2,N3,N4
+---
+> C SPEC OMPM2001
+>       N1=32
+>       N2=32
+>       N3=32
+>       N4=32
+> C SPEC OMPM2001
+> C SPEC OMPL2001
+> C        READ(10,*)     N1,N2,N3,N4
+> C SPEC OMPL2001
+> 
+
+
+

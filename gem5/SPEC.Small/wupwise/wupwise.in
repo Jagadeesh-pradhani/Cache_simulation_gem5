@@ -1,0 +1,6 @@
+(1.0E-1, 0.0E+0)                                  KAPPA
+10                                                NITER
+2                                                 ISOURCE
+1,1,1,1                                           IX,IY,IZ,IT
+1,1                                               IC,ID
+3785,0017,0018,0019                               SEED

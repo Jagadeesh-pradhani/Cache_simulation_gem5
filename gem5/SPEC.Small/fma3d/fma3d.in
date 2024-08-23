@@ -1,0 +1,15 @@
+ TITLE Concentrated Mass With A Spring Boundary Condition
+$
+ QAREC The natural frequency is omega = (spring_constant/mass)**0.5 (rad/sec)
+ QAREC Here, the mass = 10, the spring_constant = 1000, omega = 10 rad/sec
+ QAREC Thus, a half-period takes 0.314159 seconds.
+$
+ NPT 100 = 1,1,1
+ NPMASS 1 = 10 0,0,0,0,0,0 100
+ SPRINGBC 1,-100 = 11,0,0  0,0,1
+ MATERIAL 11 Spring 1, K1 = 1000.0
+ VELIC 1,100 = 0,0,-1.0
+ PARAM, DT_SCALE=0.1, ENG_BAL=1
+ PRINT BEGIN = 0.0, END = 1.0, DELTA = 1.0, NPT=ALL
+$
+ ENDDATA

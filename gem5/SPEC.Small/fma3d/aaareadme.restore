@@ -1,0 +1,882 @@
+
+
+                                    FMA-3D
+
+                         Version 10.01; April 5, 1997
+
+                         A Program For Simulating The
+         Large Deformation, Elastic and Inelastic, Transient Dynamic
+             Response of Three-Dimensional Solids and Structures
+
+       (Force = Mass x Acceleration -- Newton's Second Law of Motion)
+
+
+        Ordinarily, FMA-3D is executed by using the C-shell script
+        below. The script facilitates the identification of the user's
+        input files with the internal file names used in FMA-3D.
+
+        The SPEC benchmark/test harness is not easily "attached" to
+        FMA-3D via an intervening script. Given the fixed set of
+        test/train/reference input files and their separation into
+        different directories, FMA-3D has been modified to always
+        expect its input in the file "fma3d.in" and produce output
+        in the file "fma3d.out"
+
+        To restore FMA-3D to its original state, grep for the
+        locations where "!SPEC" is used to comment out the original
+        coding, remove "!SPEC" and the following substitute line(s),
+        if any. The following script will then work again as a means 
+        of running FMA-3D.
+
+        Samuel W. Key dba KEY Associates
+        1851 Tramway Terrace Loop NE
+        Albuquerque, NM 87122 USA
+        Telephone: (505) 856-1488
+        Faxsimile: (505) 856-1488
+        May, 1997
+
+================================================================================
+#! /usr/bin/csh
+#                             FMA-3D
+#
+# This is a csh script for running FMA-3D, an explicit transient dynamic 
+# structural code written in Fortran.
+#
+# Copyright (c) by KEY Associates;  7-NOV-1993 14:10:50.85
+# Copyright (c) by KEY Associates; 15-OCT-1995 15:28:52.00
+# Copyright (c) by KEY Associates;  3-MAR-1996 16:19:11.00
+# Copyright (c) by KEY Associates;  1-DEC-1996 10:17:58.00
+#
+
+set ls_hold=`alias ls`
+set rm_hold=`alias rm`
+set mv_hold=`alias mv`
+
+unalias ls
+unalias rm
+unalias mv
+
+# Set default code path
+#----------------------
+set VERSION="v10"
+set FMAROOT="/usr3/fma3d"
+set code_path="$FMAROOT/$VERSION/bin"
+set default_code_path=$code_path
+set code_size="500000"
+set default_code_size=$code_size
+
+# Check for command line arguments
+#---------------------------------
+
+set notify
+clear
+echo    " "
+echo    "FMA-3D Menu Command Script: Last Revision -- 18-MAY-1996 12:22:51.00"
+echo    "--------------------------------------------------------------------"
+echo    "Copyright (c) by KEY Associates, 1996"
+echo    "-------------------------------------"
+echo    " "
+echo -n "Enter Analysis Name --> "
+set analysis_name=$<
+
+loop:
+clear
+echo " "
+echo "******************** FMA-3D SCRIPT: Version 4.01 ********************"
+echo "****************** ANALYSIS NAME= $analysis_name"
+echo "*********** SIMULATION CODE PATH= $code_path"
+echo "****** STORAGE (IN 4-BYTE WORDS)= $code_size"
+echo " "
+echo ".........................................................................."
+echo " 0  Change analysis name"
+echo " Z  Change code size"
+echo "                            **INPUTS**   ***************OUTPUT*************"
+echo " 1  FMA :initial run       .inp,  .mdi   .elo, ,sdo, .cro, .mdo, .rdo, .pdb"
+echo " 2  FMA :unchanged restart .urs,  .rdi   .elo, ,sdo, .cro, .mdo, .rdo, .pdb"
+echo " 3  FMA :changed restart   .crs,  .rdi   .elo, ,sdo, .cro, .mdo, .rdo, .pdb"
+echo " 4  FMA :rezoned restart   .urs,  .rdi   .elo, ,sdo, .cro, .mdo, .rdo, .pdb"
+echo " "
+echo " 5  Edit .pdb (time,format).pdb          .pdb.edt-ASCII or .pdb.edt-BINARY"
+echo ".........................................................................."
+echo "sj  Show Jobs           ei  Edit .inp     ls  Directory Listing"
+echo "sp  Show Processes                        rm  Delete Files"
+echo "sl  Show FMA Log File                     ta  tar Archive Files"
+echo "                                          ua  untar Archive Files"
+echo " x  EXIT Script"
+echo " "
+echo -n "Select Option --> "
+set selection=$<
+
+# Invisable Options
+#------------------
+#   np     New Path
+#   verify (toggle)
+#   wait   (alternate f/ x)
+
+switch ($selection)
+
+#-------------------------------------------------------------------------------
+case 0:							# Change Analysis Name
+
+clear
+echo " "
+echo -n "Enter Analysis Name --> "
+set analysis_name=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case Z:							# Change Storage Size
+case z:
+
+clear
+echo " "
+echo -n "Enter New Storage Size [$default_code_size]--> "
+set new_size=$<
+
+if ($new_size == "") then
+  set code_size=$default_code_size
+else
+  set code_size=$new_size
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case 1:							# FMA Original Run
+
+clear
+echo " "
+echo " Running FMA-3D (original run)"
+echo " "
+
+set suffix=TMP`date +%M%S`
+# Input Files
+set fmasdi = $analysis_name.inp
+set fmardi = $analysis_name.rdi
+set fmamdi = $analysis_name.mdi
+set fmasri = $analysis_name.sri
+# Output Files
+set fmaelo = $analysis_name.elo
+set fmasdo = $analysis_name.sdo
+set fmacro = $analysis_name.cro
+set fmamdo = $analysis_name.mdo
+set fmardo = $analysis_name.rdo
+set fmarzo = $analysis_name.rzo
+set fmasro = $analysis_name.sro
+set fmapdb = $analysis_name.pdb
+
+if (! -e $fmasdi) then
+  echo " "
+  echo " The file $fmasdi was not found..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+  breaksw
+endif
+
+echo " "
+echo " FMA-3D Will Be Submitted To Background"
+echo " With The Follwing Input Files:"
+echo " "
+if (-e $fmasdi) echo "    Simulation Data Input:    $fmasdi"
+if (-e $fmardi) echo "    Restart Data Input:       $fmardi"
+if (-e $fmamdi) echo "    Mesh Data Input:          $fmamdi"
+if (-e $fmasri) echo "    Status Request Input:     $fmasri"
+echo " "
+echo -n " Are These Input Files Correct? (y/n) --> "
+set answer=$<
+
+if (!(($answer == "") || ($answer == "Y") || ($answer == "y"))) then
+  breaksw
+endif
+
+if (-e $fmasdi) ln -s $fmasdi fmasdi
+if (-e $fmardi) ln -s $fmardi fmardi
+if (-e $fmamdi) ln -s $fmamdi fmamdi
+if (-e $fmasri) ln -s $fmasri fmasri
+
+if (-e fmaelo)                    rm -f fmaelo
+if (-e fmasdo)                    rm -f fmasdo
+if (-e fmacro)                    rm -f fmacro
+if (-e fmamdo)                    rm -f fmamdo
+if (-e fmasro)                    rm -f fmasro
+if (-e fmapdb)                    rm -f fmapdb
+if ((`ls fmardo.* | wc -l`) != 0) rm -f fmardo.*
+if ((`ls fmarzo.* | wc -l`) != 0) rm -f fmarzo.*
+if (-e $analysis_name.fma_start)  rm -f $analysis_name.fma_start
+if (-e $analysis_name.fma_stop)   rm -f $analysis_name.fma_stop
+
+(                                                          \
+nohup                                                      \
+date > $analysis_name.fma_start                           ;\
+$code_path/fma3d.exe maxla=$code_size                     ;\
+if (-e fmasdi) rm -f fmasdi                               ;\
+if (-e fmardi) rm -f fmardi                               ;\
+if (-e fmamdi) rm -f fmamdi                               ;\
+if (-e fmasri) rm -f fmasri                               ;\
+if (-e fmaelo) mv -f fmaelo $fmaelo                       ;\
+if (-e fmasdo) mv -f fmasdo $fmasdo                       ;\
+if (-e fmacro) mv -f fmacro $fmacro                       ;\
+if (-e fmasro) mv -f fmasro $fmasro                       ;\
+if (-e fmamdo) mv -f fmamdo $fmamdo                       ;\
+if (-e fmapdb) mv -f fmapdb $fmapdb                       ;\
+set rdofnd=(`ls fmardo.* | wc -l`)                        ;\
+if ($rdofnd != 0) echo 'foreach i (fmardo.*)'     > tmpfl ;\
+if ($rdofnd != 0)   echo 'mv -f $i $fmardo.$i:e' >> tmpfl ;\
+if ($rdofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rdofnd != 0) source tmpfl                            ;\
+set rzofnd=(`ls fmarzo.* | wc -l`)                        ;\
+if ($rzofnd != 0) echo 'foreach i (fmarzo.*)'     > tmpfl ;\
+if ($rzofnd != 0)   echo 'mv -f $i $fmarzo.$i:e' >> tmpfl ;\
+if ($rzofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rzofnd != 0) source tmpfl                            ;\
+if (-e tmpfl) rm tmpfl                                    ;\
+date > $analysis_name.fma_stop                            ;\
+) &
+
+echo " "
+echo " FMA-3D Submitted To Background. Use 'sj', 'sp', & 'sl' To Examine"
+echo " The Status Of The Run.  Note The Job # Indicated in [] Above."
+echo " "
+echo "...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case 2:							# FMA Unchanged Restart
+
+clear
+echo " "
+echo " Running FMA-3D (unchanged restart)"
+echo " "
+
+echo "Available $analysis_name.rdo.nnn files:"
+echo "--------------------------------------"
+echo " "
+ls $analysis_name.rdo.*
+echo " "
+echo -n " Enter Restart Sequence Number (001,002,003...n) --> "
+set sequence=$<
+
+if ($sequence == "") breaksw
+
+set suffix=TMP`date +%M%S`
+# Input Files
+set fmasdi = $analysis_name.urs
+set fmardi = $analysis_name.rdo.$sequence
+set fmamdi = $analysis_name.mdi
+set fmasri = $analysis_name.sri
+# Output Files
+set fmaelo = $analysis_name.elo
+set fmasdo = $analysis_name.sdo
+set fmacro = $analysis_name.cro
+set fmamdo = $analysis_name.mdo
+set fmardo = $analysis_name.rdo
+set fmarzo = $analysis_name.rzo
+set fmasro = $analysis_name.sro
+set fmapdb = $analysis_name.pdb
+
+if ((! -e $fmasdi) || (! -e $fmardi)) then
+  echo " "
+  if (! -e $fmasdi) echo "The file $fmasdi was not found..."
+  if (! -e $fmardi) echo "The file $fmardi was not found..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+  breaksw
+endif
+
+echo " "
+echo " FMA-3D Will Be Submitted To Background"
+echo " With The Follwing Input Files:"
+echo " "
+if (-e $fmasdi) echo "    Simulation Data Input:    $fmasdi"
+if (-e $fmardi) echo "    Restart Data Input:       $fmardi"
+if (-e $fmamdi) echo "    Mesh Data Input:          $fmamdi"
+if (-e $fmasri) echo "    Status Request Input:     $fmasri"
+if (-e $fmapdb) echo "    Plotting_Database:        $fmapdb"
+echo " "
+echo -n " Are These Input Files Correct? (y/n) --> "
+set answer=$<
+
+if (!(($answer == "") || ($answer == "Y") || ($answer == "y"))) then
+  breaksw
+endif
+
+if (-e $fmasdi) ln -s $fmasdi fmasdi
+if (-e $fmardi) ln -s $fmardi fmardi
+if (-e $fmamdi) ln -s $fmamdi fmamdi
+if (-e $fmasri) ln -s $fmasri fmasri
+if (-e $fmapdb) ln -s $fmapdb fmapdb
+
+if (-e fmaelo)                    rm -f fmaelo
+if (-e fmasdo)                    rm -f fmasdo
+if (-e fmacro)                    rm -f fmacro
+if (-e fmamdo)                    rm -f fmamdo
+if (-e fmasro)                    rm -f fmasro
+if ((`ls fmardo.* | wc -l`) != 0) rm -f fmardo.*
+if ((`ls fmarzo.* | wc -l`) != 0) rm -f fmarzo.*
+if (-e $analysis_name.fma_start)  rm -f $analysis_name.fma_start
+if (-e $analysis_name.fma_stop)   rm -f $analysis_name.fma_stop
+
+(                                                          \
+nohup                                                      \
+date > $analysis_name.fma_start                           ;\
+$code_path/fma3d.exe maxla=$code_size                     ;\
+if (-e  fmasdi) rm -f fmasdi                              ;\
+if (-e  fmardi) rm -f fmardi                              ;\
+if (-e  fmamdi) rm -f fmamdi                              ;\
+if (-e  fmasri) rm -f fmasri                              ;\
+if (-e  fmaelo) mv -f fmaelo $fmaelo                      ;\
+if (-e  fmasdo) mv -f fmasdo $fmasdo                      ;\
+if (-e  fmacro) mv -f fmacro $fmacro                      ;\
+if (-e  fmasro) mv -f fmasro $fmasro                      ;\
+if (-e  fmamdo) mv -f fmamdo $fmamdo                      ;\
+if (-e $fmapdb) rm -f fmapdb                              ;\
+if (-e  fmapdb) mv -f fmapdb $fmapdb                      ;\
+set rdofnd=(`ls fmardo.* | wc -l`)                        ;\
+if ($rdofnd != 0) echo 'foreach i (fmardo.*)'     > tmpfl ;\
+if ($rdofnd != 0)   echo 'mv -f $i $fmardo.$i:e' >> tmpfl ;\
+if ($rdofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rdofnd != 0) source tmpfl                            ;\
+set rzofnd=(`ls fmarzo.* | wc -l`)                        ;\
+if ($rzofnd != 0) echo 'foreach i (fmarzo.*)'     > tmpfl ;\
+if ($rzofnd != 0)   echo 'mv -f $i $fmarzo.$i:e' >> tmpfl ;\
+if ($rzofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rzofnd != 0) source tmpfl                            ;\
+if (-e tmpfl) rm tmpfl                                    ;\
+date > $analysis_name.fma_stop                            ;\
+) &
+
+echo " "
+echo " FMA-3D Submitted To Background. Use 'sj', 'sp', & 'sl' To Examine"
+echo " The Status Of The Run.  Note The Job # Indicated in [] Above."
+echo " "
+echo " ...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case 3:							# FMA Changed Restart
+
+clear
+echo " "
+echo " Running FMA-3D (changed restart)"
+echo " "
+
+echo "Available $analysis_name.rdo.nnn files:"
+echo "--------------------------------------"
+echo " "
+ls $analysis_name.rdo.*
+echo " "
+echo -n " Enter Restart Sequence Number (001,002,003,...) --> "
+set sequence=$<
+
+if ($sequence == "") breaksw
+
+set suffix=TMP`date +%M%S`
+# Input Files
+set fmasdi = $analysis_name.crs
+set fmardi = $analysis_name.rdo.$sequence
+set fmamdi = $analysis_name.mdi
+set fmasri = $analysis_name.sri
+# Output Files
+set fmaelo = $analysis_name.elo
+set fmasdo = $analysis_name.sdo
+set fmacro = $analysis_name.cro
+set fmamdo = $analysis_name.mdo
+set fmardo = $analysis_name.rdo
+set fmarzo = $analysis_name.rzo
+set fmasro = $analysis_name.sro
+set fmapdb = $analysis_name.pdb
+
+if ((! -e $fmasdi) || (! -e $fmardi)) then
+  echo " "
+  if (! -e $fmasdi) echo " The file $fmasdi was not found..."
+  if (! -e $fmardi) echo " The file $fmardi was not found..."
+  echo " "
+  echo " ...press return to continue"
+  set null=$<
+  breaksw
+endif
+
+echo " "
+echo " FMA-3D Will Be Submitted To Background"
+echo " With The Follwing Input Files:"
+echo " "
+if (-e $fmasdi) echo "    Simulation Data Input:    $fmasdi"
+if (-e $fmardi) echo "    Restart Data Input:       $fmardi"
+if (-e $fmamdi) echo "    Mesh Data Input:          $fmamdi"
+if (-e $fmasri) echo "    Status Request Input:     $fmasri"
+echo " "
+echo -n " Are These Input Files Correct? (y/n) --> "
+set answer=$<
+
+if (!(($answer == "") || ($answer == "Y") || ($answer == "y"))) then
+  breaksw
+endif
+
+if (-e $fmasdi) ln -s $fmasdi fmasdi
+if (-e $fmardi) ln -s $fmardi fmardi
+if (-e $fmamdi) ln -s $fmamdi fmamdi
+if (-e $fmasri) ln -s $fmasri fmasri
+
+if (-e fmaelo)                    rm -f fmaelo
+if (-e fmasdo)                    rm -f fmasdo
+if (-e fmacro)                    rm -f fmacro
+if (-e fmamdo)                    rm -f fmamdo
+if (-e fmasro)                    rm -f fmasro
+if (-e fmapdb)                    rm -f fmapdb
+if ((`ls fmardo.* | wc -l`) != 0) rm -f fmardo.*
+if ((`ls fmarzo.* | wc -l`) != 0) rm -f fmarzo.*
+if (-e $analysis_name.fma_start)  rm -f $analysis_name.fma_start
+if (-e $analysis_name.fma_stop)   rm -f $analysis_name.fma_stop
+
+(                                                          \
+nohup                                                      \
+date > $analysis_name.fma_start                           ;\
+$code_path/fma3d.exe maxla=$code_size                     ;\
+if (-e fmasdi) rm -f fmasdi                               ;\
+if (-e fmardi) rm -f fmardi                               ;\
+if (-e fmamdi) rm -f fmamdi                               ;\
+if (-e fmasri) rm -f fmasri                               ;\
+if (-e fmaelo) mv -f fmaelo $fmaelo                       ;\
+if (-e fmasdo) mv -f fmasdo $fmasdo                       ;\
+if (-e fmacro) mv -f fmacro $fmacro                       ;\
+if (-e fmasro) mv -f fmasro $fmasro                       ;\
+if (-e fmamdo) mv -f fmamdo $fmamdo                       ;\
+if (-e fmapdb) mv -f fmapdb $fmapdb                       ;\
+set rdofnd=(`ls fmardo.* | wc -l`)                        ;\
+if ($rdofnd != 0) echo 'foreach i (fmardo.*)'     > tmpfl ;\
+if ($rdofnd != 0)   echo 'mv -f $i $fmardo.$i:e' >> tmpfl ;\
+if ($rdofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rdofnd != 0) source tmpfl                            ;\
+set rzofnd=(`ls fmarzo.* | wc -l`)                        ;\
+if ($rzofnd != 0) echo 'foreach i (fmarzo.*)'     > tmpfl ;\
+if ($rzofnd != 0)   echo 'mv -f $i $fmarzo.$i:e' >> tmpfl ;\
+if ($rzofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rzofnd != 0) source tmpfl                            ;\
+if (-e tmpfl) rm tmpfl                                    ;\
+date > $analysis_name.fma_stop                            ;\
+) &
+
+echo " "
+echo " FMA-3D Submitted To Background. Use 'sj', 'sp', & 'sl' To Examine"
+echo " The Status Of The Run.  Note The Job # Indicated in [] Above."
+echo " "
+echo " ...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case 4:							# FMA Rezoned Restart
+
+clear
+echo " "
+echo " Running FMA-3D (rezoned restart)"
+echo " "
+
+echo "Available $analysis_name.rzo.nnn files:"
+echo "---------------------------------------"
+echo " "
+ls $analysis_name.rzo.*
+echo " "
+echo -n " Enter Restart Sequence Number (001,002,003...n) --> "
+set sequence=$<
+
+if ($sequence == "") breaksw
+
+set suffix=TMP`date +%M%S`
+# Input Files
+set fmasdi = $analysis_name.urs
+set fmardi = $analysis_name.rzo.$sequence
+set fmamdi = $analysis_name.mdi
+set fmasri = $analysis_name.sri
+# Output Files
+set fmaelo = $analysis_name.elo
+set fmasdo = $analysis_name.sdo
+set fmacro = $analysis_name.cro
+set fmamdo = $analysis_name.mdo
+set fmardo = $analysis_name.rdo
+set fmarzo = $analysis_name.rzo
+set fmasro = $analysis_name.sro
+set fmapdb = $analysis_name.pdb
+
+if ((! -e $fmasdi) || (! -e $fmardi)) then
+  echo " "
+  if (! -e $fmasdi) echo "The file $fmasdi was not found..."
+  if (! -e $fmardi) echo "The file $fmardi was not found..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+  breaksw
+endif
+
+echo " "
+echo " FMA-3D Will Be Submitted To Background"
+echo " With The Follwing Input Files:"
+echo " "
+if (-e $fmasdi) echo "    Simulation Data Input:    $fmasdi"
+if (-e $fmardi) echo "    Restart Data Input:       $fmardi"
+if (-e $fmamdi) echo "    Mesh Data Input:          $fmamdi"
+if (-e $fmasri) echo "    Status Request Input:     $fmasri"
+echo " "
+echo -n " Are These Input Files Correct? (y/n) --> "
+set answer=$<
+
+if (!(($answer == "") || ($answer == "Y") || ($answer == "y"))) then
+  breaksw
+endif
+#
+# Soft Links To Actual Input Files
+#
+if (-e $fmasdi) ln -s $fmasdi fmasdi
+if (-e $fmardi) ln -s $fmardi fmardi
+if (-e $fmamdi) ln -s $fmamdi fmamdi
+if (-e $fmasri) ln -s $fmasri fmasri
+#
+# Clean Up Any Left-Over FMA-3D Output Files
+#
+if (-e fmaelo)                    rm -f fmaelo
+if (-e fmasdo)                    rm -f fmasdo
+if (-e fmacro)                    rm -f fmacro
+if (-e fmamdo)                    rm -f fmamdo
+if (-e fmasro)                    rm -f fmasro
+if ((`ls fmardo.* | wc -l`) != 0) rm -f fmardo.*
+if ((`ls fmarzo.* | wc -l`) != 0) rm -f fmarzo.*
+if (-e $analysis_name.fma_start)  rm -f $analysis_name.fma_start
+if (-e $analysis_name.fma_stop)   rm -f $analysis_name.fma_stop
+#
+# Build Background csh Command Stream
+#
+(                                                          \
+nohup                                                      \
+date > $analysis_name.fma_start                           ;\
+$code_path/fma3d.exe maxla=$code_size                     ;\
+if (-e  fmasdi) rm -f fmasdi                              ;\
+if (-e  fmardi) rm -f fmardi                              ;\
+if (-e  fmamdi) rm -f fmamdi                              ;\
+if (-e  fmasri) rm -f fmasri                              ;\
+if (-e  fmaelo) mv -f fmaelo $fmaelo                      ;\
+if (-e  fmasdo) mv -f fmasdo $fmasdo                      ;\
+if (-e  fmacro) mv -f fmacro $fmacro                      ;\
+if (-e  fmasro) mv -f fmasro $fmasro                      ;\
+if (-e  fmamdo) mv -f fmamdo $fmamdo                      ;\
+if (-e  fmapdb) mv -f fmapdb $fmapdb                      ;\
+set rdofnd=(`ls fmardo.* | wc -l`)                        ;\
+if ($rdofnd != 0) echo 'foreach i (fmardo.*)'     > tmpfl ;\
+if ($rdofnd != 0)   echo 'mv -f $i $fmardo.$i:e' >> tmpfl ;\
+if ($rdofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rdofnd != 0) source tmpfl                            ;\
+set rzofnd=(`ls fmarzo.* | wc -l`)                        ;\
+if ($rzofnd != 0) echo 'foreach i (fmarzo.*)'     > tmpfl ;\
+if ($rzofnd != 0)   echo 'mv -f $i $fmarzo.$i:e' >> tmpfl ;\
+if ($rzofnd != 0) echo 'end'                     >> tmpfl ;\
+if ($rzofnd != 0) source tmpfl                            ;\
+if (-e tmpfl) rm tmpfl                                    ;\
+date > $analysis_name.fma_stop                            ;\
+) &
+
+echo " "
+echo " FMA-3D Submitted To Background. Use 'sj', 'sp', & 'sl' To Examine"
+echo " The Status Of The Run.  Note The Job # Indicated in [] Above."
+echo " "
+echo " ...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case 5:							# BINARY TO ASCII *PDB
+
+clear
+echo " "
+echo "Current Plotting_Databases:"
+echo "--------------------------"
+echo " "
+ls $analysis_name.pdb*
+echo " "
+echo -n " Enter Plotting_Database Extension (pdb,pdb_001,...) --> "
+set extension=($<)
+set plotdb=$analysis_name.$extension
+
+if ($plotdb != "") then
+  if (-e $plotdb) then
+
+    ln -s $plotdb fmapdb
+    $FMAROOT/ut/EDITPDB
+    rm fmapdb
+    if ((`ls fmapdb.edt* | wc -l`) != 0) then
+      set fmapsh=""
+      foreach i (fmapdb.edt*)
+        mv -f $i $plotdb.$i:e
+        set fmapsh=$plotdb.$i:e
+      end
+      echo " "
+      echo " ...press return to continue"
+      set null=$<
+    endif
+
+    if ( -e $fmapsh) then
+      echo " "
+      ls $fmapsh
+      echo " "
+      echo -n ' Push edited PDB to WHITE::WHITE$DUA1:[FMA3D.UNIX]* (y/n) --> '
+      set answer=$<
+
+      if (($answer == "") || ($answer == "Y") || ($answer == "y")) then
+        dcp $fmapsh white/swk/snotkory::'WHITE$DUA1:[FMA3D.UNIX]fmachx.dat'
+      endif
+    endif
+
+  else
+    echo " "
+    echo " WARNING: The file $plotdb was not found..."
+    echo " ...press return to continue"
+    set null=$<
+  endif
+else
+  breaksw
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case sj:							# SHOW JOBS
+
+clear
+echo " "
+echo "Current Shell Jobs:"
+echo "------------------"
+echo " "
+jobs
+echo " "
+echo "...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case sp:							# SHOW PROCESSES
+
+clear
+echo " "
+echo "Current Processes:"
+echo "-----------------"
+echo " "
+ps -u $user
+echo " "
+echo "...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case sl:						# SHOW FMA-3D LOG FILE
+
+clear
+echo " "
+echo "Available FMA-3D Log Files:"
+echo "--------------------------"
+echo " "
+ls *elo
+echo " "
+echo -n " Enter Filename --> "
+set file=$<
+
+if ($file != "") then
+  if (-e $file) then
+    more $file
+    echo " "
+    echo "...press return to continue"
+    set null=$<
+  else
+    echo " "
+    echo " WARNING: The file $file was not found..."
+    echo " ...press return to continue"
+    set null=$<
+  endif
+else
+  breaksw
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case ei:						# EDIT .INP FILE
+
+clear
+echo " "
+echo "Available FMA-3D Input Files:"
+echo "----------------------------"
+echo " "
+if ((`ls *.inp | wc -l`) != 0) ls *.inp
+if ((`ls *.urs | wc -l`) != 0) ls *.urs
+if ((`ls *.crs | wc -l`) != 0) ls *.crs
+echo " "
+echo -n "Enter Filename --> "
+set file=$<
+
+if (-e $file) then
+  vi $file
+else
+  echo " "
+  echo -n "WARNING: The file $file was not found...create? (y/n)"
+  set response=$<
+
+  if (($response == "") || ($response == "Y") || ($response == "y")) then
+    vi $file
+  endif
+
+endif
+
+breaksw
+#-------------------------------------------------------------------------------
+case ls:						# DIRECTORY LISTING
+
+clear
+echo " "
+echo "Directory Listing:"
+echo "-----------------"
+echo " "
+ls -CaF
+echo " "
+echo "...press return to continue"
+set null=$<
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case rm:							# DELETE FILES
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case ta:							# tar ARCHIVE
+
+clear
+echo " "
+echo " Archiving files To $analysis_name.tar ..."
+echo " "
+
+if ((`ls $analysis_name.* | wc -l`) != 0) then
+
+  tar -cvf ./$analysis_name.tar $analysis_name.*
+
+  mv $analysis_name.tar tar.$analysis_name
+  rm $analysis_name.*
+  mv tar.$analysis_name $analysis_name.tar
+
+  echo " "
+  echo "...archiving completed..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+
+else
+
+  echo " "
+  echo "...files for archiving were not found\!"
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case ut:							# untar ARCHIVE
+
+clear
+echo " "
+echo " Restoring Files From $analysis_name.tar ..."
+echo " "
+
+if (-e $analysis_name.tar) then
+
+  tar -xvf ./$analysis_name.tar
+
+  rm $analysis_name.tar
+
+  echo " "
+  echo "...file restoration completed..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+
+else
+
+  echo " "
+  echo "...archive file $analysis_name.tar was not found\!"
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case wait:							# WAIT
+
+echo "Waiting for Background Execution To Complete..."
+wait
+
+case x:								# EXIT
+
+clear
+alias ls $ls_hold
+alias rm $rm_hold
+alias mv $mv_hold
+unset verbose
+exit
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case np:							# NEW PATH
+
+clear
+echo " "
+echo -n " Enter New Code Path [$code_path] --> "
+set new_path=$<
+
+if ($new_path == "") then
+  set code_path=$default_code_path
+else if (-e $new_path) then
+  set code_path=$new_path
+else
+  echo " "
+  echo "...new directory was not found..."
+  echo " "
+  echo "...press return to continue"
+  set null=$<
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+case verify:							# VERIFY
+
+if ($?verbose) then
+  unset verbose
+else
+  set verbose
+endif
+
+breaksw
+
+#-------------------------------------------------------------------------------
+default:
+endsw
+
+#-------------------------------------------------------------------------------
+goto loop
+#
+# End of script
+#

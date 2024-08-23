@@ -1,0 +1,12 @@
+Compile 
+
+
+	gcc *.c
+
+
+RUN with data
+
+
+	./a.out  inp.in	
+
+

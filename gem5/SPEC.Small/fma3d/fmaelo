@@ -1,0 +1,202 @@
+
+
+            _/_/_/_/_/_/  _/_/          _/_/       _/_/_/                   _/_/_/_/      _/_/_/_/_/_/ 
+           _/_/_/_/_/_/  _/_/_/      _/_/_/    _/_/_/_/_/_/             _/_/_/_/_/_/_/   _/_/_/_/_/_/-/
+          _/_/          _/_/_/_/  _/_/_/_/   _/_/      _/_/            _/_/       _/_/  _/_/       _/_/
+         _/_/          _/_/ _/_/_/_/ _/_/  _/_/        _/_/                      _/_/  _/_/        _/_/
+        _/_/_/_/_/    _/_/  _/_/_/  _/_/  _/_/        _/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/ 
+       _/_/_/_/_/    _/_/   _/_/   _/_/  _/_/_/_/_/_/_/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/  
+      _/_/          _/_/          _/_/  _/_/_/_/_/_/_/_/                      _/_/  _/_/        _/_/   
+     _/_/          _/_/          _/_/  _/_/        _/_/           _/_/       _/_/  _/_/       _/_/     
+    _/_/          _/_/          _/_/  _/_/        _/_/           _/_/_/_/_/_/_/   _/_/_/_/_/_/_/       
+   _/_/          _/_/          _/_/  _/_/        _/_/              _/_/_/_/      _/_/_/_/_/_/          
+
+     Version: SPEC CPU
+     Released: 
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: INCLUDE_FILE
+ *** INFORMATION *** Number Of Items Allocated:      100
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: VALUE
+ *** INFORMATION *** Number Of Items Allocated:        2
+  
+  Entered INIT_INCLUDE_FILE.
+  
+  
+  Entered SCAN_INCLUDED_FILES.
+  
+
+ *** INFORMATION *** SCAN_INCLUDED_FILES.001.02
+ *** INFORMATION *** INCLUDE File Scanned: fma3d.in
+  
+  Entered SCAN_INPUT_RECORDS.
+  
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: VALUE
+ *** INFORMATION *** Number Of Items Allocated:       18
+  
+  Entered PRE_READ_CONTROL_RECORDS.
+  
+  
+  Entered ALLOCATE_STORAGE.
+  
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: QA_RECORD
+ *** INFORMATION *** Number Of Items Allocated:        2
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: MASSPROP
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: MATERIAL
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: NODAL_POINT_MASS
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: SPRING_BC
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: NODE
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: FORCE
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: MOTION
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: VELOCITY_IC
+ *** INFORMATION *** Number Of Items Allocated:        1
+  
+  Entered READ_INCLUDED_FILES.
+  
+
+ *** INFORMATION *** READ_INCLUDED_FILES.001.02
+ *** INFORMATION *** INCLUDE File Read: fma3d.in
+  
+  Entered READ_INPUT_RECORDS.
+  
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: INPV
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: JNPV
+ *** INFORMATION *** Number Of Items Allocated:        1
+  
+  Entered RELINK_USER_IDS.
+  
+  
+  Entered GET_AUXILIARY_STORAGE_LENGTH.
+  
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: STATE_VARIABLES
+ *** INFORMATION *** Number Of Items Allocated:        0
+  
+  Entered INITIALIZE_WORKING_STORAGE.
+  
+  
+  Entered INITIALIZE_MOTION.
+  
+  
+  Entered SLIDING_INTERFACE_INIT.
+  
+  
+  Entered SOLVE.
+  
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: NPGRP
+ *** INFORMATION *** Number Of Items Allocated:        1
+
+ *** INFORMATION *** SCATTER_ELEMENT_NODAL_FORCES.001.00
+ *** INFORMATION *** Number Of Parallel-Safe Scatter Groups:       0
+
+
+   Cycle No.   Time     Dt_inc    Dt_min  Crit_El  Dt_max      Critical Element Type       Ext_Eng     K.E.    Int_Eng  % Error
+        0    0.00E+00  0.00E+00  1.41E-01       0   1.41E-01          Spring BC             5.00E+00  5.00E+00  0.00E+00     0.00
+        1    1.41E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.00E+00  5.00E+00  0.00E+00     0.00
+        2    2.83E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.80E+00  4.80E+00  0.00E+00     0.00
+        3    4.24E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.42E+00  4.42E+00  0.00E+00     0.00
+        4    5.66E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.89E+00  3.89E+00  0.00E+00     0.00
+        5    7.07E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.25E+00  3.25E+00  0.00E+00     0.00
+        6    8.49E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.55E+00  2.55E+00  0.00E+00    -0.00
+        7    9.90E-02  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.84E+00  1.84E+00  0.00E+00    -0.00
+        8    1.13E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.19E+00  1.19E+00  0.00E+00    -0.00
+        9    1.27E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             6.49E-01  6.49E-01  0.00E+00    -0.00
+       10    1.41E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.53E-01  2.53E-01  0.00E+00    -0.00
+       11    1.56E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.59E-02  3.59E-02  0.00E+00    -0.00
+       12    1.70E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.63E-02  1.63E-02  0.00E+00    -0.00
+       13    1.84E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.95E-01  1.95E-01  0.00E+00    -0.00
+       14    1.98E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.59E-01  5.59E-01  0.00E+00    -0.00
+       15    2.12E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.08E+00  1.08E+00  0.00E+00    -0.00
+       16    2.26E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.71E+00  1.71E+00  0.00E+00    -0.00
+       17    2.40E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.41E+00  2.41E+00  0.00E+00    -0.00
+       18    2.55E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.11E+00  3.11E+00  0.00E+00    -0.00
+       19    2.69E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.77E+00  3.77E+00  0.00E+00    -0.00
+       20    2.83E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.33E+00  4.33E+00  0.00E+00    -0.00
+       21    2.97E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.74E+00  4.74E+00  0.00E+00    -0.00
+       22    3.11E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.98E+00  4.98E+00  0.00E+00    -0.00
+       23    3.25E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.02E+00  5.02E+00  0.00E+00    -0.00
+       24    3.39E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.78E+00  4.78E+00  0.00E+00    -0.00
+       25    3.54E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.36E+00  4.36E+00  0.00E+00    -0.00
+       26    3.68E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.80E+00  3.80E+00  0.00E+00    -0.00
+       27    3.82E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.14E+00  3.14E+00  0.00E+00    -0.00
+       28    3.96E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.43E+00  2.43E+00  0.00E+00    -0.00
+       29    4.10E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.73E+00  1.73E+00  0.00E+00    -0.00
+       30    4.24E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.09E+00  1.09E+00  0.00E+00    -0.00
+       31    4.38E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.64E-01  5.64E-01  0.00E+00    -0.00
+       32    4.53E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.97E-01  1.97E-01  0.00E+00    -0.00
+       33    4.67E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.64E-02  1.64E-02  0.00E+00    -0.00
+       34    4.81E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.61E-02  3.61E-02  0.00E+00    -0.00
+       35    4.95E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.54E-01  2.54E-01  0.00E+00    -0.00
+       36    5.09E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             6.54E-01  6.54E-01  0.00E+00    -0.00
+       37    5.23E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.20E+00  1.20E+00  0.00E+00    -0.00
+       38    5.37E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.86E+00  1.86E+00  0.00E+00    -0.00
+       39    5.52E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.57E+00  2.57E+00  0.00E+00    -0.00
+       40    5.66E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.27E+00  3.27E+00  0.00E+00    -0.00
+       41    5.80E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.92E+00  3.92E+00  0.00E+00    -0.00
+       42    5.94E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.46E+00  4.46E+00  0.00E+00    -0.00
+       43    6.08E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.84E+00  4.84E+00  0.00E+00     0.00
+       44    6.22E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.04E+00  5.04E+00  0.00E+00    -0.00
+       45    6.36E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.64E+00  4.64E+00  0.00E+00    -0.00
+       46    6.51E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.09E+00  4.09E+00  0.00E+00    -0.00
+       47    6.65E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.42E+00  3.42E+00  0.00E+00    -0.00
+       48    6.79E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.68E+00  2.68E+00  0.00E+00    -0.00
+       49    6.93E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.95E+00  1.95E+00  0.00E+00    -0.00
+       50    7.07E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.26E+00  1.26E+00  0.00E+00    -0.00
+       51    7.21E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             6.90E-01  6.90E-01  0.00E+00    -0.00
+       52    7.35E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.71E-01  2.71E-01  0.00E+00    -0.00
+       53    7.50E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.00E-02  4.00E-02  0.00E+00    -0.00
+       54    7.64E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.55E-02  1.55E-02  0.00E+00    -0.00
+       55    7.78E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.99E-01  1.99E-01  0.00E+00    -0.00
+       56    7.92E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             5.77E-01  5.77E-01  0.00E+00    -0.00
+       57    8.06E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.12E+00  1.12E+00  0.00E+00    -0.00
+       58    8.20E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.78E+00  1.78E+00  0.00E+00    -0.00
+       59    8.34E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.51E+00  2.51E+00  0.00E+00    -0.00
+       60    8.49E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.25E+00  3.25E+00  0.00E+00    -0.00
+       61    8.63E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.94E+00  3.94E+00  0.00E+00    -0.00
+       62    8.77E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.53E+00  4.53E+00  0.00E+00    -0.00
+       63    8.91E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.96E+00  4.96E+00  0.00E+00    -0.00
+       64    9.05E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             4.34E+00  4.34E+00  0.00E+00    -0.00
+       65    9.19E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             3.60E+00  3.60E+00  0.00E+00    -0.00
+       66    9.33E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.80E+00  2.80E+00  0.00E+00    -0.00
+       67    9.48E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.00E+00  2.00E+00  0.00E+00    -0.00
+       68    9.62E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             1.27E+00  1.27E+00  0.00E+00    -0.00
+       69    9.76E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             6.73E-01  6.73E-01  0.00E+00    -0.00
+       70    9.90E-01  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.45E-01  2.45E-01  0.00E+00    -0.00
+       71    1.00E+00  1.41E-02  1.41E-01       0   1.41E-01          Spring BC             2.58E-02  2.58E-02  0.00E+00    -0.00

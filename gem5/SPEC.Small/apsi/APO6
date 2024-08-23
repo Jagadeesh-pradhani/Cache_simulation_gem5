@@ -1,0 +1,212 @@
+
+
+
+
+          *********************************************************
+          *********************************************************
+          *** PROGRAM TO  SOLVE FOR THE  MESOSCALE AND SYNOPTIC ***
+          *** VARIATIONS OF POTENTIAL TEMPERATURE, U AND V WIND ***
+          *** COMPONENTS, AND THE MESOSCALE VERTICAL VELOCITY W ***
+          *** PRESSURE AND DISTRIBUTION OF POLLUTANTS C  HAVING ***
+          *** SOURCES  Q. THE SYNOPTIC  SCALE COMPONENTS ARE IN ***
+          *** QUASSI-STEADY STATE BALANCE,  WHILE THE MESOSCALE ***
+          *** PRESSURE AND VELOCITY  W ARE FOUND DIAGNOSTICALLY ***
+          *********************************************************
+          *********************************************************
+
+
+
+
+------------------------------------------------!
+  ***  D A T A   F O R   M E S O - R U N  ***   !
+------------------------------------------------!
+              INTEGER CONSTANTS                 !
+------------------------------------------------!
+     L E G E N T             !   V A L U E      !
+------------------------------------------------!
+------------------------------------------------!
+             REAL CONSTANTS                     !
+------------------------------------------------!
+     L E G E N T             !   V A L U E      !
+------------------------------------------------!
+
+ FOR LINEAR STABILITY,  UMAX < 15.78  VMAX < -0.00
+
+ ** TOTAL SIMULATION PERIOD   600000.0S, =166.67 HOURS **
+ ** HEAT AMPLITUDE  11.00 K,    LAG = 14.00(H),   BIAS A    0.1
+
+
+ ********   LAND SURFACE FORCING  FUNCTION ********* 
+
+ T(X,Y,T)= 11.0{EXP -((T-14.0)/ 4.9)**2 - 0.1}
+
+ ********   TIME UNITS ARE IN HOURS        *********
+
+  WORK ARRAY HAS        34402  ELEMENTS.  
+
+
+ ACTUAL SOURCE VALUE   0.1087E+00 AT GRID POINTS I,J,K   15   1   1
+ ACTUAL SOURCE VALUE   0.1101E+00 AT GRID POINTS I,J,K   16   1   1
+ ACTUAL SOURCE VALUE   0.1087E+00 AT GRID POINTS I,J,K   17   1   1
+ ACTUAL SOURCE VALUE   0.1145E+00 AT GRID POINTS I,J,K   15   1   2
+ ACTUAL SOURCE VALUE   0.1159E+00 AT GRID POINTS I,J,K   16   1   2
+ ACTUAL SOURCE VALUE   0.1145E+00 AT GRID POINTS I,J,K   17   1   2
+ ACTUAL SOURCE VALUE   0.1087E+00 AT GRID POINTS I,J,K   15   1   3
+ ACTUAL SOURCE VALUE   0.1101E+00 AT GRID POINTS I,J,K   16   1   3
+ ACTUAL SOURCE VALUE   0.1087E+00 AT GRID POINTS I,J,K   17   1   3
+
+
+
+ ***********************  MEAN PROFILES ***********************
+
+ CONVERGENCE AFTER     34 ITERATIONS.    NORM=   0.0000E+00
+ EQUIVALENT TIME FOR THE MEAN PROFILES  IS    2040.00 SEC. 
+ Z0=  0.0200   ZMIX= 224.85   U*=  0.05270   L(4)=      337.11
+
+
+   K    HEIGHT (M)       UG(Z)     VG(Z)      TM(Z)       KM(Z)       UM(Z)       VM(Z)  
+
+   1       0.00          6.88      0.00      290.10        0.10        0.00        0.00
+   2      13.62          6.88      0.00      290.13        0.26        0.56        1.18
+   3      28.79          6.88      0.00      290.18        0.40        0.96        1.67
+   4      45.68          6.89      0.00      290.25        0.50        1.32        1.96
+   5      64.49          6.89      0.00      290.33        0.56        1.71        2.16
+   6      85.43          6.89      0.00      290.42        0.57        2.13        2.33
+   7     108.76          6.89      0.00      290.53        0.52        2.61        2.48
+   8     134.72          6.90      0.00      290.66        0.42        3.15        2.61
+   9     163.64          6.90      0.00      290.81        0.29        3.73        2.69
+  10     195.84          6.90      0.00      290.97        0.17        4.33        2.72
+  11     231.69          6.91      0.00      291.16        0.11        4.91        2.67
+  12     271.62          6.91      0.00      291.36        0.10        5.46        2.56
+  13     316.08          6.92      0.00      291.58        0.10        5.97        2.38
+  14     365.58          6.92      0.00      291.83        0.10        6.44        2.14
+  15     420.70          6.93      0.00      292.10        0.10        6.84        1.85
+  16     482.08          6.94      0.00      292.41        0.10        7.16        1.51
+  17     550.43          6.95      0.00      292.75        0.10        7.38        1.15
+  18     626.54          6.96      0.00      293.13        0.10        7.50        0.80
+  19     711.29          6.97      0.00      293.56        0.10        7.53        0.48
+  20     805.66          6.98      0.00      294.03        0.10        7.49        0.22
+  21     910.74          6.99      0.00      294.55        0.10        7.39        0.03
+  22    1027.75          7.00      0.00      295.14        0.10        7.27       -0.08
+  23    1158.04          7.02      0.00      295.79        0.10        7.16       -0.12
+  24    1303.12          7.04      0.00      296.52        0.10        7.08       -0.11
+  25    1464.68          7.06      0.00      297.32        0.10        7.05       -0.07
+  26    1644.57          7.08      0.00      298.22        0.10        7.05       -0.03
+  27    1844.89          7.10      0.00      299.22        0.10        7.08       -0.01
+  28    2067.94          7.13      0.00      300.34        0.10        7.12        0.00
+  29    2316.32          7.16      0.00      301.58        0.10        7.15        0.00
+  30    2592.89          7.19      0.00      302.96        0.10        7.19        0.00
+  31    2900.86          7.23      0.00      304.50        0.10        7.23        0.00
+  32    3243.79          7.27      0.00      306.22        0.10        7.27        0.00
+
+ **************************************************************
+
+
+ ****************  X - FILTER  ***************** 
+
+ 1122345780000000000000000000000000000000000000000000000875432211
+
+
+
+            ****   TOPOGRAPHY  MAX =       1.00 MIN =      -1.00  METERS   ****
+
+
+ LLLLLLLLLLLLLLLLLWWWWWWWWWWWWLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+
+
+
+
+
+
+                  SOLVING THE EQUATION 
+   DC/DT=U*DC/DX+V*DC/DY+KX*D2C/DX2+KY*DC/DY+D(KZ*DC/DZ)/DZ + Q,
+   WHERE C(X,Y,Z,T0)=0 WITH PERIODIC BOUNDARY CONDITIONS IN    X,Y
+   AND FLUX VERTICAL BOUNDARY CONDITIONS. 
+
+
+
+
+   X AXIS IS DIVIDED INTO   64  SUBINTERVALS
+   Y AXIS IS DIVIDED INTO    1  SUBINTERVALS
+   Z AXIS IS DIVIDED INTO   32  SUBINTERVALS
+        5000  TIME STEPS WERE REQUESTED 
+
+
+  BATCH MODE = NO       SPECTRAL FILTER       STRECHED Z, Z=F(H)  
+
+   Z=120.0*(EXP(H/ 0.3)-1),  UPWIND A= 0.5
+
+
+    FOLLOWING NUMBERS ARE IN USER WORLD UNITS
+
+
+   X  DOMAIN  (      0.0, 504000.0),    DX=  8000.00
+   Y  DOMAIN  (      0.0,      0.0),    DY=  5000.00
+   Z  DOMAIN  (      0.0,    422.3),    DZ=    13.62
+   T  DOMAIN  (      0.0, 599880.0),    DT=   120.00
+
+   CENTRAL LATITUDE  40.00 DEG,    GRAPH STEP 720
+
+
+  DIFFUSIVITIES   (KX,KY,KZ) = (   7000.00   1000.00      0.10)
+
+ ** TIME SCHEMES USED **  LEAP  FROG 2ND IN X,Y  CRANK-NICKOLSON IN Z
+
+ T(     0)=     0.0  FUM= 0.1000E+01  E= 0.0000E+00  T= 0.0000E+00  P= 0.0000E+00
+        TS= 290.10    U= 0.0000E+00  V= 0.0000E+00  W= 0.0000E+00
+ T(   100)= 12000.0  FUM= 0.9119E+04  E= 0.8497E+02  T=-0.1307E+03  P=-0.1325E+00
+        TS= 289.09    U= 0.2666E+02  V= 0.3314E+02  W=-0.2135E-03
+ T(   200)= 24000.0  FUM= 0.1428E+05  E= 0.6447E+02  T=-0.3688E+02  P= 0.8875E+00
+        TS= 290.14    U= 0.9205E+02  V=-0.8138E+02  W=-0.9084E-04
+ T(   300)= 36000.0  FUM= 0.1527E+05  E= 0.9281E+03  T= 0.1228E+04  P=-0.1195E+02
+        TS= 294.58    U=-0.2668E+03  V=-0.1369E+03  W= 0.2188E-02
+ T(   400)= 48000.0  FUM= 0.1860E+05  E= 0.2853E+04  T= 0.4570E+04  P=-0.1429E+03
+        TS= 299.77    U=-0.6430E+03  V= 0.3431E+03  W= 0.1596E-01
+ T(   500)= 60000.0  FUM= 0.2119E+05  E= 0.5665E+04  T= 0.5588E+04  P=-0.2458E+03
+        TS= 297.24    U=-0.3383E+03  V= 0.1153E+04  W= 0.2074E-01
+ T(   600)= 72000.0  FUM= 0.3003E+05  E= 0.7324E+04  T= 0.4921E+04  P=-0.2501E+03
+        TS= 291.49    U= 0.9545E+03  V= 0.1165E+04  W= 0.1201E-01
+ T(   700)= 84000.0  FUM= 0.3979E+05  E= 0.7554E+04  T= 0.4533E+04  P=-0.2522E+03
+        TS= 289.30    U= 0.1646E+04  V=-0.2773E+03  W= 0.8708E-02
+
+
+
+
+
+
+                  SOLVING THE EQUATION 
+   DC/DT=U*DC/DX+V*DC/DY+KX*D2C/DX2+KY*DC/DY+D(KZ*DC/DZ)/DZ + Q,
+   WHERE C(X,Y,Z,T0)=0 WITH PERIODIC BOUNDARY CONDITIONS IN    X,Y
+   AND FLUX VERTICAL BOUNDARY CONDITIONS. 
+
+
+
+
+   X AXIS IS DIVIDED INTO   64  SUBINTERVALS
+   Y AXIS IS DIVIDED INTO    1  SUBINTERVALS
+   Z AXIS IS DIVIDED INTO   32  SUBINTERVALS
+        5000  TIME STEPS WERE REQUESTED 
+
+
+  BATCH MODE = NO       SPECTRAL FILTER       STRECHED Z, Z=F(H)  
+
+   Z=120.0*(EXP(H/ 0.3)-1),  UPWIND A= 0.5
+
+
+    FOLLOWING NUMBERS ARE IN USER WORLD UNITS
+
+
+   X  DOMAIN  (      0.0, 504000.0),    DX=  8000.00
+   Y  DOMAIN  (      0.0,      0.0),    DY=  5000.00
+   Z  DOMAIN  (      0.0,    422.3),    DZ=    13.62
+   T  DOMAIN  (      0.0, 599880.0),    DT=   120.00
+
+   CENTRAL LATITUDE  40.00 DEG,    GRAPH STEP 720
+
+
+  DIFFUSIVITIES   (KX,KY,KZ) = (   7000.00   1000.00      0.10)
+
+ ** TIME SCHEMES USED **  LEAP  FROG 2ND IN X,Y  CRANK-NICKOLSON IN Z
+
+ T(   800)=  9480.0  FUM= 0.4898E+05  E= 0.6748E+04  T= 0.4399E+04  P=-0.2519E+03
