@@ -67,6 +67,9 @@ gem5/build/X86/gem5.opt --debug-flags=RubyCache --debug-file=output.out.gz gem5/
 
 
 
+## Output
+![image](https://github.com/user-attachments/assets/bcfe0e8d-5f9f-4b37-9073-4c66eafcb782)
+
 
 
    
