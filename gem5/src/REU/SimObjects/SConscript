@@ -1,0 +1,6 @@
+Import('*')
+
+SimObject('CacheInfo.py', sim_objects=['CacheInfo'])
+
+Source('cache_info.cc')
+DebugFlag("CacheInfoFlag")
