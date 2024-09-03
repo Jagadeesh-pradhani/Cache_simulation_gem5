@@ -47,6 +47,9 @@ SimObject('RubyCache.py', sim_objects=['RubyCache'])
 SimObject('DirectoryMemory.py', sim_objects=['RubyDirectoryMemory'])
 SimObject('RubyPrefetcher.py', sim_objects=['RubyPrefetcher'])
 SimObject('WireBuffer.py', sim_objects=['RubyWireBuffer'])
+SimObject('MySimpleObject.py', sim_objects=['MySimpleObject'])
+
+Source('my_simple_object.cc')
 
 Source('DirectoryMemory.cc')
 Source('CacheMemory.cc')
