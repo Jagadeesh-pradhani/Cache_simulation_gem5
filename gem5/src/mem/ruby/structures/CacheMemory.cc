@@ -53,6 +53,10 @@
 #include "mem/ruby/protocol/AccessPermission.hh"
 #include "mem/ruby/system/RubySystem.hh"
 
+#include "base/trace.hh"
+#include "debug/CacheRubyInfoFlag.hh"
+#include "sim/sim_exit.hh"
+
 namespace gem5
 {
 
@@ -75,9 +79,11 @@ CacheMemory::CacheMemory(const Params &p)
              p.start_index_bit, p.ruby_system),
     atomicALUArray(p.atomicALUs, p.atomicLatency *
              p.ruby_system->clockPeriod()),
-    cacheMemoryStats(this)
+    cacheMemoryStats(this),
+    event([this]{ CacheOccupancy(); }, name() + ".event")
 {
     m_cache_size = p.size;
+    times = 0;
     m_cache_assoc = p.assoc;
     m_replacementPolicy_ptr = p.replacement_policy;
     m_start_index_bit = p.start_index_bit;
@@ -189,6 +195,7 @@ CacheMemory::tryCacheAccess(Addr address, RubyRequestType type,
                             DataBlock*& data_ptr)
 {
     DPRINTF(RubyCache, "trying to access address: %#x\n", address);
+
     AbstractCacheEntry* entry = lookup(address);
     if (entry != nullptr) {
         // Do we even have a tag match?
@@ -219,7 +226,10 @@ bool
 CacheMemory::testCacheAccess(Addr address, RubyRequestType type,
                              DataBlock*& data_ptr)
 {
+    
     DPRINTF(RubyCache, "testing address: %#x\n", address);
+    
+
     AbstractCacheEntry* entry = lookup(address);
     if (entry != nullptr) {
         // Do we even have a tag match?
@@ -276,6 +286,49 @@ CacheMemory::cacheAvail(Addr address) const
         }
     }
     return false;
+}
+
+void
+CacheMemory::startup()
+{
+    DPRINTF(CacheRubyInfoFlag, " HelloWorld! From a SimObject (startup).\n");
+
+    
+    schedule(event, curTick() + 10000);
+}
+
+void 
+CacheMemory::CacheOccupancy() {
+    times++;
+    int occupancy = 0;
+    Addr check_address;
+
+    
+
+    for (int i = 0; i < getNumBlocks(); i++) {
+        check_address = getAddressAtIdx(i);
+        if(check_address != 0){
+            if(isTagPresent(check_address)){
+                occupancy++;
+            }
+        }
+    }
+
+  
+    DPRINTF(CacheRubyInfoFlag, "Hello World! Occupied value : %d.\n",occupancy);
+
+    if(times != 3268) {
+        schedule(event, curTick() + 10000);
+
+    }
+
+    
+
+    // // Print the occupancy data
+    // std::cout << "Cache Occupancy: " << occupied_lines 
+    //           << " lines occupied out of " << numCacheSets * associativity 
+    //           << " (" << (occupied_lines * 100.0) / (numCacheSets * associativity) 
+    //           << "%)" << std::endl;
 }
 
 AbstractCacheEntry*
@@ -707,6 +760,7 @@ CacheMemory::checkResourceAvailable(CacheResourceType res, Addr addr)
 bool
 CacheMemory::isBlockInvalid(int64_t cache_set, int64_t loc)
 {
+    
   return (m_cache[cache_set][loc]->m_Permission == AccessPermission_Invalid);
 }
 

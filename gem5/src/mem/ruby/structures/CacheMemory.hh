@@ -75,6 +75,8 @@ class CacheMemory : public SimObject
     CacheMemory(const Params &p);
     ~CacheMemory();
 
+    virtual void startup();
+
     void init();
 
     // Public Methods
@@ -164,6 +166,10 @@ class CacheMemory : public SimObject
     // convert a Address to its location in the cache
     int64_t addressToCacheSet(Addr address) const;
 
+    //Functin to get occupancy overtime
+    void CacheOccupancy();
+    EventFunctionWrapper event;
+
     // Given a cache tag: returns the index of the tag in a set.
     // returns -1 if the tag is not found.
     int findTagInSet(int64_t line, Addr tag) const;
@@ -190,6 +196,7 @@ class CacheMemory : public SimObject
     ALUFreeListArray atomicALUArray;
 
     int m_cache_size;
+    int times;
     int m_cache_num_sets;
     int m_cache_num_set_bits;
     int m_cache_assoc;

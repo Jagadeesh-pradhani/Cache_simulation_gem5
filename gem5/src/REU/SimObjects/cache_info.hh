@@ -3,9 +3,6 @@
 #define __CACHE_INFO__
 
 #include "mem/ruby/system/RubySystem.hh"
-#include "mem/ruby/common/TypeDefines.hh"
-#include "mem/ruby/structures/BankedArray.hh"
-#include "mem/ruby/structures/ALUFreeListArray.hh"
 #include "params/CacheInfo.hh"
 #include "sim/sim_object.hh"
 
@@ -16,9 +13,7 @@ class CacheInfo : public SimObject
 {
   private:
     
-    int timesLeft;
 
-    void printCacheInfo();
 
 
   public:

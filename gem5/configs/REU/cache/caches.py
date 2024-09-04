@@ -1,53 +1,26 @@
-# Copyright (c) 2017 Jason Power
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met: redistributions of source code must retain the above copyright
-# notice, this list of conditions and the following disclaimer;
-# redistributions in binary form must reproduce the above copyright
-# notice, this list of conditions and the following disclaimer in the
-# documentation and/or other materials provided with the distribution;
-# neither the name of the copyright holders nor the names of its
-# contributors may be used to endorse or promote products derived from
-# this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-""" This file creates a set of Ruby caches, the Ruby network, and a simple
-point-to-point topology.
-See Part 3 in the Learning gem5 book:
-http://gem5.org/documentation/learning_gem5/part3/MSIintro
-
-IMPORTANT: If you modify this file, it's likely that the Learning gem5 book
-           also needs to be updated. For now, email Jason <jason@lowepower.com>
-
-"""
-
 import math
 
+import m5
 from m5.defines import buildEnv
 from m5.objects import *
 from m5.util import (
+    addToPath,
     fatal,
     panic,
 )
 
+addToPath("../../")
+
+from ruby.Ruby import (
+    create_directories,
+    create_topology,
+    send_evicts,
+)
 
 class MyCacheSystem(RubySystem):
     def __init__(self):
         if buildEnv["PROTOCOL"] != "MESI_Two_Level":
-            fatal("This system assumes MSI from learning gem5!")
+            fatal("This system assumes MESI_Two_Level protocol")
 
         super().__init__()
 
@@ -71,9 +44,11 @@ class MyCacheSystem(RubySystem):
         # customized depending on the topology/network requirements.
         # Create one controller for each L1 cache (and the cache mem obj.)
         # Create a single directory controller (Really the memory cntrl)
-        self.controllers = [L1Cache(system, self, cpu) for cpu in cpus] + [
-            DirController(self, system.mem_ranges, mem_ctrls)
-        ]
+        self.controllers = [
+            L1Cache(system, self, cpu, icache = True) for cpu in cpus] + [
+                L1Cache(system, self, cpu, icache = False) for cpu in cpus] + [
+                    DirController(self, system.mem_ranges, mem_ctrls)] + [
+                        L2Cache()]
 
         # Create one sequencer per CPU. In many systems this is more
         # complicated since you have to create sequencers for DMA controllers
@@ -109,7 +84,6 @@ class MyCacheSystem(RubySystem):
         for i, cpu in enumerate(cpus):
             self.sequencers[i].connectCpuPorts(cpu)
 
-
 class L1Cache(L1Cache_Controller):
     _version = 0
 
@@ -118,7 +92,7 @@ class L1Cache(L1Cache_Controller):
         cls._version += 1  # Use count for this particular type
         return cls._version - 1
 
-    def __init__(self, system, ruby_system, cpu):
+    def __init__(self, system, ruby_system, cpu, icache):
         """CPUs are needed to grab the clock domain and system is needed for
         the cache block size.
         """
@@ -127,7 +101,10 @@ class L1Cache(L1Cache_Controller):
         self.version = self.versionCount()
         # This is the cache memory object that stores the cache data and tags
         self.cacheMemory = RubyCache(
-            size="16kB", assoc=8, start_index_bit=self.getBlockSizeBits(system)
+            size="32kB", 
+            assoc=2, 
+            start_index_bit=self.getBlockSizeBits(system),
+            is_icache=icache
         )
         self.clk_domain = cpu.clk_domain
         self.send_evictions = self.sendEvicts(cpu)
@@ -172,6 +149,8 @@ class L1Cache(L1Cache_Controller):
         self.responseFromDirOrSibling = MessageBuffer(ordered=True)
         self.responseFromDirOrSibling.in_port = ruby_system.network.out_port
 
+class L2Cache(L2Cache_Controller):
+    pass
 
 class DirController(Directory_Controller):
     _version = 0

@@ -1,0 +1,110 @@
+CacheMemory::CacheMemory(const Params &p)
+
+void
+CacheMemory::init()
+
+CacheMemory::~CacheMemory()
+
+int64_t
+CacheMemory::addressToCacheSet(Addr address) const
+
+int
+CacheMemory::findTagInSet(int64_t cacheSet, Addr tag) const
+
+int
+CacheMemory::findTagInSetIgnorePermissions(int64_t cacheSet,Addr tag) const
+
+Addr
+CacheMemory::getAddressAtIdx(int idx) const
+
+bool
+CacheMemory::tryCacheAccess(Addr address, RubyRequestType type,
+                            DataBlock*& data_ptr)
+
+bool
+CacheMemory::testCacheAccess(Addr address, RubyRequestType type,
+                             DataBlock*& data_ptr)
+
+
+bool
+CacheMemory::isTagPresent(Addr address) const
+
+bool
+CacheMemory::cacheAvail(Addr address) const
+
+
+AbstractCacheEntry*
+CacheMemory::allocate(Addr address, AbstractCacheEntry *entry)
+
+void
+CacheMemory::deallocate(Addr address)
+
+Addr
+CacheMemory::cacheProbe(Addr address) const
+
+// looks an address up in the cache
+AbstractCacheEntry*
+CacheMemory::lookup(Addr address)
+
+// looks an address up in the cache
+const AbstractCacheEntry*
+CacheMemory::lookup(Addr address) const
+
+void
+CacheMemory::setMRU(Addr address)
+
+void
+CacheMemory::setMRU(AbstractCacheEntry *entry)
+
+void
+CacheMemory::setMRU(Addr address, int occupancy)
+
+int
+CacheMemory::getReplacementWeight(int64_t set, int64_t loc)
+
+void
+CacheMemory::recordCacheContents(int cntrl, CacheRecorder* tr) const
+
+
+void
+CacheMemory::print(std::ostream& out) const
+
+void
+CacheMemory::printData(std::ostream& out) const
+
+void
+CacheMemory::setLocked(Addr address, int context)
+
+void
+CacheMemory::clearLocked(Addr address)
+
+void
+CacheMemory::clearLockedAll(int context)
+
+bool
+CacheMemory::isLocked(Addr address, int context)
+
+CacheMemory::
+CacheMemoryStats::CacheMemoryStats(statistics::Group *parent)
+
+void
+CacheMemory::recordRequestType(CacheRequestType requestType, Addr addr)
+
+bool
+CacheMemory::checkResourceAvailable(CacheResourceType res, Addr addr)
+
+bool
+CacheMemory::isBlockInvalid(int64_t cache_set, int64_t loc)
+{
+  return (m_cache[cache_set][loc]->m_Permission == AccessPermission_Invalid);
+}
+
+bool
+CacheMemory::isBlockNotBusy(int64_t cache_set, int64_t loc)
+
+void
+CacheMemory::htmAbortTransaction()
+
+
+
+

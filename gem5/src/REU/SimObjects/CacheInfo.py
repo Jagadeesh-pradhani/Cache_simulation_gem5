@@ -7,4 +7,3 @@ class CacheInfo(SimObject):
     cxx_header = "REU/SimObjects/cache_info.hh"
     cxx_class = "gem5::CacheInfo"
 
-    number_of_greets = Param.Int(1, "Number of times to greet.")

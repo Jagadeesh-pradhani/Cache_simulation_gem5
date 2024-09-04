@@ -56,8 +56,8 @@ def define_options(parser):
 def create_system(
     options, full_system, system, dma_ports, bootmem, ruby_system, cpus
 ):
-    if buildEnv["PROTOCOL"] != "MESI_Two_Level":
-        fatal("This script requires the MESI_Two_Level protocol to be built.")
+    if buildEnv["PROTOCOL"] != "Custom_MESI_Two_Level":
+        fatal("This script requires the Custom_MESI_Two_Level protocol to be built.")
 
     cpu_sequencers = []
 
@@ -109,7 +109,7 @@ def create_system(
             ruby_system=ruby_system,
             clk_domain=clk_domain,
             transitions_per_cycle=options.ports,
-            enable_prefetch=False,
+            enable_prefetch=True,
         )
 
         cpu_seq = RubySequencer(

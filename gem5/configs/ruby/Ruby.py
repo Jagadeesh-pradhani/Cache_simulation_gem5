@@ -126,6 +126,7 @@ def define_options(parser):
     )
 
     protocol = buildEnv["PROTOCOL"]
+    #print(protocol)
     exec(f"from . import {protocol}")
     eval(f"{protocol}.define_options(parser)")
     Network.define_options(parser)
@@ -249,6 +250,7 @@ def create_system(
     protocol = buildEnv["PROTOCOL"]
     exec(f"from . import {protocol}")
     try:
+        #print("hello")
         (cpu_sequencers, dir_cntrls, topology) = eval(
             "%s.create_system(options, full_system, system, dma_ports,\
                                     bootmem, ruby, cpus)"
