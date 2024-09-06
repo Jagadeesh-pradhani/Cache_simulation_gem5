@@ -1,31 +1,3 @@
-/*
- * Copyright (c) 2009-2012 Mark D. Hill and David A. Wood
- * Copyright (c) 2010-2012 Advanced Micro Devices, Inc.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are
- * met: redistributions of source code must retain the above copyright
- * notice, this list of conditions and the following disclaimer;
- * redistributions in binary form must reproduce the above copyright
- * notice, this list of conditions and the following disclaimer in the
- * documentation and/or other materials provided with the distribution;
- * neither the name of the copyright holders nor the names of its
- * contributors may be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 
 machine(MachineType:L1Cache, "MI Example L1 Cache")
     : Sequencer * sequencer;
@@ -44,6 +16,13 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
             vnet_type="forward";
       MessageBuffer * responseToCache, network="From", virtual_network="4",
             vnet_type="response";
+      
+      // NETWORK BUFFERS
+      MessageBuffer * neighborRequest, network="To", virtual_network="5", 
+            vnet_type="request";
+      MessageBuffer * neighborResponse, network="From", virtual_network="5", 
+            vnet_type="response";
+
 
       MessageBuffer * mandatoryQueue;
 {
@@ -57,6 +36,10 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
     IS, AccessPermission:Busy, desc="Issued request for LOAD/IFETCH";
     IM, AccessPermission:Busy, desc="Issued request for STORE/ATOMIC";
+
+    // New states for neighbor search
+    NI, AccessPermission:Busy, desc="Issued request to neighbor caches";
+    NS, AccessPermission:Busy, desc="Waiting for response from neighbor caches";
   }
 
   // EVENTS
@@ -71,6 +54,10 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
     Fwd_GETX,        desc="Forward from network";
 
     Inv,        desc="Invalidate request from dir";
+
+    // From neighboring caches
+    NeighborData, desc="Data from neighboring cache";
+    NeighborNack, desc="Negative response from neighboring cache";
 
     Replacement,  desc="Replace a block";
     Writeback_Ack,   desc="Ack from the directory for a writeback";
@@ -111,6 +98,9 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
   void unset_tbe();
   void profileMsgDelay(int virtualNetworkType, Cycles b);
   MachineID mapAddressToMachine(Addr addr, MachineType mtype);
+  MachineID mapNodeIdToMacine(NodeID Id, MachineType mtype);
+
+  
 
   Entry getCacheEntry(Addr address), return_by_pointer="yes" {
     return static_cast(Entry, "pointer", cacheMemory.lookup(address));
@@ -201,6 +191,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
   out_port(requestNetwork_out, RequestMsg, requestFromCache);
   out_port(responseNetwork_out, ResponseMsg, responseFromCache);
+  out_port(neighborRequest_out, RequestMsg, neighborRequest); 
 
   in_port(forwardRequestNetwork_in, RequestMsg, forwardToCache) {
     if (forwardRequestNetwork_in.isReady(clockEdge())) {
@@ -247,6 +238,24 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
     // Mandatory Queue
   in_port(mandatoryQueue_in, RubyRequest, mandatoryQueue, desc="...") {
+
+    NodeID id := machineIDToNodeID(machineID);
+    int curr := IDToInt(id);
+    int left:=0;
+    int right:=0;
+    if(curr == 0){
+      right := 1;
+      left := 0;
+    }
+    else{
+     left := 1;
+      right := 0;
+    }
+
+    NodeID l := intToID(left);
+    NodeID r := intToID(right);
+    
+    DPRINTF(RubySlicc, "Current machine_id : %s\n : Left : %d, Right : %d", mapNodeIdToMacine(machineIDToNodeID(machineID), MachineType:L1Cache), l,r);
     if (mandatoryQueue_in.isReady(clockEdge())) {
       peek(mandatoryQueue_in, RubyRequest, block_on="LineAddress") {
 
@@ -269,6 +278,24 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
     }
   }
 
+  //Neigbour network
+  in_port(neighborResponse_in, ResponseMsg, neighborResponse) {
+    if (neighborResponse_in.isReady(clockEdge())) {
+        peek(neighborResponse_in, ResponseMsg, block_on="addr") {
+            Entry cache_entry := getCacheEntry(in_msg.addr);
+            TBE tbe := TBEs[in_msg.addr];
+
+            // Handle Neighbor Data Response
+            if (in_msg.Type == CoherenceResponseType:DATA) {
+                trigger(Event:NeighborData, in_msg.addr, cache_entry, tbe);
+            } else {
+                trigger(Event:NeighborNack, in_msg.addr, cache_entry, tbe);
+            }
+        }
+    }
+  }
+
+
   // ACTIONS
 
   action(a_issueRequest, "a", desc="Issue a request") {
@@ -280,6 +307,9 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
       out_msg.MessageSize := MessageSizeType:Control;
     }
   }
+
+  
+
 
   action(b_issuePUT, "b", desc="Issue a PUT request") {
     enqueue(requestNetwork_out, RequestMsg, issue_latency) {
@@ -372,6 +402,57 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
                              machineIDToMachineType(in_msg.Sender));
     }
   }
+  action(neighbor_issueRequest, "nsr", desc="Issue a request") {
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+    int left:=0;
+    int right:=0;
+    if(curr == 0){
+      right := 1;
+      left := 0;
+    }
+    else{
+     left := 1;
+      right := 0;
+    }
+
+    if(left == 1){
+      dest := intToID(left);
+    }
+    else{
+      dest := intToID(right);
+    }
+    enqueue(neighborRequest_out, RequestMsg, issue_latency) {
+    out_msg.addr := address;
+      out_msg.Type := CoherenceRequestType:GETX;
+      out_msg.Requestor := machineID;
+      out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+      out_msg.MessageSize := MessageSizeType:Control;
+
+      
+    }
+  }
+
+  action(handle_neighbor_response, "msr", desc="Handle neighbor search response") {
+    peek(neighborResponse_in, ResponseMsg) {
+      assert(is_valid(cache_entry));
+      DPRINTF(RubySlicc,"%s\n", cache_entry.DataBlk);
+      sequencer.readCallback(address, cache_entry.DataBlk, true,
+                             machineIDToMachineType(in_msg.Sender));
+    }
+  }
+
+  action(neighbor_search_nack, "nsm", desc="Handle negative neighbor search response") {
+    // If all neighbors fail, send a request to L2
+    enqueue(requestNetwork_out, RequestMsg, issue_latency) {
+      out_msg.addr := address;
+      out_msg.Type := CoherenceRequestType:GETX;
+      out_msg.Requestor := machineID;
+      out_msg.Destination.add(mapAddressToMachine(address, MachineType:Directory));
+      out_msg.MessageSize := MessageSizeType:Control;
+    }
+  }
 
   action(s_store_hit, "s", desc="Notify sequencer that store completed.") {
     assert(is_valid(cache_entry));
@@ -425,6 +506,25 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
   // TRANSITIONS
 
+  // Single transition from I state on Load/Ifetch to NS (Neighbor Search)
+
+
+// Transition from NS (Neighbor Search) to M state if neighbor has the data
+transition(NS, NeighborData, M) {
+    handle_neighbor_response;  // Data found in neighbor, update cache
+    p_profileHit;
+    m_popMandatoryQueue;
+}
+
+// If neighbor search fails, fallback to IS and issue L2 request
+transition(NS, Data, IS) {
+    a_issueRequest;  // Fallback to L2 after neighbor search
+    p_profileMiss;
+    m_popMandatoryQueue;
+}
+
+
+
   transition({IS, IM, MI, II, MII}, {Load, Ifetch, Store, Replacement}) {
     z_stall;
   }
@@ -461,20 +561,16 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
     m_popMandatoryQueue;
   }
 
-  transition(I, {Load, Ifetch}, IS) {
-    v_allocateTBE;
-    i_allocateL1CacheBlock;
-    a_issueRequest;
-    p_profileMiss;
-    m_popMandatoryQueue;
+  // 1. Modified transition from I to NS (neighbor search) instead of IS
+  transition(I, {Load, Ifetch}, NS) {
+      v_allocateTBE;
+      i_allocateL1CacheBlock;
+      neighbor_issueRequest;  // Initiate neighbor search
+      p_profileMiss;
+      m_popMandatoryQueue;
   }
 
-  transition(IS, Data, M) {
-    u_writeDataToCache;
-    rx_load_hit;
-    w_deallocateTBE;
-    n_popResponseQueue;
-  }
+
 
   transition(IM, Data, M) {
     u_writeDataToCache;
