@@ -120,6 +120,14 @@ def create_system(
         l1_cntrl.responseToCache = MessageBuffer(ordered=True)
         l1_cntrl.responseToCache.in_port = ruby_system.network.out_port
 
+        # Initialize neighborRequest and neighborResponse message buffers
+        l1_cntrl.neighborRequest = MessageBuffer(ordered=True)
+        l1_cntrl.neighborResponse = MessageBuffer(ordered=True)
+
+        # Connect the neighborRequest and neighborResponse message buffers to the network
+        l1_cntrl.neighborRequest.out_port = ruby_system.network.in_port
+        l1_cntrl.neighborResponse.in_port = ruby_system.network.out_port
+
     phys_mem_size = sum([r.size() for r in system.mem_ranges])
     assert phys_mem_size % options.num_dirs == 0
     mem_module_size = phys_mem_size / options.num_dirs
@@ -199,6 +207,6 @@ def create_system(
 
         all_cntrls = all_cntrls + [io_controller]
 
-    ruby_system.network.number_of_virtual_networks = 5
+    ruby_system.network.number_of_virtual_networks = 6
     topology = create_topology(all_cntrls, options)
     return (cpu_sequencers, mem_dir_cntrl_nodes, topology)
