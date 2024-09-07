@@ -194,6 +194,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
   out_port(neighborRequest_out, RequestMsg, neighborRequest); 
 
   in_port(forwardRequestNetwork_in, RequestMsg, forwardToCache) {
+    DPRINTF(RubySlicc, "forwardReq\n");
     if (forwardRequestNetwork_in.isReady(clockEdge())) {
       peek(forwardRequestNetwork_in, RequestMsg, block_on="addr") {
 
@@ -220,6 +221,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
   }
 
   in_port(responseNetwork_in, ResponseMsg, responseToCache) {
+    DPRINTF(RubySlicc, "response net\n");
     if (responseNetwork_in.isReady(clockEdge())) {
       peek(responseNetwork_in, ResponseMsg, block_on="addr") {
 
@@ -227,6 +229,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
         TBE tbe := TBEs[in_msg.addr];
 
         if (in_msg.Type == CoherenceResponseType:DATA) {
+          DPRINTF(RubySlicc, "event:data\n");
           trigger(Event:Data, in_msg.addr, cache_entry, tbe);
         }
         else {
@@ -255,22 +258,26 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
     NodeID l := intToID(left);
     NodeID r := intToID(right);
     
-    DPRINTF(RubySlicc, "Current machine_id : %s\n : Left : %d, Right : %d", mapNodeIdToMacine(machineIDToNodeID(machineID), MachineType:L1Cache), l,r);
+    DPRINTF(RubySlicc, "Current machine_id : %s : Left : %d, Right : %d\n", mapNodeIdToMacine(machineIDToNodeID(machineID), MachineType:L1Cache), l,r);
     if (mandatoryQueue_in.isReady(clockEdge())) {
       peek(mandatoryQueue_in, RubyRequest, block_on="LineAddress") {
 
         Entry cache_entry := getCacheEntry(in_msg.LineAddress);
+        DPRINTF(RubySlicc, "Mandotory addr: %#x\n", in_msg.LineAddress);
         if (is_invalid(cache_entry) &&
             cacheMemory.cacheAvail(in_msg.LineAddress) == false ) {
+            DPRINTF(RubySlicc, "Invalid\n");
+            trigger(Event:NeighborData, in_msg.LineAddress, cache_entry, TBEs[in_msg.LineAddress]);
           // make room for the block
           // Check if the line we want to evict is not locked
-          Addr addr := cacheMemory.cacheProbe(in_msg.LineAddress);
-          check_on_cache_probe(mandatoryQueue_in, addr);
-          trigger(Event:Replacement, addr,
-                  getCacheEntry(addr),
-                  TBEs[addr]);
+          // Addr addr := cacheMemory.cacheProbe(in_msg.LineAddress);
+          // check_on_cache_probe(mandatoryQueue_in, addr);
+          // trigger(Event:Replacement, addr,
+          //         getCacheEntry(addr),
+          //         TBEs[addr]);
         }
         else {
+          DPRINTF(RubySlicc, "valid\n");
           trigger(mandatory_request_type_to_event(in_msg.Type), in_msg.LineAddress,
                   cache_entry, TBEs[in_msg.LineAddress]);
         }
@@ -280,15 +287,21 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
   //Neigbour network
   in_port(neighborResponse_in, ResponseMsg, neighborResponse) {
+    DPRINTF(RubySlicc, "neighbour response\n");
+    
     if (neighborResponse_in.isReady(clockEdge())) {
+      
         peek(neighborResponse_in, ResponseMsg, block_on="addr") {
             Entry cache_entry := getCacheEntry(in_msg.addr);
+            DPRINTF(RubySlicc, "Response in : %#x\n", in_msg.addr);
             TBE tbe := TBEs[in_msg.addr];
 
             // Handle Neighbor Data Response
             if (in_msg.Type == CoherenceResponseType:DATA) {
+                DPRINTF(RubySlicc, "Data\n");
                 trigger(Event:NeighborData, in_msg.addr, cache_entry, tbe);
             } else {
+              DPRINTF(RubySlicc, "No data\n");
                 trigger(Event:NeighborNack, in_msg.addr, cache_entry, tbe);
             }
         }
@@ -299,6 +312,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
   // ACTIONS
 
   action(a_issueRequest, "a", desc="Issue a request") {
+    DPRINTF(RubySlicc, "Transition to IS: Fallback to L2 for addr: %#x\n", address);
     enqueue(requestNetwork_out, RequestMsg, issue_latency) {
     out_msg.addr := address;
       out_msg.Type := CoherenceRequestType:GETX;
@@ -402,39 +416,37 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
                              machineIDToMachineType(in_msg.Sender));
     }
   }
+///////////////////////////////////////////////////////////
   action(neighbor_issueRequest, "nsr", desc="Issue a request") {
+    DPRINTF(RubySlicc, "Sending neighbor search request from cache version: %d for addr: %#x\n", version, address);
     NodeID id := machineIDToNodeID(machineID);
     NodeID dest := id;
     int curr := IDToInt(id);
     int left:=0;
     int right:=0;
     if(curr == 0){
-      right := 1;
-      left := 0;
+      dest := intToID(1);
     }
     else{
-     left := 1;
-      right := 0;
+      dest := intToID(0);
     }
+    DPRINTF(RubySlicc, "Dest : %d, Curr : %d\n",dest,curr);
 
-    if(left == 1){
-      dest := intToID(left);
-    }
-    else{
-      dest := intToID(right);
-    }
+
     enqueue(neighborRequest_out, RequestMsg, issue_latency) {
     out_msg.addr := address;
       out_msg.Type := CoherenceRequestType:GETX;
       out_msg.Requestor := machineID;
       out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
       out_msg.MessageSize := MessageSizeType:Control;
+      DPRINTF(RubySlicc, "Addr: %#x\n", out_msg.addr);
 
       
     }
   }
 
   action(handle_neighbor_response, "msr", desc="Handle neighbor search response") {
+    DPRINTF(RubySlicc, "Handle\n");
     peek(neighborResponse_in, ResponseMsg) {
       assert(is_valid(cache_entry));
       DPRINTF(RubySlicc,"%s\n", cache_entry.DataBlk);
@@ -443,16 +455,22 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
     }
   }
 
-  action(neighbor_search_nack, "nsm", desc="Handle negative neighbor search response") {
-    // If all neighbors fail, send a request to L2
+  action(neighbor_search_nack, "nsn", desc="Neighbor search failed, fallback to L2") {
+    DPRINTF(RubySlicc, "Neighbor search failed, evicting and fetching from L2 for addr: %#x\n", address);
+
+    
+    // After eviction, fetch the block from L2 or directory
     enqueue(requestNetwork_out, RequestMsg, issue_latency) {
-      out_msg.addr := address;
-      out_msg.Type := CoherenceRequestType:GETX;
-      out_msg.Requestor := machineID;
-      out_msg.Destination.add(mapAddressToMachine(address, MachineType:Directory));
-      out_msg.MessageSize := MessageSizeType:Control;
+        out_msg.addr := address;
+        out_msg.Type := CoherenceRequestType:GETX;
+        out_msg.Requestor := machineID;
+        out_msg.Destination.add(mapAddressToMachine(address, MachineType:Directory));
+        out_msg.MessageSize := MessageSizeType:Control;
+    DPRINTF(RubySlicc, "Failed to find a block to evict for addr: %#x\n", address);
     }
-  }
+}
+  
+//////////////////////////////////////////////////////////////
 
   action(s_store_hit, "s", desc="Notify sequencer that store completed.") {
     assert(is_valid(cache_entry));
@@ -523,6 +541,18 @@ transition(NS, Data, IS) {
     m_popMandatoryQueue;
 }
 
+transition(IS, Data, M) {
+    u_writeDataToCache;  // Write data to cache
+    rx_load_hit;         // Signal the load hit to the sequencer
+    w_deallocateTBE;     // Deallocate the TBE
+    n_popResponseQueue;  // Pop the response queue
+}
+// If neighbors don't have the data, fallback to L2 and replacement
+transition(NS, NeighborNack, IS) {
+    neighbor_search_nack;
+    p_profileMiss;
+    m_popMandatoryQueue;
+}
 
 
   transition({IS, IM, MI, II, MII}, {Load, Ifetch, Store, Replacement}) {
@@ -561,8 +591,17 @@ transition(NS, Data, IS) {
     m_popMandatoryQueue;
   }
 
+  transition(I, {Load, Ifetch}, IS) {
+    v_allocateTBE;
+    i_allocateL1CacheBlock;
+    a_issueRequest;
+    p_profileMiss;
+    m_popMandatoryQueue;
+  
+  }
+
   // 1. Modified transition from I to NS (neighbor search) instead of IS
-  transition(I, {Load, Ifetch}, NS) {
+  transition(I, NeighborData, NS) {
       v_allocateTBE;
       i_allocateL1CacheBlock;
       neighbor_issueRequest;  // Initiate neighbor search
