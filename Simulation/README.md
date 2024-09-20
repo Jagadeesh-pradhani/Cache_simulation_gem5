@@ -19,9 +19,9 @@
 - **CPU**: `O3CPU`
 - **Caches**: `PrivateL1SharedL2`
 - **Cache Type**: `ruby`
-- **L1I Cache**: `64kB`
-- **L1D Cache**: `64kB`
-- **L2 Cache**: `512kB`
+- **L1I Cache**: `32kB`
+- **L1D Cache**: `32kB`
+- **L2 Cache**: `4MB`
 - **Memory**: `512MB`
 - **Block size** : `64 bytes`
 - **L1 Associativity**: `2-way`
