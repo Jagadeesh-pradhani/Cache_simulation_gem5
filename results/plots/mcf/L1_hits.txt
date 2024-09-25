@@ -1,0 +1,11 @@
+Comparison of 'new' vs 'old' values:
+system.ruby.l1_cntrl1.L1Dcache.m_demand_hits: New value is greater by 0.24% (Old: 32842.0, New: 32921.0)
+system.ruby.l1_cntrl1.L1Icache.m_demand_hits: New value is greater by 0.12% (Old: 17554.0, New: 17575.0)
+system.ruby.l1_cntrl4.L1Dcache.m_demand_hits: New value is greater by 0.16% (Old: 32765.0, New: 32819.0)
+system.ruby.l1_cntrl4.L1Icache.m_demand_hits: New value is greater by 0.21% (Old: 17562.0, New: 17599.0)
+system.ruby.l1_cntrl5.L1Dcache.m_demand_hits: New value is greater by 0.28% (Old: 32764.0, New: 32855.0)
+system.ruby.l1_cntrl9.L1Dcache.m_demand_hits: New value is greater by 0.43% (Old: 32771.0, New: 32912.0)
+system.ruby.l1_cntrl10.L1Dcache.m_demand_hits: New value is greater by 0.29% (Old: 32797.0, New: 32891.0)
+system.ruby.l1_cntrl11.L1Dcache.m_demand_hits: New value is greater by 0.27% (Old: 32762.0, New: 32852.0)
+system.ruby.l1_cntrl11.L1Icache.m_demand_hits: New value is greater by 0.52% (Old: 17610.0, New: 17702.0)
+system.ruby.l1_cntrl14.L1Dcache.m_demand_hits: New value is greater by 0.11% (Old: 32797.0, New: 32834.0)

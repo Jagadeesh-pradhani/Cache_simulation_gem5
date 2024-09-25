@@ -14,12 +14,13 @@ def extract_flit_latency(filename, find):
         for line in file:
             if find in line:
                 latency_value = float(line.split()[1].strip())
+                print(latency_value)
                 return latency_value
     return None
 
 # Main function
-def main(x_label, find, plot_label):
-    src = "stats/"
+def main(x_label, find, plot_label,convert):
+    src = "newprot/"
     values = []
     counts = []
     x_axis = []
@@ -35,7 +36,7 @@ def main(x_label, find, plot_label):
         Files.append(filename[i])
 
     for i in path:
-        value = extract_flit_latency(i, find)
+        value = extract_flit_latency(i, find)/convert
         counts.append(value)
 
     for i in Files:
@@ -60,6 +61,7 @@ if __name__ == "__main__":
     parser.add_argument("--x_label", type=str, help="Name for the x-axis", default="X-axis")
     parser.add_argument("--Y_value", type=str, help="String to search for in the stats files.")
     parser.add_argument("--plot_label", type=str, help="Name for the plot.", default='Plots')
+    parser.add_argument("--convert", type=float, help="Name for the plot.", default=1.0)
 
     args = parser.parse_args()
-    main(args.x_label, args.Y_value, args.plot_label)
+    main(args.x_label, args.Y_value, args.plot_label, args.convert)

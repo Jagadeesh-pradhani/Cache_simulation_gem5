@@ -1,0 +1,26 @@
+Memory used by directories
+
+system.ruby.dir_cntrl0.directory: Looking up address:
+0x0, 0x100, 0x200, ... 0x25b080     (9456) 
+
+system.ruby.dir_cntrl1.directory: Looking up address:
+0x40, 0x140, 0x240, ... 0x25b0c0    (9461)
+
+system.ruby.dir_cntrl2.directory: Looking up address:
+0x80, 0x180, 0x280, ... 0x25f000    (9470)
+
+system.ruby.dir_cntrl3.directory: Looking up address:
+0xc0, 0x1c0, 0x2c0, ... 0x25b040    (9453)
+
+L1Dcache adrress
+
+system.ruby.l1_cntrl0.L1Icache: allocating address:
+0x140, 0x180, 0x1c0, ... 0x5d440        (269)
+
+system.ruby.l1_cntrl0.L1Dcache: allocating address:
+0x0040, 0x0080, 0x00c0, ... 0x25c000    (137)
+
+
+L2cache adresses
+system.ruby.l2_cntrl0.L2cache: allocating address:
+0x0, 0x40. 0x80 ... 0x25f000        (1627)
