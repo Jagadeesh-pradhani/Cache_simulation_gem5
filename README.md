@@ -17,11 +17,11 @@ This project involves modifying the gem5 simulator to implement a custom version
 
 1. Clone this repo
    ```bash
-   git clone https://github.com/Jagadeesh-pradhani/Cache_prefetcher_simulation.git -b dev
+   git clone https://github.com/Jagadeesh-pradhani/Cache_simulation_gem5.git -b dev
    ```
 2. Install dependencies
    ```bash
-   cd Cache_prefetcher_simulation/
+   cd Cache_simulation_gem5/
    ```
    ```bash
    sudo apt install build-essential git m4 scons zlib1g zlib1g-dev \
