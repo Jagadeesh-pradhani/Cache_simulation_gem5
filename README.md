@@ -17,7 +17,7 @@ This project involves modifying the gem5 simulator to implement a custom version
 
 1. Clone this repo
    ```bash
-   git clone https://github.com/Jagadeesh-pradhani/Cache_prefetcher_simulation.git
+   git clone https://github.com/Jagadeesh-pradhani/Cache_prefetcher_simulation.git -b dev
    ```
 2. Install dependencies
    ```bash
