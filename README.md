@@ -1,6 +1,6 @@
 # Cache_prefetcher_simulation
 
-![image](https://github.com/user-attachments/assets/c96bc175-c660-46b7-9ad8-47e0cba5f915)
+![image](https://github.com/user-attachments/assets/fa66786e-3648-41aa-be6a-978273e8648f)
 
 
 <p align="center">
