@@ -1,5 +1,11 @@
 # Cache_prefetcher_simulation
 
+<p align="center">
+    <img width="100px" height="20px" src="https://img.shields.io/badge/Ubuntu-22.04-orange?logo=Ubuntu&Ubuntu-22.04"
+        alt="ubuntu" />
+    <img width="100px" height="20px" src="https://img.shields.io/badge/gem5-23.1.0.0-blue?logo=ROS&ROS=noetic" alt="ROS" />
+</p>
+
 
 Open each folders for details.
 
