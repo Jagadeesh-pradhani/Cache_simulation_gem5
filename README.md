@@ -11,7 +11,7 @@
 
 # Cache_prefetcher_simulation
 
-
+This project involves modifying the gem5 simulator to implement a custom version of the MESI_Two_Level cache coherence protocol. The goal of this modification is to enhance cache efficiency in multicore processors by incorporating an energy-efficient prefetching mechanism. Specifically, the protocol is designed to search neighboring cores' L1 caches for data upon an L1 cache miss before accessing the L2 cache, thereby reducing average memory access time (AMAT) and improving overall system performance. The modified protocol has been tested on various SPEC CPU2006 workloads using a 16-core multicore system.
 
 
 
