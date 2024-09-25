@@ -36,6 +36,16 @@ This project involves modifying the gem5 simulator to implement a custom version
    scons build/X86_MESI_Two_Level/gem5.opt -j$(nproc)
    ```
 
+# Simulation
+
+1. Run the **run_simulation.py** file
+   ```bash
+   cd gem5/
+   ```
+   ```bash
+   python3 run_simulation.py
+   ```
+
 
 
 Open each folders for details.
