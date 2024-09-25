@@ -247,6 +247,7 @@ machine(MachineType:L1Cache, "MI Example L1 Cache")
 
     // Mandatory Queue
   in_port(mandatoryQueue_in, RubyRequest, mandatoryQueue, desc="...") {
+    DPRINTF(RubySlicc, "Current machine_id : %s\n", machineID);
     if (mandatoryQueue_in.isReady(clockEdge())) {
       peek(mandatoryQueue_in, RubyRequest, block_on="LineAddress") {
 

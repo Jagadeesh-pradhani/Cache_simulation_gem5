@@ -208,6 +208,8 @@ class AbstractController : public ClockedObject, public Consumer
      * @return the MachineID of the destination
      */
     MachineID mapAddressToMachine(Addr addr, MachineType mtype) const;
+    //New
+    MachineID mapNodeIdToMacine(NodeID Id, MachineType mtype) const;
 
     /**
      * Maps an address to the correct dowstream MachineID (i.e. the component

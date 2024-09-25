@@ -123,6 +123,8 @@ void
 DataBlock::print(std::ostream& out) const
 {
     int size = RubySystem::getBlockSizeBytes();
+
+
     out << "[ ";
     for (int i = 0; i < size; i++) {
         out << std::setw(2) << std::setfill('0') << std::hex

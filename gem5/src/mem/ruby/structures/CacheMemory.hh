@@ -66,7 +66,7 @@ namespace gem5
 
 namespace ruby
 {
-
+class AbstractController;
 class CacheMemory : public SimObject
 {
   public:
@@ -115,6 +115,7 @@ class CacheMemory : public SimObject
 
     // Returns with the physical address of the conflicting cache line
     Addr cacheProbe(Addr address) const;
+    int CacheOccupancy();
 
     // looks an address up in the cache
     AbstractCacheEntry* lookup(Addr address);
@@ -167,8 +168,9 @@ class CacheMemory : public SimObject
     int64_t addressToCacheSet(Addr address) const;
 
     //Functin to get occupancy overtime
-    void CacheOccupancy();
-    EventFunctionWrapper event;
+    
+    // EventFunctionWrapper event;
+    AbstractController* m_controller;
 
     // Given a cache tag: returns the index of the tag in a set.
     // returns -1 if the tag is not found.
@@ -194,6 +196,9 @@ class CacheMemory : public SimObject
     BankedArray dataArray;
     BankedArray tagArray;
     ALUFreeListArray atomicALUArray;
+
+    RubySystem *m_ruby_system;
+
 
     int m_cache_size;
     int times;

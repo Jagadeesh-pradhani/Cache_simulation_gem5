@@ -52,6 +52,7 @@
 #include "mem/cache/replacement_policies/weighted_lru_rp.hh"
 #include "mem/ruby/protocol/AccessPermission.hh"
 #include "mem/ruby/system/RubySystem.hh"
+#include "mem/ruby/slicc_interface/AbstractController.hh"
 
 #include "base/trace.hh"
 #include "debug/CacheRubyInfoFlag.hh"
@@ -79,10 +80,11 @@ CacheMemory::CacheMemory(const Params &p)
              p.start_index_bit, p.ruby_system),
     atomicALUArray(p.atomicALUs, p.atomicLatency *
              p.ruby_system->clockPeriod()),
-    cacheMemoryStats(this),
-    event([this]{ CacheOccupancy(); }, name() + ".event")
+    cacheMemoryStats(this)
+    // event([this]{ CacheOccupancy(); }, name() + ".event")
 {
     m_cache_size = p.size;
+    m_ruby_system = p.ruby_system;
     times = 0;
     m_cache_assoc = p.assoc;
     m_replacementPolicy_ptr = p.replacement_policy;
@@ -104,6 +106,8 @@ CacheMemory::init()
     assert(m_cache_num_sets > 1);
     m_cache_num_set_bits = floorLog2(m_cache_num_sets);
     assert(m_cache_num_set_bits > 0);
+
+    DPRINTF(CacheRubyInfoFlag, "Block size : %d, Num sets: %d, set bits: %d.\n", m_block_size, m_cache_num_sets, m_cache_num_set_bits);
 
     m_cache.resize(m_cache_num_sets,
                     std::vector<AbstractCacheEntry*>(m_cache_assoc, nullptr));
@@ -134,6 +138,7 @@ int64_t
 CacheMemory::addressToCacheSet(Addr address) const
 {
     assert(address == makeLineAddress(address));
+    // DPRINTF(CacheRubyInfoFlag, "Address : %#x, Set index : %d.\n", address, bitSelect(address, m_start_index_bit,m_start_index_bit + m_cache_num_set_bits - 1));
     return bitSelect(address, m_start_index_bit,
                      m_start_index_bit + m_cache_num_set_bits - 1);
 }
@@ -148,8 +153,10 @@ CacheMemory::findTagInSet(int64_t cacheSet, Addr tag) const
     auto it = m_tag_index.find(tag);
     if (it != m_tag_index.end())
         if (m_cache[cacheSet][it->second]->m_Permission !=
-            AccessPermission_NotPresent)
+            AccessPermission_NotPresent) {
+            DPRINTF(CacheRubyInfoFlag, "Tag : %#x, Tag index : %d, set index : %d.\n", tag, it->second, cacheSet);
             return it->second;
+            }
     return -1; // Not found
 }
 
@@ -294,41 +301,64 @@ CacheMemory::startup()
     DPRINTF(CacheRubyInfoFlag, " HelloWorld! From a SimObject (startup).\n");
 
     
-    schedule(event, curTick() + 10000);
+    // schedule(event, curTick() + 10000);
 }
 
-void 
+
+//Custom function
+int 
 CacheMemory::CacheOccupancy() {
     times++;
-    int occupancy = 0;
+    int occupancy = 0, coreCount, cacheCount;
     Addr check_address;
+    // MachineID currentMachine;
+    
+    
+
+    
+
+     // Get the total number of cores and caches
+    coreCount = machineCount(MachineType_Directory);
+    cacheCount = machineCount(MachineType_L1Cache);
+
+
+    DPRINTF(CacheRubyInfoFlag, "Total CPU cores: %d, Total L1 Caches: %d.\n", coreCount, cacheCount);
+
 
     
 
     for (int i = 0; i < getNumBlocks(); i++) {
         check_address = getAddressAtIdx(i);
         if(check_address != 0){
+            // try{
+            // if(m_controller != nullptr){
+            //     currentMachine = m_controller->mapAddressToMachine(check_address, MachineType_L1Cache);
+            //     DPRINTF(CacheRubyInfoFlag, "Mapped Address to MachineID: %s\n",MachineIDToString(currentMachine).c_str());
+
+            // }
             if(isTagPresent(check_address)){
                 occupancy++;
             }
+            // } catch (const std::exception &e) {
+            //     DPRINTF(CacheRubyInfoFlag, "Exception: %s\n", e.what());
+            //     continue; // Handle the exception or break if needed
+            // }
         }
     }
 
-  
+    // Print the machine ID using MachineIDToString
+    
+
     DPRINTF(CacheRubyInfoFlag, "Hello World! Occupied value : %d.\n",occupancy);
 
-    if(times != 3268) {
-        schedule(event, curTick() + 10000);
+    // if(times != 3268) {
+    //     schedule(event, curTick() + 10000);
 
-    }
+    // }
+    return occupancy;
 
     
 
-    // // Print the occupancy data
-    // std::cout << "Cache Occupancy: " << occupied_lines 
-    //           << " lines occupied out of " << numCacheSets * associativity 
-    //           << " (" << (occupied_lines * 100.0) / (numCacheSets * associativity) 
-    //           << "%)" << std::endl;
 }
 
 AbstractCacheEntry*

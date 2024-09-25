@@ -12,6 +12,7 @@ namespace gem5
 class CacheInfo : public SimObject
 {
   private:
+  void getNeighbourID();
     
 
 

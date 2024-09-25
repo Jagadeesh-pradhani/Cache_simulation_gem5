@@ -74,8 +74,8 @@ def create_system(
     # Must create the individual controllers before the network to ensure the
     # controller constructors are called before the network constructor
     #
-    l2_bits = int(math.log(options.num_l2caches, 2))
-    block_size_bits = int(math.log(options.cacheline_size, 2))
+    l2_bits = int(math.log(options.num_l2caches, 2))    #0
+    block_size_bits = int(math.log(options.cacheline_size, 2))  #6
 
     for i in range(options.num_cpus):
         #
@@ -86,12 +86,16 @@ def create_system(
             assoc=options.l1i_assoc,
             start_index_bit=block_size_bits,
             is_icache=True,
+            ruby_system = ruby_system,
+            # replacement_policy= BRRIPRP(),
         )
         l1d_cache = L1Cache(
             size=options.l1d_size,
             assoc=options.l1d_assoc,
             start_index_bit=block_size_bits,
             is_icache=False,
+            ruby_system = ruby_system,
+            # replacement_policy= BRRIPRP(),
         )
 
         prefetcher = RubyPrefetcher()
@@ -109,7 +113,7 @@ def create_system(
             ruby_system=ruby_system,
             clk_domain=clk_domain,
             transitions_per_cycle=options.ports,
-            enable_prefetch=False,
+            enable_prefetch=True,
         )
 
         cpu_seq = RubySequencer(
@@ -135,6 +139,13 @@ def create_system(
         l1_cntrl.unblockFromL1Cache = MessageBuffer()
         l1_cntrl.unblockFromL1Cache.out_port = ruby_system.network.in_port
 
+        #New Buffers
+        l1_cntrl.n_RequestFromL1Cache = MessageBuffer()
+        l1_cntrl.n_RequestFromL1Cache.out_port = ruby_system.network.in_port
+        l1_cntrl.n_ResponseFromL1Cache = MessageBuffer()
+        l1_cntrl.n_ResponseFromL1Cache.out_port = ruby_system.network.in_port
+        
+
         l1_cntrl.optionalQueue = MessageBuffer()
 
         l1_cntrl.requestToL1Cache = MessageBuffer()
@@ -142,7 +153,13 @@ def create_system(
         l1_cntrl.responseToL1Cache = MessageBuffer()
         l1_cntrl.responseToL1Cache.in_port = ruby_system.network.out_port
 
-    l2_index_start = block_size_bits + l2_bits
+        #New
+        l1_cntrl.n_RequestToL1Cache = MessageBuffer()
+        l1_cntrl.n_RequestToL1Cache.in_port = ruby_system.network.out_port
+        l1_cntrl.n_ResponseToL1Cache = MessageBuffer()
+        l1_cntrl.n_ResponseToL1Cache.in_port = ruby_system.network.out_port
+
+    l2_index_start = block_size_bits + l2_bits  #6
 
     for i in range(options.num_l2caches):
         #
@@ -152,6 +169,8 @@ def create_system(
             size=options.l2_size,
             assoc=options.l2_assoc,
             start_index_bit=l2_index_start,
+            ruby_system = ruby_system,
+            # replacement_policy= BRRIPRP(),
         )
 
         l2_cntrl = L2Cache_Controller(
@@ -250,6 +269,6 @@ def create_system(
 
         all_cntrls = all_cntrls + [io_controller]
 
-    ruby_system.network.number_of_virtual_networks = 3
+    ruby_system.network.number_of_virtual_networks = 5
     topology = create_topology(all_cntrls, options)
     return (cpu_sequencers, mem_dir_cntrl_nodes, topology)

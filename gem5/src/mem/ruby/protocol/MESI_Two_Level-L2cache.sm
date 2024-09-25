@@ -365,6 +365,7 @@ machine(MachineType:L2Cache, "MESI Directory L2 Cache CMP")
 
   // L1 Request
   in_port(L1RequestL2Network_in, RequestMsg, L1RequestToL2Cache, rank = 0) {
+    DPRINTF(Custom, "request from L1->L2\n");
     if(L1RequestL2Network_in.isReady(clockEdge())) {
       peek(L1RequestL2Network_in,  RequestMsg) {
         Entry cache_entry := getCacheEntry(in_msg.addr);

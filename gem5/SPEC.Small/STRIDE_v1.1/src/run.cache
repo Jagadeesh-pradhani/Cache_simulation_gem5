@@ -1,0 +1,113 @@
+#!/usr/local/bin/bash -f
+#       This shell script runs the CACHE benchmarks and prints the
+#       results to STDOUT and STDERR.  It is intended to be run from "make"
+#       see "make run" in the makefile.
+#
+echo "************************************************************************"
+echo "****              LLNL MEMORY TRASHER  Programs Benchmark           ****"
+echo "************************************************************************"
+echo "Please send the results of this run to:"
+echo " "
+echo "Dr. Mark K. Seager"
+echo "Lawrence Livermore National Laboratory"
+echo "PO Box 808, L-554"
+echo "Livermore, CA 94551-9900"
+echo "VOICE: 925-423-3141, FAX: 925-423-8911"
+echo "seager@llnl.gov"
+echo " "
+echo -n "Running benchmarks on machine: "
+uname -a
+cat /proc/cpuinfo
+echo -n "Starting STRIDE benchmark on: "
+date
+times
+echo ""
+#set number of repatitions...
+export NREP=1
+#set time output
+TIMEFORMAT='real %lR user %lU sys %lS CPU %P%%'
+
+echo "************************************************************************"
+echo "****      Sequoia Benchmark Version 1.0                             ****"
+echo "************************************************************************"
+echo "************************************************************************"
+echo "****      STRID3 Optimized FORTRAN MEMORY Benchmark                 ****"
+echo "************************************************************************"
+for ((REP=0; REP<$NREP; REP++ )) ;
+do
+    echo "time strid3.Opt"
+    time strid3.Opt
+done
+echo "************************************************************************"
+echo "****      STRID3 Optimized C MEMORY Benchmark                       ****"
+echo "************************************************************************"
+for ((REP=0; REP<$NREP; REP++ )) ;
+do
+    echo "time strid3c.Opt"
+    time strid3c.Opt
+done
+echo ""
+echo "************************************************************************"
+echo "****              VECOP Optimized FORTRAN BENCHMARK                 ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time vecop.Opt"
+    time vecop.Opt
+done
+echo ""
+echo "************************************************************************"
+echo "****              VECOP Optimized C BENCHMARK                       ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time vecopc.Opt"
+    time vecopc.Opt
+done
+echo ""
+echo ""
+echo "************************************************************************"
+echo "****              CACHE Optimized FORTRAN BENCHMARK                 ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time cache.Opt"
+    time cache.Opt
+done
+echo ""
+echo ""
+echo "************************************************************************"
+echo "****              CACHE Optimized C BENCHMARK                       ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time cachec.Opt"
+    time cachec.Opt
+done
+echo ""
+echo ""
+echo "************************************************************************"
+echo "****              STRIDDOT Optimized BENCHMARK                      ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time striddot.Opt"
+    time striddot.Opt
+done
+echo ""
+echo ""
+echo "************************************************************************"
+echo "****              CACHEDOT Optimized BENCHMARK                      ****"
+echo "************************************************************************"
+for ((REP=0; REP<NREP; REP++ )) ;
+do
+    echo "time cachedot.Opt"
+    time cachedot.Opt
+done
+echo ""
+
+#
+echo " "
+echo -n "MEMORY THRASHING benchmark completed at: "
+date
+times

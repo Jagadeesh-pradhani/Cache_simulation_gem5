@@ -423,6 +423,15 @@ AbstractController::mapAddressToMachine(Addr addr, MachineType mtype) const
     return mach;
 }
 
+//New
+MachineID
+AbstractController::mapNodeIdToMacine(NodeID Id, MachineType mtype) const
+{
+    MachineID mach = {mtype, Id};
+    return mach;
+}
+
+
 MachineID
 AbstractController::mapAddressToDownstreamMachine(Addr addr, MachineType mtype)
 const

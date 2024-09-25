@@ -261,6 +261,7 @@ machine(MachineType:Directory, "Directory protocol")
 //added by SS
   // off-chip memory request/response is done
   in_port(memQueue_in, MemoryMsg, responseFromMemory) {
+    DPRINTF(RubySlicc, "Current machine_id : %s\n", machineID);
     if (memQueue_in.isReady(clockEdge())) {
       peek(memQueue_in, MemoryMsg) {
         TBE tbe := TBEs[in_msg.addr];
