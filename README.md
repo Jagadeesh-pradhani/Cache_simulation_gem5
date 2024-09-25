@@ -21,12 +21,19 @@ This project involves modifying the gem5 simulator to implement a custom version
    ```
 2. Install dependencies
    ```bash
+   cd Cache_prefetcher_simulation/
+   ```
+   ```bash
    sudo apt install build-essential git m4 scons zlib1g zlib1g-dev \
     libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev \
     python3-dev libboost-all-dev pkg-config python3-tk
    ```
    ```bash
    pip3 install requirements.txt
+   ```
+4. Build for **X86_MESI_Two_Level**
+   ```bash
+   scons build/X86_MESI_Two_Level/gem5.opt -j$(nproc)
    ```
 
 
