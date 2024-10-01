@@ -1,5 +1,4 @@
 
-FROM gcr.io/gem5-test/ubuntu-22.04_all-dependencies:latest
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
-RUN apt -y update && apt -y install git
 
