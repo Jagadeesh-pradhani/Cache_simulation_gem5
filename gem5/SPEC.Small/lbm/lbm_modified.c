@@ -136,10 +136,10 @@ void read_input_file(char *filename) {
 
 int main(int argc, char *argv[]){
     if (argc < 2) {
-        printf("Usage: %s <input_file>", argv[0]);
+        printf("Usage: %s <input_file> \n", argv[0]);
         return 1;
     }
     read_input_file(argv[1]);
-    printf("OMEGA: %f, TAU: %f", OMEGA, TAU);
+    printf("OMEGA: %f, TAU: %f \n", OMEGA, TAU);
     return 0;
 }

@@ -416,4 +416,41 @@ u_writeDataToL1Cache
 
 
 
+// Base states
+NP, AccessPermission:Invalid, desc="Not present in either cache";
+I, AccessPermission:Invalid, desc="a L1 cache entry Idle";
+S, AccessPermission:Read_Only, desc="a L1 cache entry Shared";
+E, AccessPermission:Read_Only, desc="a L1 cache entry Exclusive";
+M, AccessPermission:Read_Write, desc="a L1 cache entry Modified", format="!b";
 
+// Transient States
+IS, AccessPermission:Busy, desc="L1 idle, issued GETS, have not seen response yet";
+IM, AccessPermission:Busy, desc="L1 idle, issued GETX, have not seen response yet";
+SM, AccessPermission:Read_Only, desc="L1 idle, issued GETX, have not seen response yet";
+IS_I, AccessPermission:Busy, desc="L1 idle, issued GETS, saw Inv before data because directory doesn't block on GETS hit";
+
+M_I, AccessPermission:Busy, desc="L1 replacing, waiting for ACK";
+SINK_WB_ACK, AccessPermission:Busy, desc="This is to sink WB_Acks from L2";
+
+// Transient States in which block is being prefetched
+PF_IS, AccessPermission:Busy, desc="Issued GETS, have not seen response yet";
+PF_IM, AccessPermission:Busy, desc="Issued GETX, have not seen response yet";
+PF_SM, AccessPermission:Busy, desc="Issued GETX, received data, waiting for acks";
+PF_IS_I, AccessPermission:Busy, desc="Issued GETs, saw inv before data";
+
+
+Ifetch : 
+
+{NP,I}, Ifetch, IS
+{S,E,M}, Ifetch
+
+Load :
+
+{NP,I}, Load, IS
+{S,E,M}, Load
+
+Store :
+
+{NP,I}, Store, IM
+S, Store, SM
+{E,M}, Store, M

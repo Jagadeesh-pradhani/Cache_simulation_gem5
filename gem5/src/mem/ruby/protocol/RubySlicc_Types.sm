@@ -207,6 +207,10 @@ structure (CacheMemory, external = "yes") {
   bool cacheAvail(Addr);
   Addr cacheProbe(Addr);
   int CacheOccupancy();
+  int getNorthNeighbour(int);
+  int getSouthNeighbour(int);
+  int getEastNeighbour(int);
+  int getWestNeighbour(int);
   AbstractCacheEntry getNullEntry();
   AbstractCacheEntry allocate(Addr, AbstractCacheEntry);
   AbstractCacheEntry allocate(Addr, AbstractCacheEntry, bool);

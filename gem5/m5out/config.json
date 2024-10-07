@@ -1108,7 +1108,7 @@
                         "name": "workload",
                         "path": "system.cpu00.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -1117,7 +1117,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -2136,7 +2136,7 @@
                         "name": "workload",
                         "path": "system.cpu01.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -2145,7 +2145,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -3164,7 +3164,7 @@
                         "name": "workload",
                         "path": "system.cpu02.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -3173,7 +3173,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -4192,7 +4192,7 @@
                         "name": "workload",
                         "path": "system.cpu03.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -4201,7 +4201,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -5220,7 +5220,7 @@
                         "name": "workload",
                         "path": "system.cpu04.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -5229,7 +5229,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -6248,7 +6248,7 @@
                         "name": "workload",
                         "path": "system.cpu05.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -6257,7 +6257,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -7276,7 +7276,7 @@
                         "name": "workload",
                         "path": "system.cpu06.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -7285,7 +7285,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -8304,7 +8304,7 @@
                         "name": "workload",
                         "path": "system.cpu07.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/mcf/mcf"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -8313,7 +8313,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/mcf/mcf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -9332,7 +9332,7 @@
                         "name": "workload",
                         "path": "system.cpu08.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/heat/heat"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -9341,7 +9341,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/heat/heat",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -10360,7 +10360,7 @@
                         "name": "workload",
                         "path": "system.cpu09.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/heat/heat"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -10369,7 +10369,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/heat/heat",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -11388,7 +11388,7 @@
                         "name": "workload",
                         "path": "system.cpu10.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/heat/heat"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -11397,7 +11397,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/heat/heat",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -12416,7 +12416,7 @@
                         "name": "workload",
                         "path": "system.cpu11.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/heat/heat"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -12425,7 +12425,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/heat/heat",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -13444,7 +13444,7 @@
                         "name": "workload",
                         "path": "system.cpu12.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/dct/dct"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -13453,7 +13453,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/dct/dct",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -14472,7 +14472,7 @@
                         "name": "workload",
                         "path": "system.cpu13.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/dct/dct"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -14481,7 +14481,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/dct/dct",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -15500,7 +15500,7 @@
                         "name": "workload",
                         "path": "system.cpu14.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/dct/dct"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -15509,7 +15509,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/dct/dct",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -16528,7 +16528,7 @@
                         "name": "workload",
                         "path": "system.cpu15.workload",
                         "cmd": [
-                            "tests/test-progs/hello/bin/x86/linux/hello"
+                            "SPEC.Small/dct/dct"
                         ],
                         "cwd": "/home/jagadeesh/gem5",
                         "drivers": [],
@@ -16537,7 +16537,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "tests/test-progs/hello/bin/x86/linux/hello",
+                        "executable": "SPEC.Small/dct/dct",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
@@ -21432,6 +21432,62 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "east_L1D",
+                    "path": "system.ruby.l1_cntrl0.east_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl0.east_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "east_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "east_L1I",
+                    "path": "system.ruby.l1_cntrl0.east_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl0.east_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -21523,6 +21579,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "north_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -21694,6 +21752,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl0.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl0.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl0.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl0.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -21716,18 +21830,29 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 0
+                "version": 0,
+                "west_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "west_L1I": "system.ruby.l1_cntrl0.L1Icache"
             },
             "l1_cntrl1": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl1",
                 "path": "system.ruby.l1_cntrl1",
-                "L1Dcache": {
+                "L1Dcache": "system.ruby.l1_cntrl0.east_L1D",
+                "L1Icache": "system.ruby.l1_cntrl0.east_L1I",
+                "addr_ranges": [
+                    "0:18446744073709551615"
+                ],
+                "buffer_size": 0,
+                "clk_domain": "system.cpu_clk_domain",
+                "cluster_id": 0,
+                "downstream_destinations": [],
+                "east_L1D": {
                     "type": "RubyCache",
                     "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl1.L1Dcache",
+                    "name": "east_L1D",
+                    "path": "system.ruby.l1_cntrl1.east_L1D",
                     "assoc": 2,
                     "atomicALUs": 64,
                     "atomicLatency": 0,
@@ -21740,7 +21865,7 @@
                         "type": "TreePLRURP",
                         "cxx_class": "gem5::replacement_policy::TreePLRU",
                         "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl1.L1Dcache.replacement_policy",
+                        "path": "system.ruby.l1_cntrl1.east_L1D.replacement_policy",
                         "eventq_index": 0,
                         "num_leaves": 2
                     },
@@ -21751,11 +21876,11 @@
                     "tagAccessLatency": 1,
                     "tagArrayBanks": 1
                 },
-                "L1Icache": {
+                "east_L1I": {
                     "type": "RubyCache",
                     "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl1.L1Icache",
+                    "name": "east_L1I",
+                    "path": "system.ruby.l1_cntrl1.east_L1I",
                     "assoc": 2,
                     "atomicALUs": 64,
                     "atomicLatency": 0,
@@ -21768,7 +21893,7 @@
                         "type": "TreePLRURP",
                         "cxx_class": "gem5::replacement_policy::TreePLRU",
                         "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl1.L1Icache.replacement_policy",
+                        "path": "system.ruby.l1_cntrl1.east_L1I.replacement_policy",
                         "eventq_index": 0,
                         "num_leaves": 2
                     },
@@ -21779,13 +21904,6 @@
                     "tagAccessLatency": 1,
                     "tagArrayBanks": 1
                 },
-                "addr_ranges": [
-                    "0:18446744073709551615"
-                ],
-                "buffer_size": 0,
-                "clk_domain": "system.cpu_clk_domain",
-                "cluster_id": 0,
-                "downstream_destinations": [],
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -21877,6 +21995,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "north_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -22001,7 +22121,7 @@
                     "path": "system.ruby.l1_cntrl1.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl1.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl0.east_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -22048,6 +22168,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl1.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl1.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl1.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl1.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -22070,69 +22246,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 1
+                "version": 1,
+                "west_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "west_L1I": "system.ruby.l1_cntrl0.L1Icache"
             },
             "l1_cntrl10": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl10",
                 "path": "system.ruby.l1_cntrl10",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl10.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl10.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl10.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl10.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl6.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl6.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -22140,6 +22264,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl7.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl7.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -22231,6 +22357,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl2.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl2.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -22355,7 +22483,7 @@
                     "path": "system.ruby.l1_cntrl10.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl10.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl6.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -22402,6 +22530,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl10.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl10.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl10.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl10.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -22424,69 +22608,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 10
+                "version": 10,
+                "west_L1D": "system.ruby.l1_cntrl5.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl5.south_L1I"
             },
             "l1_cntrl11": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl11",
                 "path": "system.ruby.l1_cntrl11",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl11.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl11.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl11.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl11.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl7.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl7.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -22494,6 +22626,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "east_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -22585,6 +22719,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl3.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl3.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -22709,7 +22845,7 @@
                     "path": "system.ruby.l1_cntrl11.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl11.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl7.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -22756,6 +22892,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl11.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl11.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl11.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl11.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -22778,69 +22970,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 11
+                "version": 11,
+                "west_L1D": "system.ruby.l1_cntrl6.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl6.south_L1I"
             },
             "l1_cntrl12": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl12",
                 "path": "system.ruby.l1_cntrl12",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl12.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl12.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl12.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl12.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl8.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl8.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -22848,6 +22988,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl9.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl9.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -22939,6 +23081,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl4.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl4.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -23063,7 +23207,7 @@
                     "path": "system.ruby.l1_cntrl12.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl12.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl8.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -23110,6 +23254,8 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "south_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -23132,69 +23278,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 12
+                "version": 12,
+                "west_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "west_L1I": "system.ruby.l1_cntrl0.L1Icache"
             },
             "l1_cntrl13": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl13",
                 "path": "system.ruby.l1_cntrl13",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl13.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl13.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl13.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl13.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl9.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl9.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -23202,6 +23296,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl10.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl10.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -23293,6 +23389,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl5.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl5.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -23417,7 +23515,7 @@
                     "path": "system.ruby.l1_cntrl13.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl13.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl9.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -23464,6 +23562,8 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "south_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -23486,69 +23586,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 13
+                "version": 13,
+                "west_L1D": "system.ruby.l1_cntrl8.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl8.south_L1I"
             },
             "l1_cntrl14": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl14",
                 "path": "system.ruby.l1_cntrl14",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl14.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl14.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl14.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl14.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl10.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl10.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -23556,6 +23604,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl11.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl11.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -23647,6 +23697,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl6.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl6.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -23771,7 +23823,7 @@
                     "path": "system.ruby.l1_cntrl14.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl14.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl10.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -23818,6 +23870,8 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "south_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -23840,69 +23894,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 14
+                "version": 14,
+                "west_L1D": "system.ruby.l1_cntrl9.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl9.south_L1I"
             },
             "l1_cntrl15": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl15",
                 "path": "system.ruby.l1_cntrl15",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl15.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl15.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl15.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl15.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl11.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl11.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -23910,6 +23912,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "east_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -24001,6 +24005,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl7.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl7.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -24125,7 +24131,7 @@
                     "path": "system.ruby.l1_cntrl15.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl15.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl11.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -24172,6 +24178,8 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "south_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -24194,18 +24202,29 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 15
+                "version": 15,
+                "west_L1D": "system.ruby.l1_cntrl10.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl10.south_L1I"
             },
             "l1_cntrl2": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl2",
                 "path": "system.ruby.l1_cntrl2",
-                "L1Dcache": {
+                "L1Dcache": "system.ruby.l1_cntrl1.east_L1D",
+                "L1Icache": "system.ruby.l1_cntrl1.east_L1I",
+                "addr_ranges": [
+                    "0:18446744073709551615"
+                ],
+                "buffer_size": 0,
+                "clk_domain": "system.cpu_clk_domain",
+                "cluster_id": 0,
+                "downstream_destinations": [],
+                "east_L1D": {
                     "type": "RubyCache",
                     "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl2.L1Dcache",
+                    "name": "east_L1D",
+                    "path": "system.ruby.l1_cntrl2.east_L1D",
                     "assoc": 2,
                     "atomicALUs": 64,
                     "atomicLatency": 0,
@@ -24218,7 +24237,7 @@
                         "type": "TreePLRURP",
                         "cxx_class": "gem5::replacement_policy::TreePLRU",
                         "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl2.L1Dcache.replacement_policy",
+                        "path": "system.ruby.l1_cntrl2.east_L1D.replacement_policy",
                         "eventq_index": 0,
                         "num_leaves": 2
                     },
@@ -24229,11 +24248,11 @@
                     "tagAccessLatency": 1,
                     "tagArrayBanks": 1
                 },
-                "L1Icache": {
+                "east_L1I": {
                     "type": "RubyCache",
                     "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl2.L1Icache",
+                    "name": "east_L1I",
+                    "path": "system.ruby.l1_cntrl2.east_L1I",
                     "assoc": 2,
                     "atomicALUs": 64,
                     "atomicLatency": 0,
@@ -24246,7 +24265,7 @@
                         "type": "TreePLRURP",
                         "cxx_class": "gem5::replacement_policy::TreePLRU",
                         "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl2.L1Icache.replacement_policy",
+                        "path": "system.ruby.l1_cntrl2.east_L1I.replacement_policy",
                         "eventq_index": 0,
                         "num_leaves": 2
                     },
@@ -24257,13 +24276,6 @@
                     "tagAccessLatency": 1,
                     "tagArrayBanks": 1
                 },
-                "addr_ranges": [
-                    "0:18446744073709551615"
-                ],
-                "buffer_size": 0,
-                "clk_domain": "system.cpu_clk_domain",
-                "cluster_id": 0,
-                "downstream_destinations": [],
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -24355,6 +24367,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "north_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -24479,7 +24493,7 @@
                     "path": "system.ruby.l1_cntrl2.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl2.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl1.east_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -24526,6 +24540,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl2.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl2.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl2.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl2.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -24548,69 +24618,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 2
+                "version": 2,
+                "west_L1D": "system.ruby.l1_cntrl0.east_L1D",
+                "west_L1I": "system.ruby.l1_cntrl0.east_L1I"
             },
             "l1_cntrl3": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl3",
                 "path": "system.ruby.l1_cntrl3",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl3.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl3.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl3.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl3.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl2.east_L1D",
+                "L1Icache": "system.ruby.l1_cntrl2.east_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -24618,6 +24636,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "east_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -24709,6 +24729,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "north_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -24833,7 +24855,7 @@
                     "path": "system.ruby.l1_cntrl3.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl3.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl2.east_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -24880,6 +24902,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl3.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl3.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl3.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl3.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -24902,69 +24980,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 3
+                "version": 3,
+                "west_L1D": "system.ruby.l1_cntrl1.east_L1D",
+                "west_L1I": "system.ruby.l1_cntrl1.east_L1I"
             },
             "l1_cntrl4": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl4",
                 "path": "system.ruby.l1_cntrl4",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl4.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl4.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl4.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl4.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl0.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl0.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -24972,6 +24998,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl1.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl1.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -25063,6 +25091,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "north_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -25187,7 +25217,7 @@
                     "path": "system.ruby.l1_cntrl4.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl4.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl0.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -25234,6 +25264,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl4.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl4.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl4.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl4.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -25256,69 +25342,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 4
+                "version": 4,
+                "west_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "west_L1I": "system.ruby.l1_cntrl0.L1Icache"
             },
             "l1_cntrl5": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl5",
                 "path": "system.ruby.l1_cntrl5",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl5.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl5.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl5.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl5.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl1.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl1.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -25326,6 +25360,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl2.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl2.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -25417,6 +25453,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.east_L1D",
+                "north_L1I": "system.ruby.l1_cntrl0.east_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -25541,7 +25579,7 @@
                     "path": "system.ruby.l1_cntrl5.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl5.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl1.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -25588,6 +25626,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl5.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl5.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl5.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl5.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -25610,69 +25704,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 5
+                "version": 5,
+                "west_L1D": "system.ruby.l1_cntrl0.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl0.south_L1I"
             },
             "l1_cntrl6": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl6",
                 "path": "system.ruby.l1_cntrl6",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl6.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl6.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl6.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl6.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl2.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl2.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -25680,6 +25722,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl3.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl3.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -25771,6 +25815,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl1.east_L1D",
+                "north_L1I": "system.ruby.l1_cntrl1.east_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -25895,7 +25941,7 @@
                     "path": "system.ruby.l1_cntrl6.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl6.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl2.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -25942,6 +25988,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl6.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl6.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl6.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl6.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -25964,69 +26066,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 6
+                "version": 6,
+                "west_L1D": "system.ruby.l1_cntrl1.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl1.south_L1I"
             },
             "l1_cntrl7": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl7",
                 "path": "system.ruby.l1_cntrl7",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl7.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl7.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl7.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl7.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl3.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl3.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -26034,6 +26084,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "east_L1I": "system.ruby.l1_cntrl0.L1Icache",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -26125,6 +26177,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl2.east_L1D",
+                "north_L1I": "system.ruby.l1_cntrl2.east_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -26249,7 +26303,7 @@
                     "path": "system.ruby.l1_cntrl7.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl7.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl3.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -26296,6 +26350,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl7.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl7.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl7.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl7.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -26318,69 +26428,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 7
+                "version": 7,
+                "west_L1D": "system.ruby.l1_cntrl2.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl2.south_L1I"
             },
             "l1_cntrl8": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl8",
                 "path": "system.ruby.l1_cntrl8",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl8.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl8.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl8.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl8.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl4.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl4.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -26388,6 +26446,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl5.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl5.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -26479,6 +26539,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl0.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl0.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -26603,7 +26665,7 @@
                     "path": "system.ruby.l1_cntrl8.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl8.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl4.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -26650,6 +26712,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl8.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl8.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl8.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl8.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -26672,69 +26790,17 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 8
+                "version": 8,
+                "west_L1D": "system.ruby.l1_cntrl0.L1Dcache",
+                "west_L1I": "system.ruby.l1_cntrl0.L1Icache"
             },
             "l1_cntrl9": {
                 "type": "L1Cache_Controller",
                 "cxx_class": "gem5::ruby::L1Cache_Controller",
                 "name": "l1_cntrl9",
                 "path": "system.ruby.l1_cntrl9",
-                "L1Dcache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Dcache",
-                    "path": "system.ruby.l1_cntrl9.L1Dcache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": false,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl9.L1Dcache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
-                "L1Icache": {
-                    "type": "RubyCache",
-                    "cxx_class": "gem5::ruby::CacheMemory",
-                    "name": "L1Icache",
-                    "path": "system.ruby.l1_cntrl9.L1Icache",
-                    "assoc": 2,
-                    "atomicALUs": 64,
-                    "atomicLatency": 0,
-                    "block_size": 0,
-                    "dataAccessLatency": 1,
-                    "dataArrayBanks": 1,
-                    "eventq_index": 0,
-                    "is_icache": true,
-                    "replacement_policy": {
-                        "type": "TreePLRURP",
-                        "cxx_class": "gem5::replacement_policy::TreePLRU",
-                        "name": "replacement_policy",
-                        "path": "system.ruby.l1_cntrl9.L1Icache.replacement_policy",
-                        "eventq_index": 0,
-                        "num_leaves": 2
-                    },
-                    "resourceStalls": false,
-                    "ruby_system": "system.ruby",
-                    "size": 32768,
-                    "start_index_bit": 6,
-                    "tagAccessLatency": 1,
-                    "tagArrayBanks": 1
-                },
+                "L1Dcache": "system.ruby.l1_cntrl5.south_L1D",
+                "L1Icache": "system.ruby.l1_cntrl5.south_L1I",
                 "addr_ranges": [
                     "0:18446744073709551615"
                 ],
@@ -26742,6 +26808,8 @@
                 "clk_domain": "system.cpu_clk_domain",
                 "cluster_id": 0,
                 "downstream_destinations": [],
+                "east_L1D": "system.ruby.l1_cntrl6.south_L1D",
+                "east_L1I": "system.ruby.l1_cntrl6.south_L1I",
                 "enable_prefetch": true,
                 "eventq_index": 0,
                 "l1_request_latency": 2,
@@ -26833,6 +26901,8 @@
                         "is_source": "False"
                     }
                 },
+                "north_L1D": "system.ruby.l1_cntrl1.south_L1D",
+                "north_L1I": "system.ruby.l1_cntrl1.south_L1I",
                 "number_of_TBEs": 256,
                 "optionalQueue": {
                     "type": "MessageBuffer",
@@ -26957,7 +27027,7 @@
                     "path": "system.ruby.l1_cntrl9.sequencer",
                     "clk_domain": "system.cpu_clk_domain",
                     "coreid": 99,
-                    "dcache": "system.ruby.l1_cntrl9.L1Dcache",
+                    "dcache": "system.ruby.l1_cntrl5.south_L1D",
                     "deadlock_threshold": 500000,
                     "eventq_index": 0,
                     "garnet_standalone": false,
@@ -27004,6 +27074,62 @@
                         "is_source": "True"
                     }
                 },
+                "south_L1D": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1D",
+                    "path": "system.ruby.l1_cntrl9.south_L1D",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": false,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl9.south_L1D.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
+                "south_L1I": {
+                    "type": "RubyCache",
+                    "cxx_class": "gem5::ruby::CacheMemory",
+                    "name": "south_L1I",
+                    "path": "system.ruby.l1_cntrl9.south_L1I",
+                    "assoc": 2,
+                    "atomicALUs": 64,
+                    "atomicLatency": 0,
+                    "block_size": 0,
+                    "dataAccessLatency": 1,
+                    "dataArrayBanks": 1,
+                    "eventq_index": 0,
+                    "is_icache": true,
+                    "replacement_policy": {
+                        "type": "TreePLRURP",
+                        "cxx_class": "gem5::replacement_policy::TreePLRU",
+                        "name": "replacement_policy",
+                        "path": "system.ruby.l1_cntrl9.south_L1I.replacement_policy",
+                        "eventq_index": 0,
+                        "num_leaves": 2
+                    },
+                    "resourceStalls": false,
+                    "ruby_system": "system.ruby",
+                    "size": 32768,
+                    "start_index_bit": 6,
+                    "tagAccessLatency": 1,
+                    "tagArrayBanks": 1
+                },
                 "system": "system",
                 "to_l2_latency": 1,
                 "transitions_per_cycle": 4,
@@ -27026,7 +27152,9 @@
                     }
                 },
                 "upstream_destinations": [],
-                "version": 9
+                "version": 9,
+                "west_L1D": "system.ruby.l1_cntrl4.south_L1D",
+                "west_L1I": "system.ruby.l1_cntrl4.south_L1I"
             },
             "l2_cntrl0": {
                 "type": "L2Cache_Controller",

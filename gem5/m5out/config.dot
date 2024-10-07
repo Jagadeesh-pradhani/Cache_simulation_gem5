@@ -956,7 +956,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;100&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;100&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu00_isa {
@@ -1935,7 +1935,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;101&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;101&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu01_isa {
@@ -2914,7 +2914,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;102&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;102&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu02_isa {
@@ -3893,7 +3893,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;103&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;103&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu03_isa {
@@ -4872,7 +4872,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;104&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;104&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu04_isa {
@@ -5851,7 +5851,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;105&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;105&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu05_isa {
@@ -6830,7 +6830,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;106&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;106&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu06_isa {
@@ -7809,7 +7809,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;107&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/mcf/mcf&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/mcf/mcf&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;107&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu07_isa {
@@ -8788,7 +8788,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;108&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/heat/heat&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/heat/heat&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;108&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu08_isa {
@@ -9767,7 +9767,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;109&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/heat/heat&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/heat/heat&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;109&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu09_isa {
@@ -10746,7 +10746,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;110&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/heat/heat&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/heat/heat&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;110&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu10_isa {
@@ -11725,7 +11725,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;111&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/heat/heat&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/heat/heat&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;111&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu11_isa {
@@ -12704,7 +12704,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;112&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/dct/dct&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/dct/dct&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;112&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu12_isa {
@@ -13683,7 +13683,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;113&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/dct/dct&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/dct/dct&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;113&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu13_isa {
@@ -14662,7 +14662,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;114&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/dct/dct&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/dct/dct&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;114&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu14_isa {
@@ -15641,7 +15641,7 @@ fontsize=14;
 label="workload \n: Process";
 shape=box;
 style="rounded, filled";
-tooltip="cmd&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;tests/test-progs/hello/bin/x86/linux/hello&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;115&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
+tooltip="cmd&#61;SPEC.Small/dct/dct&#10;\cwd&#61;/home/jagadeesh/gem5&#10;\drivers&#61;&#10;\egid&#61;100&#10;\env&#61;&#10;\errout&#61;cerr&#10;\euid&#61;100&#10;\eventq_index&#61;0&#10;\executable&#61;SPEC.Small/dct/dct&#10;\gid&#61;1000&#10;\input&#61;cin&#10;\kvmInSE&#61;false&#10;\maxStackSize&#61;67108864&#10;\output&#61;cout&#10;\pgid&#61;100&#10;\pid&#61;115&#10;\ppid&#61;0&#10;\release&#61;5.1.0&#10;\simpoint&#61;0&#10;\system&#61;system&#10;\uid&#61;100&#10;\useArchPT&#61;false";
 }
 
 subgraph cluster_system_cpu15_isa {
@@ -34366,7 +34366,7 @@ fontsize=14;
 label="l1_cntrl0 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl0.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl0.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl0.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl0.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl0.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl0.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl0.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl0.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl0.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl0.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl0.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl0.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl0.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl0.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl0.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;0";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl0.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl0.east_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl0.east_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl0.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl0.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl0.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl0.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl0.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\north_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl0.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl0.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl0.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl0.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl0.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl0.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl0.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl0.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl0.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl0.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl0.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;0&#10;\west_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\west_L1I&#61;system.ruby.l1_cntrl0.L1Icache";
 subgraph cluster_system_ruby_l1_cntrl0_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -34437,6 +34437,102 @@ label="prefetcher \n: RubyPrefetcher";
 shape=box;
 style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
+}
+
+subgraph cluster_system_ruby_l1_cntrl0_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl0.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl0_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl0_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl0.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl0_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl0_east_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl0.east_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl0_east_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl0_east_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl0.east_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl0_east_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
 }
 
 subgraph cluster_system_ruby_l1_cntrl0_sequencer {
@@ -34617,7 +34713,7 @@ fontsize=14;
 label="l1_cntrl1 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl1.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl1.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl1.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl1.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl1.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl1.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl1.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl1.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl1.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl1.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl1.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl1.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl1.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl1.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl1.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl1.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;1";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl0.east_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl0.east_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl1.east_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl1.east_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl1.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl1.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl1.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl1.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl1.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\north_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl1.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl1.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl1.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl1.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl1.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl1.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl1.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl1.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl1.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl1.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl1.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;1&#10;\west_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\west_L1I&#61;system.ruby.l1_cntrl0.L1Icache";
 subgraph cluster_system_ruby_l1_cntrl1_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -34628,54 +34724,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl1_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl1_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl1_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl1_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl1_prefetcher {
@@ -34690,6 +34738,102 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl1_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl1_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl1_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl1_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl1_east_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.east_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl1_east_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl1_east_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl1.east_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl1_east_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl1_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -34699,7 +34843,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl1.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl1.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;1";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl0.east_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl1.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;1";
 system_ruby_l1_cntrl1_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl1_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl1_sequencer_power_state {
@@ -34868,7 +35012,7 @@ fontsize=14;
 label="l1_cntrl2 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl2.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl2.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl2.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl2.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl2.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl2.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl2.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl2.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl2.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl2.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl2.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl2.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl2.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl2.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl2.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl2.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;2";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl1.east_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl1.east_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl2.east_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl2.east_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl2.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl2.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl2.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl2.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl2.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\north_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl2.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl2.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl2.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl2.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl2.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl2.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl2.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl2.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl2.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl2.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl2.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;2&#10;\west_L1D&#61;system.ruby.l1_cntrl0.east_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl0.east_L1I";
 subgraph cluster_system_ruby_l1_cntrl2_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -34879,54 +35023,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl2_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl2_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl2_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl2_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl2_prefetcher {
@@ -34941,6 +35037,102 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl2_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl2_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl2_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl2_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl2_east_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.east_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl2_east_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl2_east_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="east_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl2.east_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl2_east_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl2_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -34950,7 +35142,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl2.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl2.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;2";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl1.east_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl2.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;2";
 system_ruby_l1_cntrl2_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl2_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl2_sequencer_power_state {
@@ -35119,7 +35311,7 @@ fontsize=14;
 label="l1_cntrl3 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl3.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl3.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl3.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl3.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl3.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl3.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl3.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl3.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl3.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl3.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl3.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl3.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl3.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl3.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl3.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl3.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;3";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl2.east_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl2.east_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\east_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl3.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl3.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl3.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl3.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl3.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\north_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl3.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl3.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl3.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl3.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl3.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl3.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl3.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl3.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl3.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl3.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl3.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;3&#10;\west_L1D&#61;system.ruby.l1_cntrl1.east_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl1.east_L1I";
 subgraph cluster_system_ruby_l1_cntrl3_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -35130,54 +35322,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl3_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl3.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl3_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl3_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl3.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl3_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl3_prefetcher {
@@ -35192,6 +35336,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl3_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl3.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl3_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl3_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl3.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl3_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl3_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -35201,7 +35393,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl3.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl3.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;3";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl2.east_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl3.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;3";
 system_ruby_l1_cntrl3_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl3_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl3_sequencer_power_state {
@@ -35370,7 +35562,7 @@ fontsize=14;
 label="l1_cntrl4 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl4.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl4.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl4.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl4.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl4.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl4.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl4.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl4.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl4.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl4.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl4.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl4.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl4.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl4.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl4.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl4.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;4";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl0.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl0.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl1.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl1.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl4.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl4.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl4.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl4.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl4.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\north_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl4.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl4.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl4.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl4.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl4.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl4.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl4.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl4.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl4.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl4.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl4.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;4&#10;\west_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\west_L1I&#61;system.ruby.l1_cntrl0.L1Icache";
 subgraph cluster_system_ruby_l1_cntrl4_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -35381,54 +35573,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl4_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl4.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl4_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl4_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl4.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl4_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl4_prefetcher {
@@ -35443,6 +35587,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl4_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl4.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl4_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl4_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl4.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl4_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl4_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -35452,7 +35644,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl4.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl4.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;4";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl0.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl4.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;4";
 system_ruby_l1_cntrl4_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl4_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl4_sequencer_power_state {
@@ -35621,7 +35813,7 @@ fontsize=14;
 label="l1_cntrl5 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl5.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl5.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl5.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl5.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl5.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl5.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl5.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl5.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl5.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl5.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl5.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl5.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl5.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl5.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl5.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl5.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;5";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl1.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl1.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl2.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl2.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl5.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl5.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl5.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl5.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl5.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.east_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl0.east_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl5.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl5.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl5.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl5.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl5.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl5.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl5.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl5.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl5.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl5.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl5.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;5&#10;\west_L1D&#61;system.ruby.l1_cntrl0.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl0.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl5_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -35632,54 +35824,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl5_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl5.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl5_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl5_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl5.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl5_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl5_prefetcher {
@@ -35694,6 +35838,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl5_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl5.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl5_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl5_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl5.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl5_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl5_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -35703,7 +35895,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl5.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl5.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;5";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl1.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl5.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;5";
 system_ruby_l1_cntrl5_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl5_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl5_sequencer_power_state {
@@ -35872,7 +36064,7 @@ fontsize=14;
 label="l1_cntrl6 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl6.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl6.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl6.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl6.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl6.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl6.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl6.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl6.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl6.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl6.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl6.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl6.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl6.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl6.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl6.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl6.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;6";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl2.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl2.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl3.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl3.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl6.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl6.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl6.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl6.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl6.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl1.east_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl1.east_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl6.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl6.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl6.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl6.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl6.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl6.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl6.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl6.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl6.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl6.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl6.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;6&#10;\west_L1D&#61;system.ruby.l1_cntrl1.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl1.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl6_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -35883,54 +36075,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl6_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl6.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl6_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl6_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl6.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl6_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl6_prefetcher {
@@ -35945,6 +36089,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl6_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl6.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl6_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl6_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl6.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl6_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl6_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -35954,7 +36146,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl6.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl6.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;6";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl2.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl6.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;6";
 system_ruby_l1_cntrl6_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl6_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl6_sequencer_power_state {
@@ -36123,7 +36315,7 @@ fontsize=14;
 label="l1_cntrl7 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl7.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl7.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl7.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl7.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl7.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl7.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl7.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl7.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl7.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl7.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl7.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl7.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl7.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl7.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl7.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl7.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;7";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl3.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl3.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\east_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl7.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl7.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl7.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl7.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl7.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl2.east_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl2.east_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl7.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl7.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl7.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl7.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl7.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl7.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl7.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl7.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl7.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl7.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl7.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;7&#10;\west_L1D&#61;system.ruby.l1_cntrl2.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl2.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl7_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -36134,54 +36326,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl7_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl7.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl7_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl7_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl7.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl7_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl7_prefetcher {
@@ -36196,6 +36340,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl7_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl7.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl7_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl7_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl7.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl7_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl7_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -36205,7 +36397,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl7.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl7.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;7";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl3.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl7.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;7";
 system_ruby_l1_cntrl7_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl7_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl7_sequencer_power_state {
@@ -36374,7 +36566,7 @@ fontsize=14;
 label="l1_cntrl8 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl8.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl8.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl8.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl8.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl8.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl8.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl8.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl8.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl8.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl8.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl8.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl8.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl8.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl8.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl8.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl8.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;8";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl4.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl4.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl5.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl5.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl8.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl8.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl8.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl8.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl8.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl0.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl0.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl8.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl8.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl8.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl8.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl8.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl8.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl8.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl8.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl8.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl8.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl8.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;8&#10;\west_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\west_L1I&#61;system.ruby.l1_cntrl0.L1Icache";
 subgraph cluster_system_ruby_l1_cntrl8_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -36385,54 +36577,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl8_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl8.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl8_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl8_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl8.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl8_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl8_prefetcher {
@@ -36447,6 +36591,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl8_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl8.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl8_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl8_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl8.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl8_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl8_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -36456,7 +36648,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl8.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl8.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;8";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl4.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl8.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;8";
 system_ruby_l1_cntrl8_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl8_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl8_sequencer_power_state {
@@ -36625,7 +36817,7 @@ fontsize=14;
 label="l1_cntrl9 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl9.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl9.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl9.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl9.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl9.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl9.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl9.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl9.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl9.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl9.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl9.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl9.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl9.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl9.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl9.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl9.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;9";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl5.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl5.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl6.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl6.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl9.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl9.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl9.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl9.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl9.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl1.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl1.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl9.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl9.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl9.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl9.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl9.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl9.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl9.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl9.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl9.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl9.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl9.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;9&#10;\west_L1D&#61;system.ruby.l1_cntrl4.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl4.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl9_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -36636,54 +36828,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl9_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl9.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl9_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl9_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl9.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl9_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl9_prefetcher {
@@ -36698,6 +36842,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl9_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl9.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl9_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl9_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl9.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl9_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl9_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -36707,7 +36899,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl9.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl9.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;9";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl5.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl9.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;9";
 system_ruby_l1_cntrl9_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl9_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl9_sequencer_power_state {
@@ -36876,7 +37068,7 @@ fontsize=14;
 label="l1_cntrl10 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl10.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl10.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl10.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl10.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl10.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl10.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl10.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl10.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl10.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl10.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl10.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl10.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl10.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl10.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl10.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl10.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;10";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl6.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl6.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl7.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl7.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl10.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl10.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl10.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl10.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl10.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl2.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl2.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl10.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl10.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl10.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl10.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl10.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl10.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl10.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl10.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl10.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl10.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl10.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;10&#10;\west_L1D&#61;system.ruby.l1_cntrl5.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl5.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl10_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -36887,54 +37079,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl10_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl10.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl10_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl10_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl10.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl10_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl10_prefetcher {
@@ -36949,6 +37093,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl10_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl10.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl10_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl10_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl10.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl10_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl10_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -36958,7 +37150,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl10.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl10.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;10";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl6.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl10.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;10";
 system_ruby_l1_cntrl10_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl10_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl10_sequencer_power_state {
@@ -37127,7 +37319,7 @@ fontsize=14;
 label="l1_cntrl11 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl11.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl11.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl11.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl11.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl11.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl11.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl11.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl11.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl11.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl11.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl11.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl11.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl11.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl11.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl11.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl11.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;11";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl7.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl7.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\east_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl11.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl11.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl11.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl11.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl11.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl3.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl3.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl11.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl11.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl11.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl11.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl11.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl11.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl11.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl11.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl11.south_L1D&#10;\south_L1I&#61;system.ruby.l1_cntrl11.south_L1I&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl11.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;11&#10;\west_L1D&#61;system.ruby.l1_cntrl6.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl6.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl11_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -37138,54 +37330,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl11_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl11.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl11_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl11_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl11.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl11_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl11_prefetcher {
@@ -37200,6 +37344,54 @@ style="rounded, filled";
 tooltip="cross_page&#61;false&#10;\eventq_index&#61;0&#10;\nonunit_filter&#61;8&#10;\num_startup_pfs&#61;1&#10;\num_streams&#61;4&#10;\page_shift&#61;12&#10;\train_misses&#61;4&#10;\unit_filter&#61;8";
 }
 
+subgraph cluster_system_ruby_l1_cntrl11_south_L1D {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1D \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl11.south_L1D.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl11_south_L1D_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
+subgraph cluster_system_ruby_l1_cntrl11_south_L1I {
+color="#000000";
+fillcolor="#84827c";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="south_L1I \n: L1Cache";
+shape=box;
+style="rounded, filled";
+tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl11.south_L1I.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
+subgraph cluster_system_ruby_l1_cntrl11_south_L1I_replacement_policy {
+color="#000000";
+fillcolor="#6a6863";
+fontcolor="#000000";
+fontname=Arial;
+fontsize=14;
+label="replacement_policy \n: TreePLRURP";
+shape=box;
+style="rounded, filled";
+tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
+}
+
+}
+
 subgraph cluster_system_ruby_l1_cntrl11_sequencer {
 color="#000000";
 fillcolor="#84827c";
@@ -37209,7 +37401,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl11.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl11.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;11";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl7.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl11.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;11";
 system_ruby_l1_cntrl11_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl11_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl11_sequencer_power_state {
@@ -37378,7 +37570,7 @@ fontsize=14;
 label="l1_cntrl12 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl12.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl12.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl12.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl12.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl12.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl12.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl12.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl12.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl12.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl12.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl12.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl12.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl12.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl12.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl12.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl12.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;12";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl8.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl8.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl9.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl9.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl12.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl12.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl12.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl12.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl12.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl4.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl4.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl12.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl12.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl12.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl12.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl12.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl12.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl12.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl12.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\south_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl12.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;12&#10;\west_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\west_L1I&#61;system.ruby.l1_cntrl0.L1Icache";
 subgraph cluster_system_ruby_l1_cntrl12_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -37389,54 +37581,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl12_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl12.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl12_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl12_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl12.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl12_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl12_prefetcher {
@@ -37460,7 +37604,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl12.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl12.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;12";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl8.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl12.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;12";
 system_ruby_l1_cntrl12_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl12_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl12_sequencer_power_state {
@@ -37629,7 +37773,7 @@ fontsize=14;
 label="l1_cntrl13 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl13.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl13.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl13.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl13.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl13.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl13.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl13.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl13.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl13.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl13.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl13.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl13.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl13.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl13.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl13.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl13.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;13";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl9.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl9.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl10.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl10.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl13.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl13.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl13.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl13.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl13.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl5.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl5.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl13.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl13.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl13.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl13.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl13.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl13.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl13.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl13.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\south_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl13.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;13&#10;\west_L1D&#61;system.ruby.l1_cntrl8.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl8.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl13_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -37640,54 +37784,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl13_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl13.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl13_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl13_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl13.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl13_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl13_prefetcher {
@@ -37711,7 +37807,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl13.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl13.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;13";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl9.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl13.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;13";
 system_ruby_l1_cntrl13_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl13_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl13_sequencer_power_state {
@@ -37880,7 +37976,7 @@ fontsize=14;
 label="l1_cntrl14 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl14.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl14.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl14.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl14.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl14.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl14.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl14.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl14.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl14.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl14.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl14.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl14.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl14.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl14.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl14.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl14.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;14";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl10.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl10.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl11.south_L1D&#10;\east_L1I&#61;system.ruby.l1_cntrl11.south_L1I&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl14.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl14.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl14.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl14.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl14.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl6.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl6.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl14.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl14.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl14.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl14.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl14.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl14.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl14.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl14.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\south_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl14.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;14&#10;\west_L1D&#61;system.ruby.l1_cntrl9.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl9.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl14_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -37891,54 +37987,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl14_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl14.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl14_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl14_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl14.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl14_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl14_prefetcher {
@@ -37962,7 +38010,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl14.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl14.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;14";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl10.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl14.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;14";
 system_ruby_l1_cntrl14_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl14_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl14_sequencer_power_state {
@@ -38131,7 +38179,7 @@ fontsize=14;
 label="l1_cntrl15 \n: L1Cache_Controller";
 shape=box;
 style="rounded, filled";
-tooltip="L1Dcache&#61;system.ruby.l1_cntrl15.L1Dcache&#10;\L1Icache&#61;system.ruby.l1_cntrl15.L1Icache&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl15.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl15.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl15.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl15.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl15.n_ResponseToL1Cache&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl15.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl15.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl15.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl15.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl15.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl15.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl15.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl15.sequencer&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl15.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;15";
+tooltip="L1Dcache&#61;system.ruby.l1_cntrl11.south_L1D&#10;\L1Icache&#61;system.ruby.l1_cntrl11.south_L1I&#10;\addr_ranges&#61;0:18446744073709551615&#10;\buffer_size&#61;0&#10;\clk_domain&#61;system.cpu_clk_domain&#10;\cluster_id&#61;0&#10;\downstream_destinations&#61;&#10;\east_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\east_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\enable_prefetch&#61;true&#10;\eventq_index&#61;0&#10;\l1_request_latency&#61;2&#10;\l1_response_latency&#61;2&#10;\l2_select_num_bits&#61;0&#10;\mandatoryQueue&#61;system.ruby.l1_cntrl15.mandatoryQueue&#10;\mandatory_queue_latency&#61;1&#10;\n_RequestFromL1Cache&#61;system.ruby.l1_cntrl15.n_RequestFromL1Cache&#10;\n_RequestToL1Cache&#61;system.ruby.l1_cntrl15.n_RequestToL1Cache&#10;\n_ResponseFromL1Cache&#61;system.ruby.l1_cntrl15.n_ResponseFromL1Cache&#10;\n_ResponseToL1Cache&#61;system.ruby.l1_cntrl15.n_ResponseToL1Cache&#10;\north_L1D&#61;system.ruby.l1_cntrl7.south_L1D&#10;\north_L1I&#61;system.ruby.l1_cntrl7.south_L1I&#10;\number_of_TBEs&#61;256&#10;\optionalQueue&#61;system.ruby.l1_cntrl15.optionalQueue&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl15.power_state&#10;\prefetcher&#61;system.ruby.l1_cntrl15.prefetcher&#10;\recycle_latency&#61;10&#10;\requestFromL1Cache&#61;system.ruby.l1_cntrl15.requestFromL1Cache&#10;\requestToL1Cache&#61;system.ruby.l1_cntrl15.requestToL1Cache&#10;\responseFromL1Cache&#61;system.ruby.l1_cntrl15.responseFromL1Cache&#10;\responseToL1Cache&#61;system.ruby.l1_cntrl15.responseToL1Cache&#10;\ruby_system&#61;system.ruby&#10;\send_evictions&#61;true&#10;\sequencer&#61;system.ruby.l1_cntrl15.sequencer&#10;\south_L1D&#61;system.ruby.l1_cntrl0.L1Dcache&#10;\south_L1I&#61;system.ruby.l1_cntrl0.L1Icache&#10;\system&#61;system&#10;\to_l2_latency&#61;1&#10;\transitions_per_cycle&#61;4&#10;\unblockFromL1Cache&#61;system.ruby.l1_cntrl15.unblockFromL1Cache&#10;\upstream_destinations&#61;&#10;\version&#61;15&#10;\west_L1D&#61;system.ruby.l1_cntrl10.south_L1D&#10;\west_L1I&#61;system.ruby.l1_cntrl10.south_L1I";
 subgraph cluster_system_ruby_l1_cntrl15_power_state {
 color="#000000";
 fillcolor="#84827c";
@@ -38142,54 +38190,6 @@ label="power_state \n: PowerState";
 shape=box;
 style="rounded, filled";
 tooltip="clk_gate_bins&#61;20&#10;\clk_gate_max&#61;1000000000000&#10;\clk_gate_min&#61;1000&#10;\default_state&#61;UNDEFINED&#10;\eventq_index&#61;0&#10;\leaders&#61;&#10;\possible_states&#61;";
-}
-
-subgraph cluster_system_ruby_l1_cntrl15_L1Icache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Icache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;true&#10;\replacement_policy&#61;system.ruby.l1_cntrl15.L1Icache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl15_L1Icache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
-}
-
-subgraph cluster_system_ruby_l1_cntrl15_L1Dcache {
-color="#000000";
-fillcolor="#84827c";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="L1Dcache \n: L1Cache";
-shape=box;
-style="rounded, filled";
-tooltip="assoc&#61;2&#10;\atomicALUs&#61;64&#10;\atomicLatency&#61;0&#10;\block_size&#61;0&#10;\dataAccessLatency&#61;1&#10;\dataArrayBanks&#61;1&#10;\eventq_index&#61;0&#10;\is_icache&#61;false&#10;\replacement_policy&#61;system.ruby.l1_cntrl15.L1Dcache.replacement_policy&#10;\resourceStalls&#61;false&#10;\ruby_system&#61;system.ruby&#10;\size&#61;32768&#10;\start_index_bit&#61;6&#10;\tagAccessLatency&#61;1&#10;\tagArrayBanks&#61;1";
-subgraph cluster_system_ruby_l1_cntrl15_L1Dcache_replacement_policy {
-color="#000000";
-fillcolor="#6a6863";
-fontcolor="#000000";
-fontname=Arial;
-fontsize=14;
-label="replacement_policy \n: TreePLRURP";
-shape=box;
-style="rounded, filled";
-tooltip="eventq_index&#61;0&#10;\num_leaves&#61;2";
-}
-
 }
 
 subgraph cluster_system_ruby_l1_cntrl15_prefetcher {
@@ -38213,7 +38213,7 @@ fontsize=14;
 label="sequencer \n: RubySequencer";
 shape=box;
 style="rounded, filled";
-tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl15.L1Dcache&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl15.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;15";
+tooltip="clk_domain&#61;system.cpu_clk_domain&#10;\coreid&#61;99&#10;\dcache&#61;system.ruby.l1_cntrl11.south_L1D&#10;\deadlock_threshold&#61;500000&#10;\eventq_index&#61;0&#10;\garnet_standalone&#61;false&#10;\is_cpu_sequencer&#61;true&#10;\max_outstanding_requests&#61;16&#10;\no_retry_on_stall&#61;false&#10;\power_model&#61;&#10;\power_state&#61;system.ruby.l1_cntrl15.sequencer.power_state&#10;\ruby_system&#61;system.ruby&#10;\support_data_reqs&#61;true&#10;\support_inst_reqs&#61;true&#10;\system&#61;system&#10;\using_ruby_tester&#61;false&#10;\version&#61;15";
 system_ruby_l1_cntrl15_sequencer_in_ports [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=in_ports, shape=box, style="rounded, filled"];
 system_ruby_l1_cntrl15_sequencer_interrupt_out_port [color="#000000", fillcolor="#6a6863", fontcolor="#000000", fontname=Arial, fontsize=14, label=interrupt_out_port, shape=box, style="rounded, filled"];
 subgraph cluster_system_ruby_l1_cntrl15_sequencer_power_state {

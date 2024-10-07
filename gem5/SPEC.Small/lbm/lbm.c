@@ -10,8 +10,8 @@ float TAU=0.5;
 
 /* Sahu: Increase XMAX and YMAX to increase execution time*/
 
-#define XMAX 64 /*Mesh size in x-direction */
-#define YMAX 64 /*Mesh size in y-direction */
+#define XMAX 64 /*Mesh size in x-direction  64*/
+#define YMAX 64 /*Mesh size in y-direction  64*/
 #define ZMAX 10 /*Not a-direction */
 #define STEP 8 
 #define MAXiter 200

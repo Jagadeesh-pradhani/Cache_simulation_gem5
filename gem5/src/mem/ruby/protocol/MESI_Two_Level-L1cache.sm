@@ -49,6 +49,14 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
    Cycles to_l2_latency := 1;
    bool send_evictions;
    bool enable_prefetch := "False";
+   CacheMemory * north_L1D;
+   CacheMemory * north_L1I;
+   CacheMemory * south_L1D;
+   CacheMemory * south_L1I;
+   CacheMemory * east_L1D;
+   CacheMemory * east_L1I;
+   CacheMemory * west_L1D;
+   CacheMemory * west_L1I;
 
    // Message Queues
    // From this node's L1 cache TO the network
@@ -109,6 +117,9 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     M_I, AccessPermission:Busy, desc="L1 replacing, waiting for ACK";
     SINK_WB_ACK, AccessPermission:Busy, desc="This is to sink WB_Acks from L2";
 
+    //Neighbour 
+    N_I, AccessPermission:Busy, desc="Issued Neighbour store";
+
     // Transient States in which block is being prefetched
     PF_IS, AccessPermission:Busy, desc="Issued GETS, have not seen response yet";
     PF_IM, AccessPermission:Busy, desc="Issued GETX, have not seen response yet";
@@ -150,11 +161,26 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
 
     //Neibour search
     N_Search, desc="Intercore request or response";
+    N_SearchD, desc="Intercore request or response for data";
     N_Not_Valid, desc="Not valid";
+    N_Not_Valid_Data, desc="Not valid data";
     N_Fwd_GET_INSTR, desc="GET_INSTR from other processor";
     N_DataL1, desc="Data from other cache";
     N_SendL2, desc="Check l2";
+    N_SendL2D, desc="Check l2 data";
     NAck_all, desc="ack all";
+
+    N_Save_North, desc="Save in north core";
+    N_Save_South, desc="Save in South core";
+    N_Save_East, desc="Save in East core";
+    N_Save_West, desc="Save in West core";
+
+    N_SaveNorth, desc="Save in north";
+    N_GetSouth, desc="Save from south";
+    N_GetSouthV, desc="Save from south";
+    N_DONE, desc="Done writing";
+
+    N_Write_N, desc="Write to neighbour";
   }
 
   // TYPES
@@ -175,6 +201,7 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     bool Dirty, default="false",   desc="data is dirty";
     bool isPrefetch,       desc="Set if this was caused by a prefetch";
     int pendingAcks, default="0", desc="number of pending acks";
+    int Not_count, default="0", desc="Not valid responses";
   }
 
   structure(TBETable, external="yes") {
@@ -187,6 +214,10 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
   TBETable TBEs, template="<L1Cache_TBE>", constructor="m_number_of_TBEs";
 
   int l2_select_low_bit, default="RubySystem::getBlockSizeBits()";
+
+  //Custom variables
+  // int Not_count := 0;
+  int Data_count := 0;
 
   Tick clockEdge();
   Cycles ticksToCycles(Tick t);
@@ -319,6 +350,118 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     return tbe.pendingAcks;
   }
 
+  //New
+  Entry getNorthDataCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Dcache_entry := static_cast(Entry, "pointer", north_L1D.lookup(addr));
+    return L1Dcache_entry;
+  }
+
+  Entry getSouthDataCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Dcache_entry := static_cast(Entry, "pointer", south_L1D.lookup(addr));
+    return L1Dcache_entry;
+  }
+
+  Entry getEastDataCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Dcache_entry := static_cast(Entry, "pointer", east_L1D.lookup(addr));
+    return L1Dcache_entry;
+  }
+
+  Entry getWestDataCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Dcache_entry := static_cast(Entry, "pointer", west_L1D.lookup(addr));
+    return L1Dcache_entry;
+  }
+
+  Entry getNorthInstCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Icache_entry := static_cast(Entry, "pointer", north_L1I.lookup(addr));
+    return L1Icache_entry;
+  }
+
+  Entry getSouthInstCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Icache_entry := static_cast(Entry, "pointer", south_L1I.lookup(addr));
+    return L1Icache_entry;
+  }
+
+  Entry getEastInstCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Icache_entry := static_cast(Entry, "pointer", east_L1I.lookup(addr));
+    return L1Icache_entry;
+  }
+
+  Entry getWestInstCacheEntry(Addr addr), return_by_pointer="yes" {
+    Entry L1Icache_entry := static_cast(Entry, "pointer", west_L1I.lookup(addr));
+    return L1Icache_entry;
+  }
+
+  Event neighbourData_event(Addr addr, RubyRequestType type) {
+
+    NodeID id := machineIDToNodeID(machineID);
+    int curr := IDToInt(id);
+
+    int north := L1Dcache.getNorthNeighbour(curr);
+    int south := L1Dcache.getSouthNeighbour(curr);
+    int east := L1Dcache.getEastNeighbour(curr);
+    int west := L1Dcache.getWestNeighbour(curr);
+    
+
+    
+
+    if(north_L1D.isTagPresent(addr) == true && north != -1) {
+      DPRINTF(Custom, "Valid-North\n");
+      return Event:N_Save_North;
+    }
+    else if(south_L1D.isTagPresent(addr) == true && south != -1) {
+      DPRINTF(Custom, "Valid-South\n");
+      return Event:N_Save_South;
+    }
+    else if(east_L1D.isTagPresent(addr) == true && east != -1) {
+      DPRINTF(Custom, "Valid-East\n");
+      return Event:N_Save_East;
+    }
+    else if(west_L1D.isTagPresent(addr) == true && west != -1) {
+      DPRINTF(Custom, "Valid-West\n");
+      return Event:N_Save_West;
+    }
+    else {
+      DPRINTF(Custom, "Non-Valid\n");
+      return mandatory_request_type_to_event(type);
+    }
+
+
+  }
+
+  Event neighbourInst_event(Addr addr, RubyRequestType type) {
+
+    NodeID id := machineIDToNodeID(machineID);
+    int curr := IDToInt(id);
+
+    int north := L1Icache.getNorthNeighbour(curr);
+    int south := L1Icache.getSouthNeighbour(curr);
+    int east := L1Icache.getEastNeighbour(curr);
+    int west := L1Icache.getWestNeighbour(curr);
+
+    if(north_L1I.isTagPresent(addr) == true && north != -1) {
+      DPRINTF(Custom, "IValid-North\n");
+      return Event:N_Save_North;
+    }
+    else if(south_L1I.isTagPresent(addr) == true && south != -1) {
+      DPRINTF(Custom, "IValid-South\n");
+      return Event:N_Save_South;
+    }
+    else if(east_L1I.isTagPresent(addr) == true && east != -1) {
+      DPRINTF(Custom, "IValid-East\n");
+      return Event:N_Save_East;
+    }
+    else if(west_L1I.isTagPresent(addr) == true && west != -1) {
+      DPRINTF(Custom, "IValid-West\n");
+      return Event:N_Save_West;
+    }
+    else {
+      DPRINTF(Custom, "Non-Valid\n");
+      return mandatory_request_type_to_event(type);
+    }
+
+
+  }
+
   out_port(requestL1Network_out, RequestMsg, requestFromL1Cache);
   out_port(responseL1Network_out, ResponseMsg, responseFromL1Cache);
   out_port(unblockNetwork_out, ResponseMsg, unblockFromL1Cache);
@@ -421,6 +564,8 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
 
         Entry cache_entry := getCacheEntry(in_msg.addr);
         TBE tbe := TBEs[in_msg.addr];
+        
+        DPRINTF(Custom,"address: %#x\n",in_msg.addr);
         // DPRINTF(RubySlicc, "%s\n", cache_entry.DataBlk);
         // if (is_invalid(cache_entry)) {
         //       DPRINTF(Custom, "Cache entry is invalid for address: %#x\n", in_msg.addr);
@@ -521,38 +666,63 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
         
         DPRINTF(Custom,"State : %s\n",getState(tbe, cache_entry, in_msg.addr));
         if(in_msg.Type == CoherenceResponseType:N_NOT) {
-          DPRINTF(Custom,"Check L2 from resp\n");
+          DPRINTF(Custom,"Check L2 from resp inst\n");
           trigger(Event:N_SendL2, in_msg.addr, cache_entry, tbe);
+        }
+        else if(in_msg.Type == CoherenceResponseType:N_NOT_DATA) {
+          DPRINTF(Custom,"Check L2 from resp data\n");
+          // NodeID id := machineIDToNodeID(machineID);
+          // int curr := IDToInt(id);
+          // Not_count := Not_count + 1;
+          // tbe.Not_count := tbe.Not_count + 1;
+          // int Not_count := tbe.Not_count;
+          // DPRINTF(Custom,"Not_count : %d\n",Not_count);
+
+          Entry cache_entry := getL1DCacheEntry(in_msg.addr);
+          trigger(Event:N_SendL2D, in_msg.addr, cache_entry, tbe);
+          // if((curr == 0 || curr == 3 || curr == 12 || curr == 15) && Not_count == 2) {
+          //   DPRINTF(Custom,"Edge cores , Not_count : %d\n",Not_count);
+          //   trigger(Event:N_SendL2D, in_msg.addr, cache_entry, tbe);
+          // }
+          // else if((curr == 5 || curr == 6 || curr == 9 || curr == 10) && Not_count == 4) {
+          //   DPRINTF(Custom,"Middle cores , Not_count : %d\n",Not_count);
+          //   trigger(Event:N_SendL2D, in_msg.addr, cache_entry, tbe);
+          // }
+          // else if((curr == 1 || curr == 2 || curr == 4 || curr == 8 ||
+          //          curr == 7 || curr == 11 || curr == 13 || curr == 14) && Not_count == 3) {
+          //   DPRINTF(Custom,"Medium cores , Not_count : %d\n",Not_count);
+          //   trigger(Event:N_SendL2D, in_msg.addr, cache_entry, tbe);
+          // }
+          // else {
+          //   DPRINTF(Custom,"Waiting for all neighbour responses\n");
+          //   Tick delay := n_ResponseL1Network_in.dequeue(clockEdge());
+          //   profileMsgDelay(0, ticksToCycles(delay));
+          // }
+          
+        }
+        else if (in_msg.Type == CoherenceResponseType:WB_ACK) {
+          DPRINTF(Custom,"Writeback to North Done\n");
+          trigger(Event:N_DONE, in_msg.addr, getNorthDataCacheEntry(in_msg.addr), tbe);
         }
         else {
           if(in_msg.Type == CoherenceResponseType:DATA){
             DPRINTF(Custom,"Data recv\n");
-            trigger(Event:N_DataL1, in_msg.addr, cache_entry, tbe);
+            Entry cache_entry := getCacheEntry(in_msg.addr);
+            if(Data_count == 0) {
+              Data_count := Data_count + 1;
+              trigger(Event:N_DataL1, in_msg.addr, cache_entry, tbe);
+            }
+            else {
+              DPRINTF(Custom,"Data already recieved from other node\n");
+            }
+            
           }
           else {
             trigger(Event:NAck_all, in_msg.addr, cache_entry, tbe);
             DPRINTF(Custom,"Not valid in Response");
           }
         }
-        // if(is_valid(cache_entry)){
-        //   if(in_msg.Type == CoherenceResponseType:DATA){
-        //     DPRINTF(Custom,"Data recv\n");
-        //     trigger(Event:N_DataL1, in_msg.addr, cache_entry, tbe);
-        //   }
-        //   else if(in_msg.Type == CoherenceResponseType:N_NOT){
-        //     DPRINTF(Custom,"Check L2 from resp\n");
-        //     trigger(Event:N_SendL2, in_msg.addr, cache_entry, tbe);
-        //   }
-        //   trigger(Event:Ack_all, in_msg.addr, cache_entry, tbe);
-          
-        // }
-        // else{
-        //   if(in_msg.Type == CoherenceResponseType:ACK) {
-        //     trigger(Event:NAck_all, in_msg.addr, cache_entry, tbe);
-        //   }
-        //   DPRINTF(Custom,"Not valid in Response");
-        //   error("Invalid forwarded request");
-        // }
+
 
 
       }
@@ -580,7 +750,30 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
             DPRINTF(Custom,"Valid->avail\n");
             trigger(Event:N_Fwd_GET_INSTR, in_msg.addr, cache_entry, tbe);
           }
-        } else {
+        } 
+        else if (in_msg.Type == CoherenceRequestType:N_GET_DATA) {
+          DPRINTF(Custom,"Event : N_GET_DATA\n");
+          if(is_invalid(cache_entry)){
+            DPRINTF(Custom,"Not Valid\n");
+            trigger(Event:N_Not_Valid_Data, in_msg.addr, cache_entry, tbe);
+          }
+          else {
+            DPRINTF(Custom,"Valid->avail\n");
+            trigger(Event:N_Fwd_GET_INSTR, in_msg.addr, cache_entry, tbe);
+          }
+
+        }
+        else if (in_msg.Type == CoherenceRequestType:N_SAVE_DATA) {
+          if(is_invalid(cache_entry)) {
+            DPRINTF(Custom,"Saving here from other cache invalid\n");
+            trigger(Event:N_GetSouth, in_msg.addr, cache_entry, tbe);
+          }
+          else {
+            DPRINTF(Custom,"Saving here from other cache valid\n");
+            trigger(Event:N_GetSouthV, in_msg.addr, getL1DCacheEntry(in_msg.addr), tbe);
+          }
+        }
+        else {
           error("Invalid forwarded request type");
         }
       }
@@ -610,6 +803,12 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
 
             // Check to see if it is in the OTHER L1
             Entry L1Dcache_entry := getL1DCacheEntry(in_msg.LineAddress);
+            Entry north_entry := getNorthDataCacheEntry(in_msg.LineAddress);
+            if(is_valid(north_entry)) {
+              DPRINTF(Custom, "Valid-Instr\n");
+            }
+
+          
             if (is_valid(L1Dcache_entry)) {
               // The block is in the wrong L1, put the request on the queue to the shared L2
               DPRINTF(Custom, "Wrong cache\n");
@@ -621,10 +820,10 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
               // L1 does't have the line, but we have space for it
               // in the L1 so let's see if the L2 has it.
               DPRINTF(Custom, "Check L2\n");
-              DPRINTF(Custom, "Occupancy: %d\n", L1Icache.CacheOccupancy());
+              DPRINTF(Custom, "Occupancy: %d\n", north_L1D.CacheOccupancy());
               
               if(in_msg.Type != RubyRequestType:ST && L1Icache.CacheOccupancy() != 0) {
-                  trigger(Event:N_Search, in_msg.LineAddress,
+                  trigger(neighbourInst_event(in_msg.LineAddress, in_msg.Type), in_msg.LineAddress,
                       L1Icache_entry, TBEs[in_msg.LineAddress]);
                 
               }
@@ -672,28 +871,38 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
               // L1 does't have the line, but we have space for it
               // in the L1 let's see if the L2 has it.
               DPRINTF(Custom, "Check L2 D\n");
-              DPRINTF(Custom, "Occupancy: %d\n", L1Dcache.CacheOccupancy());
+              DPRINTF(Custom, "Occupancy: %d\n", north_L1D.CacheOccupancy());
               
-              // if(in_msg.Type != RubyRequestType:ST && L1Dcache.CacheOccupancy() != 0) {
-              //   trigger(Event:N_Search, in_msg.LineAddress,
-              //         L1Dcache_entry, TBEs[in_msg.LineAddress]);
-              // }
-              // else{
+              if(in_msg.Type != RubyRequestType:ST) {
+                trigger(neighbourData_event(in_msg.LineAddress, in_msg.Type), in_msg.LineAddress,
+                      L1Dcache_entry, TBEs[in_msg.LineAddress]);
+              }
+              else{
                 trigger(mandatory_request_type_to_event(in_msg.Type), in_msg.LineAddress,
                       L1Dcache_entry, TBEs[in_msg.LineAddress]);
-              // }
+              }
               
             } else {
               // No room in the L1, so we need to make room in the L1
+              if(north_L1D.cacheAvail(in_msg.LineAddress) && north_L1D.isTagPresent(in_msg.LineAddress) == false && in_msg.Type == RubyRequestType:ST) {
+                DPRINTF(Custom, "Space-avail-North\n");
+                trigger(Event:N_SaveNorth, in_msg.LineAddress,
+                        getNorthDataCacheEntry(in_msg.LineAddress),
+                        TBEs[in_msg.LineAddress]);
+              }
+              else {
+                // Check if the line we want to evict is not locked
+                DPRINTF(Custom, "Replacement\n");
+                Addr addr := L1Dcache.cacheProbe(in_msg.LineAddress);
+                check_on_cache_probe(mandatoryQueue_in, addr);
 
-              // Check if the line we want to evict is not locked
-              DPRINTF(Custom, "Replacement\n");
-              Addr addr := L1Dcache.cacheProbe(in_msg.LineAddress);
-              check_on_cache_probe(mandatoryQueue_in, addr);
+                trigger(Event:L1_Replacement, addr,
+                        getL1DCacheEntry(addr),
+                        TBEs[addr]);
+              }
 
-              trigger(Event:L1_Replacement, addr,
-                      getL1DCacheEntry(addr),
-                      TBEs[addr]);
+            
+              
             }
           }
         }
@@ -732,6 +941,350 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     }
     
   }
+
+  action(na_issueGETS, "na", desc="Issue GETS data") {
+    DPRINTF(Custom, "na_issueGETS : Dest L2\n");
+    
+      peek(n_ResponseL1Network_in, ResponseMsg) {
+        enqueue(requestL1Network_out, RequestMsg, l1_request_latency) {
+          out_msg.addr := address;
+          out_msg.Type := CoherenceRequestType:GETS;
+          out_msg.Requestor := machineID;
+          out_msg.Destination.add(mapAddressToRange(address, MachineType:L2Cache,
+                            l2_select_low_bit, l2_select_num_bits, intToID(0)));
+          DPRINTF(RubySlicc, "address: %#x, destination: %s\n",
+                  address, out_msg.Destination);
+          out_msg.MessageSize := MessageSizeType:Control;
+          out_msg.Prefetch := in_msg.Prefetch;
+          out_msg.AccessMode := in_msg.AccessMode;
+        }
+    }
+    
+  }
+
+  //new action
+  action(an_issueGETS, "an", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "an_issueGETS : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+
+    int north := L1Dcache.getNorthNeighbour(curr);
+    int south := L1Dcache.getSouthNeighbour(curr);
+    int east := L1Dcache.getEastNeighbour(curr);
+    int west := L1Dcache.getWestNeighbour(curr);
+
+    DPRINTF(Custom, "North : %d, South : %d, East : %d, West : %d\n",north,south,east,west);
+    Data_count := 0;
+    
+
+    
+
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (in_msg.Type == RubyRequestType:LD) {
+          
+
+            // Send request to the North neighbor if it exists
+            if (north != -1) {
+              dest := intToID(north);
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: North neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+
+            // Send request to the South neighbor if it exists
+            if (south != -1) {
+                dest := intToID(south);
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: South neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+
+            // Send request to the East neighbor if it exists
+            if (east != -1) {
+                dest := intToID(east);
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+
+            // Send request to the West neighbor if it exists
+            if (west != -1) {
+                dest := intToID(west);
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: West neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+        }
+    }
+    
+  }
+
+  //new north only action
+  action(an_northGETS, "ann", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "an_northGETS : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+
+    int north := L1Dcache.getNorthNeighbour(curr);
+
+    DPRINTF(Custom, "North : %d\n", north);
+    Data_count := 0;
+    
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (north != -1) {
+          dest := intToID(north);
+            // Send request to the North neighbor if it exists
+            if (in_msg.Type == RubyRequestType:LD) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: North neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+            else if (in_msg.Type == RubyRequestType:IFETCH) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_INSTR;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: North neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+
+            }
+        }
+    }
+    
+  }
+
+  //new south only action
+  action(an_southGETS, "ans", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "an_southGETS : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+
+    int south := L1Dcache.getSouthNeighbour(curr);
+
+
+    DPRINTF(Custom, "South : %d\n", south);
+    Data_count := 0;
+    
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (south != -1)  {
+          dest := intToID(south);
+            // Send request to the South neighbor if it exists
+            if (in_msg.Type == RubyRequestType:LD) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: South neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+            else if (in_msg.Type == RubyRequestType:IFETCH) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_INSTR;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: South neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+        }
+    }
+    
+  }
+
+  //new East only action
+  action(an_eastGETS, "ane", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "an_eastGETS : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+
+    
+    int east := L1Dcache.getEastNeighbour(curr);
+
+    DPRINTF(Custom, "East : %d\n", east);
+    Data_count := 0;
+    
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (east != -1) {
+          dest := intToID(east);
+            // Send request to the South neighbor if it exists
+            if (in_msg.Type == RubyRequestType:LD) {
+              
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+            else if (in_msg.Type == RubyRequestType:IFETCH) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_INSTR;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+        }
+    }
+    
+  }
+
+  //new West only action
+  action(an_westGETS, "anw", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "an_westGETS : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+
+    
+    int west := L1Dcache.getWestNeighbour(curr);
+
+    DPRINTF(Custom, "West : %d\n", west);
+    Data_count := 0;
+    
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (west != -1) {
+          dest := intToID(west);
+            // Send request to the South neighbor if it exists
+            if (in_msg.Type == RubyRequestType:LD) {
+              
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+            else if (in_msg.Type == RubyRequestType:IFETCH) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    out_msg.Type := CoherenceRequestType:N_GET_INSTR;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+        }
+    }
+    
+  }
+
+  
+  //new store action
+  action(oo_SaveNorth, "sn", desc="Issue GETS neighbour") {
+    DPRINTF(Custom, "oo_SaveNorth : Dest L1\n");
+    NodeID id := machineIDToNodeID(machineID);
+    NodeID dest := id;
+    int curr := IDToInt(id);
+    
+    int north := L1Dcache.getNorthNeighbour(curr);
+
+    DPRINTF(Custom, "North-store : %d\n", north);
+    
+    peek(mandatoryQueue_in, RubyRequest) {
+        if (north != -1) {
+          DPRINTF(Custom, "Go to North\n");
+          dest := intToID(north);
+            if (in_msg.Type == RubyRequestType:ST) {
+                enqueue(n_RequestL1Network_out, RequestMsg, l1_request_latency) {
+                    out_msg.addr := address;
+                    // out_msg.DataBlk := cache_entry.DataBlk;
+                    // out_msg.Dirty := cache_entry.Dirty;
+                    out_msg.Type := CoherenceRequestType:N_SAVE_DATA;
+                    out_msg.Requestor := machineID;
+                    out_msg.Destination.add(mapNodeIdToMacine(dest, MachineType:L1Cache));
+                    DPRINTF(RubySlicc, "address: %#x, destination: East neighbor %s\n",
+                            address, out_msg.Destination);
+                    out_msg.MessageSize := MessageSizeType:Control;
+                    out_msg.Prefetch := in_msg.Prefetch;
+                    out_msg.AccessMode := in_msg.AccessMode;
+                }
+            }
+
+        }
+    }
+    
+  }
+
+  
+  
 
   action(pa_issuePfGETS, "pa", desc="Issue prefetch GETS") {
     DPRINTF(Custom, "pa_issuePfGETS, Dest : L2\n");
@@ -897,6 +1450,27 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     }
   }
 
+  //new
+  action(nlc_invalid, "nlca", desc="Get from L2 for other cache") {
+
+    DPRINTF(Custom, "nlc_invalid invalid data, Dest : L1\n");
+    peek(n_RequestL1Network_in, RequestMsg) {
+      DPRINTF(Custom, "peek\n");
+      enqueue(n_ResponseL1Network_out, ResponseMsg, l1_request_latency) {
+        DPRINTF(Custom, "enqueue\n");
+        out_msg.addr := in_msg.addr;
+        out_msg.Type := CoherenceResponseType:N_NOT_DATA;
+        out_msg.Sender := machineID;
+        out_msg.Destination.add(in_msg.Requestor); //mapNodeIdToMacine(dest, MachineType:L1Cache)
+        DPRINTF(RubySlicc, "address: %#x, destination: %s\n",
+                address, out_msg.Destination);
+        out_msg.MessageSize := MessageSizeType:Response_Control;
+        out_msg.Prefetch := in_msg.Prefetch;
+        out_msg.AccessMode := in_msg.AccessMode;
+      }
+    }
+  }
+
 
   
 
@@ -924,6 +1498,31 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
   action(b_issueGETX, "b", desc="Issue GETX") {
     DPRINTF(Custom, "b_issueGETX, Dest : L2\n");
     peek(mandatoryQueue_in, RubyRequest) {
+      enqueue(requestL1Network_out, RequestMsg, l1_request_latency) {
+        out_msg.addr := address;
+        out_msg.Type := CoherenceRequestType:GETX;
+        out_msg.Requestor := machineID;
+        DPRINTF(RubySlicc, "%s\n", machineID);
+        out_msg.Destination.add(mapAddressToRange(address, MachineType:L2Cache,
+                          l2_select_low_bit, l2_select_num_bits, intToID(0)));
+        DPRINTF(RubySlicc, "address: %#x, destination: %s\n",
+                address, out_msg.Destination);
+        out_msg.MessageSize := MessageSizeType:Control;
+        out_msg.Prefetch := in_msg.Prefetch;
+        out_msg.AccessMode := in_msg.AccessMode;
+      }
+    }
+  }
+
+  //New 
+  action(b_issueNGETX, "bn", desc="Issue Neighbour GETX") {
+    DPRINTF(Custom, "b_issueNGETX, Dest : L2\n");
+    if(tbe.Not_count == 0) {
+      tbe.Not_count := 1;
+    }
+    DPRINTF(Custom, "Not_count : %d \n",tbe.Not_count);
+
+    peek(n_RequestL1Network_in, RequestMsg) {
       enqueue(requestL1Network_out, RequestMsg, l1_request_latency) {
         out_msg.addr := address;
         out_msg.Type := CoherenceRequestType:GETX;
@@ -982,9 +1581,54 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     }
   }
 
+  //New
+  action(c_issueNUPGRADE, "nc", desc="Issue  Neighbour GETX") {
+    DPRINTF(Custom, "c_issueNUPGRADE, Dest : L2\n");
+    
+      peek(n_RequestL1Network_in, RequestMsg) {
+          enqueue(requestL1Network_out, RequestMsg,  l1_request_latency) {
+            out_msg.addr := address;
+            out_msg.Type := CoherenceRequestType:UPGRADE;
+            out_msg.Requestor := machineID;
+            out_msg.Destination.add(mapAddressToRange(address, MachineType:L2Cache,
+                              l2_select_low_bit, l2_select_num_bits, intToID(0)));
+            DPRINTF(RubySlicc, "address: %#x, destination: %s\n",
+                    address, out_msg.Destination);
+            out_msg.MessageSize := MessageSizeType:Control;
+            out_msg.Prefetch := in_msg.Prefetch;
+            out_msg.AccessMode := in_msg.AccessMode;
+          }
+    }
+  }
+
   //Required
   action(d_sendDataToRequestor, "d", desc="send data to requestor") {
     DPRINTF(Custom, "d_sendDataToRequestor start\n");
+    
+    peek(requestL1Network_in, RequestMsg) {
+      Entry cache_entry := getCacheEntry(in_msg.addr);
+
+      enqueue(n_ResponseL1Network_out, ResponseMsg, l1_response_latency) {
+      assert(is_valid(cache_entry));
+      DPRINTF(Custom, "Sending nebour data\n");
+      out_msg.addr := address;
+      out_msg.Type := CoherenceResponseType:DATA;
+      out_msg.Sender := machineID;
+      out_msg.Destination.add(in_msg.Requestor);
+      out_msg.DataBlk := cache_entry.DataBlk;
+      out_msg.MessageSize := MessageSizeType:Response_Data;
+      out_msg.AckCount := 0;
+      DPRINTF(Custom, "d_sendDataToRequestor, Dest : %s\n",in_msg.Requestor);
+    }
+      
+
+      
+    }
+  }
+
+  //New
+  action(dn_sendDataToRequestor, "dn", desc="send data to requestor") {
+    DPRINTF(Custom, "dn_sendDataToRequestor start\n");
     
     peek(n_RequestL1Network_in, RequestMsg) {
       Entry cache_entry := getCacheEntry(in_msg.addr);
@@ -999,7 +1643,7 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
       out_msg.DataBlk := cache_entry.DataBlk;
       out_msg.MessageSize := MessageSizeType:Response_Data;
       out_msg.AckCount := 0;
-      DPRINTF(Custom, "d_sendDataToRequestor, Dest : %s\n",in_msg.Requestor);
+      DPRINTF(Custom, "dn_sendDataToRequestor, Dest : %s\n",in_msg.Requestor);
     }
       
 
@@ -1178,7 +1822,7 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
       out_msg.Destination.add(mapAddressToRange(address, MachineType:L2Cache,
                           l2_select_low_bit, l2_select_num_bits, intToID(0)));
       out_msg.MessageSize := MessageSizeType:Response_Control;
-      DPRINTF(RubySlicc, "%#x\n", address);
+      DPRINTF(RubySlicc, "Unblock : %#x\n", address);
 
     }
   }
@@ -1225,18 +1869,52 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
   action(hhx_store_hit, "\hx", desc="Notify sequencer that store completed.")
   {
     DPRINTF(Custom, "hhx_store_hit, Dest : Sequencer\n");
-    assert(is_valid(cache_entry));
-    DPRINTF(RubySlicc, "%s\n", cache_entry.DataBlk);
-    // Request misses and new replacement policy info is set for new entry.
-    // No need to setMRU on external hit.
-    sequencer.writeCallback(address, cache_entry.DataBlk, true);
-    cache_entry.Dirty := true;
+    if(tbe.Not_count == 0) {
+      DPRINTF(Custom, "in\n");
+      assert(is_valid(cache_entry));
+      DPRINTF(RubySlicc, "%s\n", cache_entry.DataBlk);
+      // Request misses and new replacement policy info is set for new entry.
+      // No need to setMRU on external hit.
+      sequencer.writeCallback(address, cache_entry.DataBlk, true);
+      cache_entry.Dirty := true;
+    }
+    else {
+      DPRINTF(Custom, "ntg\n");
+      tbe.Not_count := 0;
+    }
+      
+  }
+
+  action(hhxn_store_hit, "\hxn", desc="Notify sequencer that store completed.")
+  {
+    DPRINTF(Custom, "hhxn_store_hit, Dest : Sequencer\n");
+      DPRINTF(Custom, "in\n");
+      assert(is_valid(cache_entry));
+      DPRINTF(RubySlicc, "%s\n", cache_entry.DataBlk);
+      // Request misses and new replacement policy info is set for new entry.
+      // No need to setMRU on external hit.
+      sequencer.writeCallback(address, cache_entry.DataBlk, true);
+      cache_entry.Dirty := true;
+  
+      
   }
 
   action(i_allocateTBE, "i", desc="Allocate TBE (isPrefetch=0, number of invalidates=0)") {
     DPRINTF(Custom, "i_allocateTBE, Dest : None\n");
     check_allocate(TBEs);
     assert(is_valid(cache_entry));
+    TBEs.allocate(address);
+    set_tbe(TBEs[address]);
+    tbe.isPrefetch := false;
+    tbe.Dirty := cache_entry.Dirty;
+    tbe.DataBlk := cache_entry.DataBlk;
+  }
+  
+  //New
+  action(in_allocateTBE, "in", desc="Allocate TBE (isPrefetch=0, number of invalidates=0)") {
+    DPRINTF(Custom, "in_allocateTBE, Dest : None\n");
+    // check_allocate(TBEs);
+    // assert(is_valid(cache_entry));
     TBEs.allocate(address);
     set_tbe(TBEs[address]);
     tbe.isPrefetch := false;
@@ -1294,6 +1972,8 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     }
   }
 
+  
+
   //New action
   action(u_writenDataToL1Cache, "nu", desc="Write data to cache") {
     DPRINTF(Custom, "u_writenDataToL1Cache, Dest : L1\n");
@@ -1338,6 +2018,11 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
 
   action(z_stallAndWaitMandatoryQueue, "\z", desc="Stall and wait the L1 mandatory request queue") {
     stall_and_wait(mandatoryQueue_in, address);
+  }
+
+  //New
+  action(z_stallAndWaitnRequestQueue, "\zn", desc="Stall and wait the L1 mandatory request queue") {
+    stall_and_wait(n_RequestL1Network_in, address);
   }
 
   action(z_stallAndWaitOptionalQueue, "\pz", desc="Stall and wait the L1 prefetch request queue") {
@@ -1411,6 +2096,20 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
       cache_entry.isPrefetch := true;
   }
 
+  //New
+  action(t_sendWBAck, "t", desc="Send writeback ACK") {
+    peek(n_RequestL1Network_in, RequestMsg) {
+      enqueue(n_ResponseL1Network_out, ResponseMsg, l1_response_latency) {
+        out_msg.addr := address;
+        out_msg.Type := CoherenceResponseType:WB_ACK;
+        out_msg.Sender := machineID;
+        out_msg.Destination.add(in_msg.Requestor);
+        out_msg.MessageSize := MessageSizeType:Response_Control;
+      }
+    }
+  }
+
+  
 
   //*****************************************************
   // TRANSITIONS
@@ -1418,16 +2117,22 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
 
   // Transitions for Load/Store/Replacement/WriteBack from transient states
   //Added N_Search in this
-  transition({IS, IM, IS_I, M_I, SM, SINK_WB_ACK}, {Load, Ifetch,N_Search, Store, L1_Replacement}) {
+  transition({IS, IM, IS_I, M_I, SM, SINK_WB_ACK}, {Load, N_Write_N,Ifetch,N_Search,N_SearchD, Store, L1_Replacement}) {
     z_stallAndWaitMandatoryQueue;
+  }
+
+  
+  //new
+  transition({IS, IM, IS_I, M_I, SM, SINK_WB_ACK}, N_GetSouth) {
+    z_stallAndWaitnRequestQueue;
   }
 
   transition({PF_IS, PF_IS_I}, {Store, L1_Replacement}) {
     z_stallAndWaitMandatoryQueue;
   }
 
-//Added N_Search in this
-  transition({PF_IM, PF_SM}, {Load, Ifetch,N_Search,L1_Replacement}) {
+  //Added N_Search in this
+  transition({PF_IM, PF_SM}, {Load, Ifetch,N_Search,N_SearchD,L1_Replacement}) {
     z_stallAndWaitMandatoryQueue;
   }
 
@@ -1451,6 +2156,68 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     a_issueGETS;
     uu_profileDataMiss;
     po_observeMiss;
+    k_popMandatoryQueue;
+  }
+
+  //new transition
+  transition({NP,I}, N_SearchD, IS) {
+    oo_allocateL1DCacheBlock;
+    i_allocateTBE;
+    an_issueGETS;
+    // uu_profileDataMiss;
+    // po_observeMiss;
+    k_popMandatoryQueue;
+  }
+
+  //new
+  transition({NP,I}, N_SaveNorth) {
+    // i_allocateTBE;
+    oo_SaveNorth;
+    k_popMandatoryQueue;
+  }
+
+  //New
+  transition({NP,I,M,E,S,IM}, N_DONE, S) {
+    // s_deallocateTBE;
+    hhxn_store_hit;
+    o_popnIncomingResponseQueue;
+    kd_wakeUpDependents;
+  }
+
+  //New
+  transition({NP,I}, N_Save_North, IS) {
+    oo_allocateL1DCacheBlock;
+    i_allocateTBE;
+    an_northGETS;
+    // uu_profileDataMiss;
+    // po_observeMiss;
+    k_popMandatoryQueue;
+  }
+
+  transition({NP,I}, N_Save_South, IS) {
+    oo_allocateL1DCacheBlock;
+    i_allocateTBE;
+    an_southGETS;
+    // uu_profileDataMiss;
+    // po_observeMiss;
+    k_popMandatoryQueue;
+  }
+
+  transition({NP,I}, N_Save_East, IS) {
+    oo_allocateL1DCacheBlock;
+    i_allocateTBE;
+    an_eastGETS;
+    // uu_profileDataMiss;
+    // po_observeMiss;
+    k_popMandatoryQueue;
+  }
+
+  transition({NP,I}, N_Save_West, IS) {
+    oo_allocateL1DCacheBlock;
+    i_allocateTBE;
+    an_westGETS;
+    // uu_profileDataMiss;
+    // po_observeMiss;
     k_popMandatoryQueue;
   }
 
@@ -1478,7 +2245,7 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     ppm_observePfMiss;
     k_popMandatoryQueue;
   }
-  //new
+  
   transition({NP,I}, Ifetch, IS) {
     pp_allocateL1ICacheBlock;
     i_allocateTBE;
@@ -1487,12 +2254,23 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     po_observeMiss;
     k_popMandatoryQueue;
   }
+  //new
   transition({M,E,S,IS,NP,I}, N_SendL2) {
     // pp_allocateL1ICacheBlock;
     // i_allocateTBE;
     nai_issueGETINSTR;
     uu_profileInstMiss;
     // ne_nsendAckToRequestor;
+    npo_observeMiss;
+    o_popnIncomingResponseQueue;
+  }
+
+  //new transision
+  transition({M,E,S,IS,NP,I}, N_SendL2D) {
+    // pp_allocateL1ICacheBlock;
+    // i_allocateTBE;
+    na_issueGETS;
+    uu_profileDataMiss;
     npo_observeMiss;
     o_popnIncomingResponseQueue;
   }
@@ -1532,6 +2310,17 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     k_popMandatoryQueue;
   }
 
+  //new
+  transition({NP,I}, N_GetSouth, IM) {
+    oo_allocateL1DCacheBlock;
+    in_allocateTBE;
+    b_issueNGETX;
+    // uu_profileDataMiss;
+    t_sendWBAck;
+    // po_observeMiss;
+    l_popnRequestQueue;
+  }
+
   transition({NP,I}, PF_Store, PF_IM) {
     oo_allocateL1DCacheBlock;
     i_allocateTBE;
@@ -1563,6 +2352,13 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     l_popnRequestQueue;
   }
 
+  //new transisiton
+  transition({NP, I}, N_Not_Valid_Data) {
+    nlc_invalid;
+    // fi_sendInvAck;
+    l_popnRequestQueue;
+  }
+
   // Transitions from Shared
   transition({S,E,M}, Load) {
     h_load_hit;
@@ -1585,6 +2381,15 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     k_popMandatoryQueue;
   }
 
+  //New
+  transition(S, N_GetSouthV, SM) {
+    i_allocateTBE;
+    c_issueNUPGRADE;
+    uu_profileDataMiss;
+    t_sendWBAck;
+    l_popnRequestQueue;
+  }
+
   transition(S, {L1_Replacement, PF_L1_Replacement}, I) {
     forward_eviction_to_cpu;
     ff_deallocateL1CacheBlock;
@@ -1603,6 +2408,15 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
     uu_profileDataHit;
     po_observeHit;
     k_popMandatoryQueue;
+  }
+
+  //New 
+  transition({E,M}, N_GetSouthV, M) {
+    // hh_store_hit;
+    uu_profileDataHit;
+    po_observeHit;
+    t_sendWBAck;
+    l_popnRequestQueue;
   }
 
   transition(E, {L1_Replacement, PF_L1_Replacement}, M_I) {
@@ -1633,8 +2447,8 @@ machine(MachineType:L1Cache, "MESI Directory L1 Cache CMP")
   }
 
   //New transition
-  transition({M,E,S,NP,I}, N_Fwd_GET_INSTR) {
-    d_sendDataToRequestor;
+  transition({M,E,S,NP,I, IM}, N_Fwd_GET_INSTR) {
+    dn_sendDataToRequestor;
     // d2_sendDataToL2;
     l_popnRequestQueue;
   }

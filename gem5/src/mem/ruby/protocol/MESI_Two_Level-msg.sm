@@ -43,7 +43,11 @@ enumeration(CoherenceRequestType, desc="...") {
   DMA_WRITE, desc="DMA Write";
 
   N_GET_INSTR, desc="Neibour request";
+  N_GET_DATA, desc="Neibour request data";
   N_NOT, desc="Not available";
+  N_NOT_DATA, desc="Not available data";
+
+  N_SAVE_DATA, desc="Save in neighbour";
 }
 
 // CoherenceResponseType
@@ -58,6 +62,9 @@ enumeration(CoherenceResponseType, desc="...") {
   EXCLUSIVE_UNBLOCK, desc="exclusive unblock";
   INV, desc="Invalidate from directory";
   N_NOT, desc="Not";
+  N_NOT_DATA, desc="Not available data";
+  N_STORE_NOT, desc="No space in neighbour";
+  N_VALID, desc="Valid store ack";
 }
 
 // RequestMsg

@@ -14,37 +14,59 @@ L2 address : Tag (45) : Set Index (13) : Block Offset (6)
 
 
 CacheRubyInfoFlag
+
+    "SPEC.Small/fft/fft",
+    "SPEC.Small/fft/fft",
+    "SPEC.Small/fft/fft",
+    "SPEC.Small/fft/fft",
+
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
+
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
+
+
 """
 
 
 
 # Define the command components
 gem5_binary = "build/X86_MESI_Two_Level/gem5.opt"
-debug_flags = "--debug-flags=CacheRubyInfoFlag"
-debug_file = "--debug-file=output.out.gz"
+debug_flags = "--debug-flags=Custom,RubySequencer,RubySlicc"
+debug_file = "--debug-file=output.out"
 config_script = "configs/deprecated/example/se.py"
 
 # Define the list of workloads
 workloads = [
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
 
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
+    "SPEC.Small/mcf/mcf",
     
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
+    "SPEC.Small/heat/heat",
 
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
-    "tests/test-progs/hello/bin/x86/linux/hello",
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
+    "SPEC.Small/dct/dct",
  
 ]
 

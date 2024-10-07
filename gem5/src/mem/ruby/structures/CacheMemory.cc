@@ -361,6 +361,68 @@ CacheMemory::CacheOccupancy() {
 
 }
 
+//Get neighbour
+int
+CacheMemory::getNorthNeighbour(int curr) {
+
+    // Compute grid coordinates (assuming a 4x4 grid for 16 cores)
+    int north=-1;
+    int row = curr / 4;
+    int col = curr % 4;
+
+    // Determine valid neighbors based on location in the grid
+    if (row > 0) {  // North neighbor exists
+        north = (row - 1) * 4 + col;
+    }
+    return north;
+
+}
+
+int
+CacheMemory::getSouthNeighbour(int curr) {
+
+    // Compute grid coordinates (assuming a 4x4 grid for 16 cores)
+    int south=-1;
+    int row = curr / 4;
+    int col = curr % 4;
+
+    if (row < 3) {  // South neighbor exists
+        south = (row + 1) * 4 + col;
+    }
+    return south;
+}
+
+int
+CacheMemory::getEastNeighbour(int curr) {
+
+    // Compute grid coordinates (assuming a 4x4 grid for 16 cores)
+    int east=-1;
+    int row = curr / 4;
+    int col = curr % 4;
+
+    if (col < 3) {  // East neighbor exists
+        east = row * 4 + (col + 1);
+    }
+    return east;
+}
+
+int
+CacheMemory::getWestNeighbour(int curr) {
+
+    // Compute grid coordinates (assuming a 4x4 grid for 16 cores)
+    int west=-1;
+    int row = curr / 4;
+    int col = curr % 4;
+
+    if (col > 0) {  // West neighbor exists
+        west = row * 4 + (col - 1);
+    }
+    return west;
+}
+
+
+
+
 AbstractCacheEntry*
 CacheMemory::allocate(Addr address, AbstractCacheEntry *entry)
 {
